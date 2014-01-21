@@ -29,7 +29,7 @@ configure rsync server and client. *SHELL-SCRIPT*
   [office website](http://rsync.samba.org/ftp/rsync/rsyncd.conf.html
   "rsync manual.")
 
-## CRONTAL
+## CRONTAB-SETTING
 * crontab setting: */30  *  * * * /home/aborn/backup/rsyncclient.sh >> /home/aborn/backup/client.log 2>&1
 
 ## AUTHOR
