@@ -24,7 +24,7 @@
   (interactive "p")
   (setq total (* iday 180))
   (if (> total 800)
-      (setq value (+ 800 (* 0.8 (- (* iday 180)800))) 
+      (setq value (+ 800 (* 0.8 (- (* iday 180) 800))) 
             tvalue  (- (* iday 180) value))    ;; if true
     (setq value total                          ;; else part
           tvalue 0))
