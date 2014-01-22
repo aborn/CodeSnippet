@@ -1,30 +1,34 @@
 #!/usr/bin/emacs --script 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; NAME 
-;;    kit.el   ---- an example elisp script
+;;    kit.el   ---- an example elisp script, which is 
+;;             used to calculate intern salary.
 ;; 
 ;; USAGE
-;;   emacs -Q --script kit.el
-;;   ./kit.el
+;;   emacs -Q --script kit.el iday
+;;   ./kit.el iday
 ;;
 ;; NOTE
 ;; #!/  shebang works for emacs22 and later.
 ;; 
+;; AUTHOR
+;;   Aborn Jiang (aborn.jiang@gmail.com)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;(print argv)
-(message "hello word")
 (message "input argument are %s" argv)
-(message "first argument is %s" (elt argv 0))
 (message "system-type:%s system-name:%s" system-type system-name)
-                                        ;(message (string-to-int))
 
 (defun cal-salary (iday)
   "Calculate the salary for intern in shanghai"
   (interactive "p")
-  (setq value (+ 800 (* 0.8 (- (* iday 180)800))))
-  (setq tvalue (- (* iday 180) value))
-  (message "You work %d day, and salary is %d, tax is %d."  iday value tvalue)
+  (setq total (* iday 180))
+  (if (> total 800)
+      (setq value (+ 800 (* 0.8 (- (* iday 180)800))) 
+            tvalue  (- (* iday 180) value))    ;; if true
+    (setq value total                          ;; else part
+          tvalue 0))
+  (message "You have worked %d day(s), and salary is %d, tax is %d."  iday value tvalue)
   )
 
 (cal-salary (string-to-number (elt argv 0)))
