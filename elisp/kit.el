@@ -24,9 +24,9 @@
   (interactive "p")
   (setq total (* iday 180))
   (if (> total 800)
-      (setq value (+ 800 (* 0.8 (- (* iday 180) 800))) 
-            tvalue  (- (* iday 180) value))    ;; if true
-    (setq value total                          ;; else part
+      (setq value (+ 800 (* 0.8 (- total 800))) 
+            tvalue  (- total value))      ;; if true
+    (setq value total                     ;; else part
           tvalue 0))
   (message "You have worked %d day(s), and salary is %d, tax is %d."  iday value tvalue)
   )
