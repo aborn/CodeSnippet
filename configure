@@ -1,0 +1,43 @@
+#!/bin/bash
+###############################################################
+# NAME
+#   configure   -- configure local machine with .rc files
+#               or collect all local configure files to .rc
+#
+# USAGE
+#   ./configure     -- configure local machine
+#   ./configure -c  -- collect local configure files 
+###############################################################
+ABSPATH=$(dirname $0)
+cd ${ABSPATH}
+# echo "ABSPATH=${ABSPATH}"
+
+function conf-local()
+{
+    cp ${ABSPATH}/.rc/.zshrc ~
+    cp ${ABSPATH}/.rc/.bashrc ~
+    cp ${ABSPATH}/.rc/.bash_aliases ~
+}
+
+function collect()
+{
+    cp ~/.zshrc ${ABSPATH}/.rc/
+    cp ~/.bashrc ${ABSPATH}/.rc/
+    cp ~/.bash_aliases ${ABSPATH}/.rc/
+}
+
+function __main__()
+{
+    if [ "$1X" == "-cX" ];then
+        echo "-c argument, collect configure files."
+        collect
+    elif [ "$1X" == "X" ];then
+        echo "configure local with .rc succuess."
+        conf-local
+    else
+        echo "error argument."
+        exit -1
+    fi
+}
+
+__main__ $1
