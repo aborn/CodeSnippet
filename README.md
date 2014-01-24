@@ -15,5 +15,6 @@ Aborn Jiang (aborn.jiang@gmail.com)
 ## VERSION
 * 2014-01-21 v0.1 (add rsync configure files)
 * 2014-01-22 v0.2 (add .rc and elisp files)
+* 2014-01-24 v0.3 (add nginx configure fiels)
 
 
