@@ -2,6 +2,8 @@
 # conv utf-8(linux) encoding file to gbk (windows)
 
 filenames=$(ls *.m)
+cpath=`pwd`
+echo "current working path=${cpath}"
 
 for file in ${filenames}
 do
