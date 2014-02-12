@@ -19,12 +19,14 @@ sudo apt-get update
 # copy files
 cp -r ${VAGRANTPATH}/sw ~
 
+echo
 echo "-----------------------------------"
 echo "install some necessary software."
 sudo apt-get install -y \
 emacs zsh vim g++ build-essential \
 make git ghostscript
 
+echo
 echo "-----------------------------------"
 echo "configure this virtual machine"
 mkdir ~/github/
@@ -33,6 +35,7 @@ git clone https://github.com/aborn/configure.git
 chmod u+x  ~/github/configure/configure
 ~/github/configure/configure
 
+echo
 echo "-----------------------------------"
 echo "configure emacs."
 git clone https://github.com/aborn/emacs.lite.git

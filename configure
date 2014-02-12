@@ -10,7 +10,7 @@
 ###############################################################
 ABSPATH=$(dirname $0)
 cd ${ABSPATH}
-# echo "ABSPATH=${ABSPATH}"
+echo "ABSPATH=${ABSPATH}"
 
 function conf-local()
 {
@@ -34,8 +34,8 @@ function __main__()
         echo "-c argument, collect configure files."
         collect
     elif [ "$1X" == "X" ];then
-        echo "configure local with .rc succuess."
         conf-local
+        echo "configure local with .rc succuess."
     else
         echo "error argument."
         exit -1
