@@ -10,7 +10,7 @@
 sudo apt-get install -y \
 git vim emacs fcitx scrot cmake g++ gcc chromium-browser \
 zsh lftp gnome gnome-shell evince w3m kmplayer xclip \
-python virtualbox nmon iconv
+python virtualbox nmon iconv make ghostscript
 
 # sudo apt-get install -y texlive-full
 # sudo apt-get install -y clisp

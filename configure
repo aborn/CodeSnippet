@@ -17,6 +17,7 @@ function conf-local()
     cp ${ABSPATH}/.rc/.zshrc ~
     cp ${ABSPATH}/.rc/.bashrc ~
     cp ${ABSPATH}/.rc/.bash_aliases ~
+    cp ${ABSPATH}/.rc/.vimrc ~
 }
 
 function collect()
@@ -24,6 +25,7 @@ function collect()
     cp ~/.zshrc ${ABSPATH}/.rc/
     cp ~/.bashrc ${ABSPATH}/.rc/
     cp ~/.bash_aliases ${ABSPATH}/.rc/
+    cp ~/.vimrc ${ABSPATH}/.rc/
 }
 
 function __main__()
