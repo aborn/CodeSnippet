@@ -16,15 +16,22 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp ${VAGRANTPATH}/sources.list /etc/apt/
 sudo apt-get update
 
-# copy files
-cp -r ${VAGRANTPATH}/sw ~
-
 echo
 echo "-----------------------------------"
 echo "install some necessary software."
 sudo apt-get install -y \
-emacs zsh vim g++ build-essential \
-make git ghostscript
+    emacs zsh vim g++ build-essential \
+    make git ghostscript
+
+iUser="`whoami`"
+echo "now user: ${iUser}"
+if [ ${iUser} = "root" ];then
+    su vagrant
+    echo "changed user, now: `whoami`"
+fi
+
+# copy files
+cp -r ${VAGRANTPATH}/sw ~
 
 echo
 echo "-----------------------------------"
