@@ -30,22 +30,3 @@ if [ ${iUser} = "root" ];then
     echo "changed user, now: `whoami`"
 fi
 
-# copy files
-cp -r ${VAGRANTPATH}/sw ~
-
-echo
-echo "-----------------------------------"
-echo "configure this virtual machine"
-mkdir ~/github/
-cd ~/github/
-git clone https://github.com/aborn/configure.git
-chmod u+x  ~/github/configure/configure
-~/github/configure/configure
-
-echo
-echo "-----------------------------------"
-echo "configure emacs."
-git clone https://github.com/aborn/emacs.lite.git
-chmod u+x ~/github/emacs.lite/sh/configure
-~/github/emacs.lite/sh/configure
-
