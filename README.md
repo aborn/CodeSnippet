@@ -18,5 +18,6 @@ Aborn Jiang (aborn.jiang@gmail.com)
 * 2014-01-24 v0.3 (add nginx configure files)
 * 2014-01-26 v0.4 (add kit subrepo files)
 * 2014-02-12 v0.5 (add vagrant subrepo files)
+* 2014-02-14 v0.6 (add phpd subrepo files)
 
 
