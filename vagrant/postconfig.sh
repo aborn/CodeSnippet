@@ -26,7 +26,10 @@ echo "-----------------------------------"
 echo "configure this virtual machine"
 echo "user:`whoami`, home=$HOME"
 
-mkdir ${iHome}/github/
+if [ ! -d ${iHome}/github/ ];then
+    mkdir ${iHome}/github/
+fi
+
 cd ${iHome}/github/
 git clone https://github.com/aborn/configure.git
 chmod u+x  ${iHome}/github/configure/configure
