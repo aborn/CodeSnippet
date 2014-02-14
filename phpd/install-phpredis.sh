@@ -3,6 +3,7 @@
 # install phpredis 
 #############################################
 
+sudo apt-get install autoconf
 wget https://github.com/nicolasff/phpredis/tarball/master
 cd src
 ~/php5/bin/phpize
