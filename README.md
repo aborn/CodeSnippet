@@ -2,7 +2,7 @@ configure
 =========
 
 ## INTRO
-This repo includes lots of configure scripts, which can be used in
+ This repo includes lots of configure scripts, which can be used in
 server and desktop.
 
 ## USAGE
