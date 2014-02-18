@@ -1,6 +1,12 @@
 mysql2redis
 ==========
 
+## STATUS
+draft
+
+## MAIN FUNCTIONS
+This doc tells users how to install mysql2redis in linux env.
+
 ## INSTALL DEPS
 * sudo apt-get install libjemalloc1 libjemalloc-dev
   or source download install
@@ -78,14 +84,14 @@ shared object file: No such file or directory)
  * or check  echo $LD_LIBRARY_PATH
  * ref http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html
  * follow error is the same:
- > vagrant@precise32 ~ % mysql -u root -p < mysql_cmd.sql
- > Enter password: 
- > ERROR 1126 (HY000) at line 5: Can't open shared library 'lib_mysqludf_redis_v2.so' (errno: 0 libexpat.so.0: cannot open shared object file: No such file or directory)
+  1.  vagrant@precise32 ~ % mysql -u root -p < mysql_cmd.sql
+  2.  Enter password: 
+  3.  ERROR 1126 (HY000) at line 5: Can't open shared library 'lib_mysqludf_redis_v2.so' (errno: 0 libexpat.so.0: cannot open shared object file: No such file or directory)
 
  
 5. % sudo make
 gcc -Werror -O2 -g `/usr/bin/mysql_config --include` -I/usr/local/include  -I/usr/local/apr/include  -I. -fPIC -shared -rdynamic lib_mysqludf_redis.c utils.c\
-		-lhiredis -L"/usr/lib/mysql/plugin"  -L/usr/local/apr/lib
+:		-lhiredis -L"/usr/lib/mysql/plugin"  -L/usr/local/apr/lib
         -lapr-1  -laprutil-1 -ljemalloc -o
         "/usr/lib/mysql/plugin"/lib_mysqludf_redis_v2.so
  /usr/local/apr/lib
