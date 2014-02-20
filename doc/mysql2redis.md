@@ -58,16 +58,22 @@ which is used to update redis when mysql update.
   * before         typedef  off64_t           apr_off_t;
   * message as follow:
   
-> . vagrant@precise32 ~/mysql2redis
->  % make
-> gcc -Werror -O2 -g `/usr/bin/mysql_config --include` -I/usr/local/include  -I/usr/local/apr/include  -I. -fPIC -shared -rdynamic lib_mysqludf_redis.c utils.c\
->		-lhiredis -L"/usr/lib64/mysql/plugin"  -L/usr/local/apr/lib  -lapr-1  -laprutil-1 -ljemalloc -o "/usr/lib64/mysql/plugin"/lib_mysqludf_redis_v2.so
-> In file included from lib_mysqludf_redis.c:50:0:
-> /usr/local/apr/include/apr-1/apr.h:358:1: error: unknown type name ‘off64_t’
-> lib_mysqludf_redis.c: In function ‘check_error’:
-> lib_mysqludf_redis.c:271:13: error: format not a string literal and no format arguments [-Werror=format-security]
-> cc1: all warnings being treated as errors
-> make: *** [linux] Error 1
+> . vagrant@precise32 ~/mysql2redis  
+>  % make  
+> gcc -Werror -O2 -g `/usr/bin/mysql_config --include`  
+>		-I/usr/local/include  -I/usr/local/apr/include  -I. -fPIC  
+>		-shared -rdynamic lib_mysqludf_redis.c utils.c\  
+>		-lhiredis -L"/usr/lib64/mysql/plugin"  -L/usr/local/apr/lib
+> -lapr-1  -laprutil-1 -ljemalloc -o
+> "/usr/lib64/mysql/plugin"/lib_mysqludf_redis_v2.so  
+> In file included from lib_mysqludf_redis.c:50:0:  
+> /usr/local/apr/include/apr-1/apr.h:358:1: error: unknown type name
+> ‘off64_t’  
+> lib_mysqludf_redis.c: In function ‘check_error’:  
+> lib_mysqludf_redis.c:271:13: error: format not a string literal and
+> no format arguments [-Werror=format-security]  
+> cc1: all warnings being treated as errors  
+> make: *** [linux] Error 1  
 
 #### Install mysql2redis
 2. lib_mysqludf_redis.c:271:13: error: format not a string literal and
@@ -77,13 +83,18 @@ which is used to update redis when mysql update.
    * fputs(buf, pFile);
    * message append follow:
    
->  % make
-> gcc -Werror -O2 -g `/usr/bin/mysql_config --include` -I/usr/local/include  -I/usr/local/apr/include  -I. -fPIC -shared -rdynamic lib_mysqludf_redis.c utils.c\
->		-lhiredis -L"/usr/lib64/mysql/plugin"  -L/usr/local/apr/lib  -lapr-1  -laprutil-1 -ljemalloc -o "/usr/lib64/mysql/plugin"/lib_mysqludf_redis_v2.so
+>  % make  
+> gcc -Werror -O2 -g `/usr/bin/mysql_config --include`
+>		-I/usr/local/include  -I/usr/local/apr/include  -I. -fPIC
+>		-shared -rdynamic lib_mysqludf_redis.c utils.c\  
+>		-lhiredis -L"/usr/lib64/mysql/plugin"  -L/usr/local/apr/lib
+> -lapr-1  -laprutil-1 -ljemalloc -o
+> "/usr/lib64/mysql/plugin"/lib_mysqludf_redis_v2.so  
 > lib_mysqludf_redis.c: In function ‘check_error’:
-> lib_mysqludf_redis.c:271:13: error: format not a string literal and no format arguments [-Werror=format-security]
-> cc1: all warnings being treated as errors
-> make: *** [linux] Error 1
+> lib_mysqludf_redis.c:271:13: error: format not a string literal and
+> no format arguments [-Werror=format-security]  
+> cc1: all warnings being treated as errors  
+> make: *** [linux] Error 1  
 
 
 #### Install hiredis
@@ -92,14 +103,14 @@ which is used to update redis when mysql update.
    * sudo make install
    * message append follow:
    
-> vagrant@precise32 ~/sw/hiredis
->  % sudo make install
-> mkdir -p /usr/local/include/hiredis /usr/local/lib
-> cp -a hiredis.h async.h adapters /usr/local/include/hiredis
-> cp -a libhiredis.so /usr/local/lib/libhiredis.so.0.10
-> cd /usr/local/lib && ln -sf libhiredis.so.0.10 libhiredis.so.0
-> cd /usr/local/lib && ln -sf libhiredis.so.0 libhiredis.so
-> cp -a libhiredis.a /usr/local/lib
+> vagrant@precise32 ~/sw/hiredis  
+>  % sudo make install  
+> mkdir -p /usr/local/include/hiredis /usr/local/lib  
+> cp -a hiredis.h async.h adapters /usr/local/include/hiredis  
+> cp -a libhiredis.so /usr/local/lib/libhiredis.so.0.10  
+> cd /usr/local/lib && ln -sf libhiredis.so.0.10 libhiredis.so.0  
+> cd /usr/local/lib && ln -sf libhiredis.so.0 libhiredis.so  
+> cp -a libhiredis.a /usr/local/lib  
 
 #### Trigger error: can't open shared library
  * copy libhiredis.so.0.10 to /lib and libexpat.so to /lib
@@ -112,19 +123,22 @@ which is used to update redis when mysql update.
       'lib_mysqludf_redis_v2.so' (errno: 0 libexpat.so.0: cannot open
       shared object file: No such file or directory)
 
-> mysql> CREATE FUNCTION redis_servers_set_v2 RETURNS int SONAME "lib_mysqludf_redis_v2.so";
-> ERROR 1126 (HY000): Can't open shared library
-> 'lib_mysqludf_redis_v2.so' (errno: 0 libhiredis.so.0.10: cannot open
-> shared object file: No such file or directory)
+> mysql> CREATE FUNCTION redis_servers_set_v2 RETURNS int SONAME
+> "lib_mysqludf_redis_v2.so";  
+> ERROR 1126 (HY000): Can't open shared library  
+> 'lib_mysqludf_redis_v2.so' (errno: 0 libhiredis.so.0.10: cannot open  
+> shared object file: No such file or directory)  
 
 
 #### Check dependcy
 
-> % sudo make
-> gcc -Werror -O2 -g `/usr/bin/mysql_config --include` -I/usr/local/include  -I/usr/local/apr/include  -I. -fPIC -shared -rdynamic lib_mysqludf_redis.c utils.c\
-> :		-lhiredis -L"/usr/lib/mysql/plugin"  -L/usr/local/apr/lib
->        -lapr-1  -laprutil-1 -ljemalloc -o
->        "/usr/lib/mysql/plugin"/lib_mysqludf_redis_v2.so
-> /usr/local/apr/lib
-> /usr/lib
-> ldd /usr/lib/mysql/plugin/lib_mysqludf_redis_v2.so
+> % sudo make  
+> gcc -Werror -O2 -g `/usr/bin/mysql_config --include`
+> -I/usr/local/include  -I/usr/local/apr/include  -I. -fPIC -shared
+> -rdynamic lib_mysqludf_redis.c utils.c\  
+> :		-lhiredis -L"/usr/lib/mysql/plugin"  -L/usr/local/apr/lib  
+>        -lapr-1  -laprutil-1 -ljemalloc -o  
+>        "/usr/lib/mysql/plugin"/lib_mysqludf_redis_v2.so  
+> /usr/local/apr/lib  
+> /usr/lib  
+> ldd /usr/lib/mysql/plugin/lib_mysqludf_redis_v2.so  
