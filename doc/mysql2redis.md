@@ -33,7 +33,7 @@ which is used to update redis when mysql update.
   3. make
   4. sudo make install
 * install lib_mysqludf_json
-  1. download: wget https://github.com/mysqludf/lib_mysqludf_json
+  1. download: git clone https://github.com/mysqludf/lib_mysqludf_json.git
   2. copy lib_mysqludf_json.so to /usr/lib/mysql/plugin
 * install hiredis
   1. download: git clone https://github.com/redis/hiredis.git
@@ -57,6 +57,7 @@ which is used to update redis when mysql update.
   * add line       typedef long    off64_t;
   * before         typedef  off64_t           apr_off_t;
   * message as follow:
+  
 > . vagrant@precise32 ~/mysql2redis
 >  % make
 > gcc -Werror -O2 -g `/usr/bin/mysql_config --include` -I/usr/local/include  -I/usr/local/apr/include  -I. -fPIC -shared -rdynamic lib_mysqludf_redis.c utils.c\
@@ -75,6 +76,7 @@ which is used to update redis when mysql update.
    * /*fprintf(pFile,buf)*/
    * fputs(buf, pFile);
    * message append follow:
+   
 >  % make
 > gcc -Werror -O2 -g `/usr/bin/mysql_config --include` -I/usr/local/include  -I/usr/local/apr/include  -I. -fPIC -shared -rdynamic lib_mysqludf_redis.c utils.c\
 >		-lhiredis -L"/usr/lib64/mysql/plugin"  -L/usr/local/apr/lib  -lapr-1  -laprutil-1 -ljemalloc -o "/usr/lib64/mysql/plugin"/lib_mysqludf_redis_v2.so
@@ -88,18 +90,16 @@ which is used to update redis when mysql update.
 3. install hiredis
    * make: Nothing to be done for `all'.
    * sudo make install
-
-## APPEND
-
-
-3. vagrant@precise32 ~/sw/hiredis
- % sudo make install
-mkdir -p /usr/local/include/hiredis /usr/local/lib
-cp -a hiredis.h async.h adapters /usr/local/include/hiredis
-cp -a libhiredis.so /usr/local/lib/libhiredis.so.0.10
-cd /usr/local/lib && ln -sf libhiredis.so.0.10 libhiredis.so.0
-cd /usr/local/lib && ln -sf libhiredis.so.0 libhiredis.so
-cp -a libhiredis.a /usr/local/lib
+   * message append follow:
+   
+> vagrant@precise32 ~/sw/hiredis
+>  % sudo make install
+> mkdir -p /usr/local/include/hiredis /usr/local/lib
+> cp -a hiredis.h async.h adapters /usr/local/include/hiredis
+> cp -a libhiredis.so /usr/local/lib/libhiredis.so.0.10
+> cd /usr/local/lib && ln -sf libhiredis.so.0.10 libhiredis.so.0
+> cd /usr/local/lib && ln -sf libhiredis.so.0 libhiredis.so
+> cp -a libhiredis.a /usr/local/lib
 
 4. mysql> CREATE FUNCTION redis_servers_set_v2 RETURNS int SONAME "lib_mysqludf_redis_v2.so";
 ERROR 1126 (HY000): Can't open shared library
