@@ -1,4 +1,4 @@
-configure
+popkit
 =========
 
 ## INTRO
@@ -52,3 +52,4 @@ Aborn Jiang (aborn.jiang@gmail.com)
 * 2014-02-12 v0.5 (add vagrant subrepo files)
 * 2014-02-14 v0.6 (add phpd subrepo files)
 * 2014-02-19 v0.7 (add sql subrepo files)
+* 2014-02-20 v1.0 (add doc and kit and rename as popkit project)
