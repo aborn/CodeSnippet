@@ -7,7 +7,8 @@ server and desktop.
 
 ## USAGE
 * ./configure   -- configure local machine with this repo
-* ./configure -c  -- collect local configure files 
+* ./configure -c  -- collect local configure files
+
 ## SUBREPO
 1. doc  
    This subrepo uses to write technical notes, such how to install
