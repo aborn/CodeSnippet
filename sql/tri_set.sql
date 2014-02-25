@@ -1,4 +1,6 @@
 USE test;
+create table if not exists account (acct_num int(11), amount decimal(10,2));
+
 DROP TRIGGER IF EXISTS tri_set_insert;
 DROP TRIGGER IF EXISTS tri_set_update;
 DROP TRIGGER IF EXISTS tri_set_delete;
@@ -16,10 +18,8 @@ CREATE TRIGGER tri_set_insert AFTER INSERT ON account
     BEGIN
     DECLARE done INT DEFAULT 99; 
     DECLARE ret  INT DEFAULT 99; 
-    DECLARE fre  INT DEFAULT 99; 
 SET @ret=redis_servers_set_v2("127.0.0.1",6379);
 SET @done=redis_command_v2("127.0.0.1",6379,"set",concat("account:",new.acct_num),concat("acct_num:",new.acct_num, " amount:", new.amount));
-SET @fre=free_resources();
     END;| 
     delimiter ;
 
@@ -35,10 +35,8 @@ CREATE TRIGGER tri_set_update AFTER UPDATE ON account
     BEGIN
     DECLARE done INT DEFAULT 99; 
     DECLARE ret  INT DEFAULT 99; 
-    DECLARE fre  INT DEFAULT 99; 
 SET @ret=redis_servers_set_v2("127.0.0.1",6379);
 SET @done=redis_command_v2("127.0.0.1",6379,"set",concat("account:",new.acct_num),concat("acct_num:",new.acct_num, " amount:", new.amount));
-SET @fre=free_resources();
     END;| 
     delimiter ;
 
@@ -59,6 +57,6 @@ CREATE TRIGGER tri_set_delete AFTER DELETE ON account
 SET @ret=redis_servers_set_v2("127.0.0.1",6379);
 #SET @done=redis_command_v2("127.0.0.1",6379,"set",concat("account:",old.acct_num),concat("del_acct_num:",old.acct_num, " amount:", old.amount));
 SET @done=redis_command_v2("127.0.0.1",6379,"del",concat("account:",old.acct_num),"deleted success.");
-SET @fre=free_resources();
+#SET @fre=free_resources();  # means free all redis data
     END; |
     delimiter ;
