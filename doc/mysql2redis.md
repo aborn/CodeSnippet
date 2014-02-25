@@ -35,6 +35,7 @@ which is used to update redis when mysql update.
 * install lib_mysqludf_json
   1. download: git clone https://github.com/mysqludf/lib_mysqludf_json.git
   2. copy lib_mysqludf_json.so to /usr/lib/mysql/plugin
+  3. install function in mysql using https://github.com/aborn/popkit/tree/master/sql/install_json_udf.sql
 * install hiredis
   1. download: git clone https://github.com/redis/hiredis.git
   2. cd hiredis;
