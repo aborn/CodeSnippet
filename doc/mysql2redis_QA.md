@@ -1,4 +1,4 @@
-mysql2redis
+mysql2redis_QA
 ==========
 
 ## 安装mysql2redis遇到的问题解决之道
@@ -21,7 +21,7 @@ lib_mysqludf_json.c -o ./lib_mysqludf_json.so -fPIC
 1. 下载:git clone https://github.com/redis/hiredis.git
 2. 编译: cd hiredis; make
 4. 安装：sudo make install
-3. 将libhiredis.so文件copy到mysqlplug_dir下
+3. 将libhiredis.so文件copy到mysqlplugin_dir下
 
 ### 安装mysql2redis
 #### 安装过程
@@ -30,8 +30,15 @@ lib_mysqludf_json.c -o ./lib_mysqludf_json.so -fPIC
    * mysql_config 所在目录
    * 修改PLUGINDIR参数
    * 添加mysql的include 如-I/data/greentea/mysql/mysql8801/include
+3. 编译：cd mysql2redis; make
+4. 安装：将lib_mysqludf_redis_v2.so文件copy到mysqlplugin_dir下
+5. 在mysql中注册函数:mysql -uroot -p < install
 
 #### lib_mysqludf_redis.c:271:13: error: format not a string literal
      and no format arguments
 将271行的 fprintf(pFile, buf) 改为 fputs(buf, pFile)
+
+#### libhiredis.so.0.10: cannot open shared object file
+执行以下命令:  
+sudo cp /usr/local/lib/libhiredis.so.0.10 /lib
 
