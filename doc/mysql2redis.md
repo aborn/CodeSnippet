@@ -28,7 +28,7 @@ which is used to update redis when mysql update.
   4. make test
   5. sudo make install
 * install apr-util
-  1. download
+  1. download: wget http://mirror.esocc.com/apache//apr/apr-util-1.5.3.tar.gz
   2.  ./configure --with-apr=/usr/local/apr
   3. make
   4. sudo make install
