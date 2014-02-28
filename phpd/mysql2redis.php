@@ -35,19 +35,20 @@ class mysql2redis
     }
 
     public function bench($items_number, $bench='bench')
-    {
-        $del_sql = sprintf("delete from %s where idx>0;", $bench);
-        $this->mysql->query($del_sql,'del');
-        for ($i=1; $i < $items_number; $i++)
+    {   ## 测试前创建数据表格操作
+##        $del_sql = sprintf("delete from %s where idx>0;", $bench);
+        $del_sql = sprintf("delete from %s;", $bench);
+        $this->mysql->query($del_sql);
+##        $this->mysql->query("select * from bench;");
+        for ($i=0; $i < $items_number; $i++)
         {
-            $value = sprintf("(%d,\"name%d\",\"shanghai\")",$i,$i);
+            $value = sprintf("(%d,\"name%d\",\"%s\")", $i, $i, $bench);
             $insert_sql = sprintf("insert into %s values%s;",$bench,$value);
-#            echo $insert_sql;
-            $this->mysql->query($insert_sql,'del');
+            $this->mysql->query($insert_sql);
         }
     }
 
-    public function mysql2redis($keycol = 0)
+    public function mysql2redis($keycol = 0, $sql = NULL)
     {
         $dbname = $this->dbname;
         $tbname = $this->tbname;
@@ -56,7 +57,11 @@ class mysql2redis
         $this->mysql->setDBname($dbname);
         $this->mysql->setTBname($tbname);
 
-        $sql = sprintf("select * from %s", $tbname);
+        if ($sql == NULL)
+        {        
+            $sql = sprintf("select * from %s", $tbname);
+        }
+        
         $this->mysql_data = $this->mysql->query($sql);
         if ($this->mysql_data == NULL) 
         {

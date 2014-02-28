@@ -6,7 +6,7 @@
      <body>
 
     <?php
-       require_once('iredis_test.php');
+#       require_once('iredis_test.php');
        require_once('redis_action.php');
        ?>
 

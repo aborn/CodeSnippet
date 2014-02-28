@@ -33,16 +33,21 @@ class dbops {
         }
     }
 
-    public function query($sql,$tag='select')
+    public function query($sql)
     {
         if ($this->connect()) {
-            if ($tag != 'select')
-            {
-                $this->mysqli->query($sql);
-                return true;
-            } 
-
             $result = $this->mysqli->query($sql);
+            if (gettype($result) == 'boolean')
+            {
+                return $result;
+            } elseif (gettype($result) == 'object' &&
+                      $result->num_rows == 0) {
+                echo "</br>"; echo "$sql";
+                echo "000no nummmmmmmmmmm0000";
+                echo "</br>";
+                return NULL;
+            }
+            
             while($row = $result->fetch_array()){
                 $this->data[] = $row;
             }

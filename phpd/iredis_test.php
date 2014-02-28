@@ -15,7 +15,7 @@ function judge($status, $cmd)
     }
 }
 
-echo "下面为测试redis的php接口类redis_face的各种命令.";
+echo "下面为测试redis的php接口类iredis的各种命令.";
 
 $rf = new iredis();
 

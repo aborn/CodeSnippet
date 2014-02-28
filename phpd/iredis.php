@@ -69,6 +69,11 @@ class iredis
         return $this->redis->hSet($key, $keysub, $value);
     }
 
+    public function expire($key, $time) 
+    { ## set expire timeout with $time (second).
+        return $this->redis->setTimeout($key, $time);
+    }
+    
     public function del($key)
     {
         return $this->redis->delete($key);
