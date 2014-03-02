@@ -22,7 +22,7 @@ echo "postinstall start."
 echo "install some necessary software."
 sudo apt-get install -y \
     emacs zsh vim g++ build-essential \
-    make git ghostscript autoconf
+    make git ghostscript autoconf unzip
 
 # install php5
 # sudo apt-get install php5-common php5-cli php5-fpm

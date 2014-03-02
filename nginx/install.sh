@@ -1,31 +1,48 @@
 #!/bin/bash
 ###############################################################
-## NAME
-##    install.sh       install nginx in server
-##
-## USAGE
-##    ./install.sh
+# NAME
+#    install.sh       install nginx in server
+#
+# USAGE
+#    ./install.sh
+# 
+# AUTHOR
+#    Aborn Jiang (aborn.jiang@gmail.com)
+#
+# VERSION
+#    v0.1   2014-03-01
 ###############################################################
 
+## download the latest version 1.4.5 (2014-2-11)
+## wget http://nginx.org/download/nginx-1.4.5.zip
+## unzip nginx-1.4.5.zip
+
+## iUser="`whoami`"
+iUser="vagrant"
+INS_PATH="/home/${iUser}"
+DPS_PATH="/vagrant_data/sw"    # depend 3pp path
+
+make clean
 
 ## following is recommanded configure and modules.
 ./configure  \
-    --prefix=/home/aborn/nginx \
-    --sbin-path=/home/aborn/nginx/sbin/nginx \
-    --conf-path=/home/aborn/nginx/conf/nginx.conf \
-    --pid-path=/home/aborn/nginx/pid/nginx.pid   \
-    --error-log-path=/home/aborn/nginx/log/error.log \
-    --http-log-path=/home/aborn/nginx/log/access.log \
-    --user=aborn --group=aborn \
+    --prefix=${INS_PATH}/nginx \
+    --sbin-path=${INS_PATH}/nginx/sbin/nginx \
+    --conf-path=${INS_PATH}/nginx/conf/nginx.conf \
+    --pid-path=${INS_PATH}/nginx/pid/nginx.pid   \
+    --error-log-path=${INS_PATH}/nginx/log/error.log \
+    --http-log-path=${INS_PATH}/nginx/log/access.log \
+    --user=${iUser} --group=${iUser} \
     --with-http_ssl_module \
     --with-http_stub_status_module \
-    --with-pcre=/home/aborn/sw/pcre-8.34 \
-    --with-zlib=/home/aborn/sw/zlib-1.2.8 \
-    --with-openssl=/home/aborn/sw/openssl-1.0.1c 
+    --with-pcre=${DPS_PATH}/pcre-8.34 \
+    --with-zlib=${DPS_PATH}/zlib-1.2.8 \
+    --with-openssl=${DPS_PATH}/openssl-1.0.1c  \
+    --add-module=${DPS_PATH}/memcached-1.4.17
 
 ## compile nginx form source code
 make
 
 ## install nginx
 make install
-    
+
