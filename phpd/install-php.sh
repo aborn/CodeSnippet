@@ -65,3 +65,5 @@ make install
 # sudo cp php.ini-development /home/vagrant/php5/etc/php.ini
 # sudo cp sapi/fpm/init.d.php-fpm.in /home/vagrant/php5/etc/init.d.php-fpm
 # sudo cp sapi/fpm/php-fpm.conf.in /home/vagrant/php5/etc/php-fpm.conf 
+# modify etc/php-fpm.conf at line 148/149 with current usr and group
+# boot up php: sudo ./sbin/php-fpm 
