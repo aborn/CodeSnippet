@@ -1,10 +1,21 @@
 #!/bin/bash
-#############################################
-# install php
-#############################################
+####################################################
+# NAME
+#    install-php.sh
+#         install php in server with configure
+# USAGE
+#    ./install-php.sh
+# 
+# AUTHOR
+#    Aborn Jiang(aborn.jiang@gmail.com)
+#
+# VERSION
+#    v0.1 2014-03-02
+#
+####################################################
 
-# please install php-deps before 
-
+## !!! warning=> please install php-deps before !!!
+## wget http://cn2.php.net/distributions/php-5.5.9.tar.gz
 make clean;
 ./configure \
 	--prefix=/home/vagrant/php5 \

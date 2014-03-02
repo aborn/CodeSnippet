@@ -5,6 +5,7 @@
 
 # bzip2 need src install
 # cd bzip2; make; sudo make install
+sudo apt-get update
 sudo apt-get install -y libxml2 libxml2-dev  \
 libcurl4-openssl-dev curl openssl bzip2   \
 libmcrypt-dev  libjpeg-dev  libpng12-dev \
