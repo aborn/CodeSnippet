@@ -30,6 +30,7 @@ make clean
 ## wget http://www.openssl.org/source/openssl-1.0.1c.tar.gz
 ## wget http://www.memcached.org/files/memcached-1.4.17.tar.gz
 ## following is recommanded configure and modules.
+cp ${DPS_PATH}/memcached-1.4.17/configure ${DPS_PATH}/memcached-1.4.17/config
 ./configure  \
     --prefix=${INS_PATH}/nginx \
     --sbin-path=${INS_PATH}/nginx/sbin/nginx \
@@ -42,12 +43,13 @@ make clean
     --with-http_stub_status_module \
     --with-pcre=${DPS_PATH}/pcre-8.34 \
     --with-zlib=${DPS_PATH}/zlib-1.2.8 \
-    --with-openssl=${DPS_PATH}/openssl-1.0.1c  \
-    --add-module=${DPS_PATH}/memcached-1.4.17
+    --with-openssl=${DPS_PATH}/openssl-1.0.1c  
+#    --add-module=${DPS_PATH}/memcached-1.4.17
 
 ## compile nginx form source code
 make
 
 ## install nginx
+[ -f install ] && rm install 
 make install
 
