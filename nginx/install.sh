@@ -24,6 +24,11 @@ DPS_PATH="/vagrant_data/sw"    # depend 3pp path
 
 make clean
 
+## depends modules
+## wget http://sourceforge.net/projects/pcre/files/pcre/8.34/pcre-8.34.zip
+## wget http://zlib.net/zlib-1.2.8.tar.gz
+## wget http://www.openssl.org/source/openssl-1.0.1c.tar.gz
+## wget http://www.memcached.org/files/memcached-1.4.17.tar.gz
 ## following is recommanded configure and modules.
 ./configure  \
     --prefix=${INS_PATH}/nginx \
