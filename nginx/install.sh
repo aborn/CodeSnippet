@@ -14,7 +14,7 @@
 ###############################################################
 
 ## download the latest version 1.4.5 (2014-2-11)
-## wget http://nginx.org/download/nginx-1.4.5.zip
+## wget http://nginx.org/download/nginx-1.4.5.tar.gz
 ## unzip nginx-1.4.5.zip
 
 ## iUser="`whoami`"
