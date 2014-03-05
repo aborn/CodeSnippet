@@ -24,7 +24,6 @@ class mysql2redis
     public function __construct()
     {
         $this->iredis = new iredis();
-        
         $this->mysql = new dbops();
     }
 
@@ -34,15 +33,23 @@ class mysql2redis
             $this->mysql->close();
     }
 
+    public function tabsize($tabname)
+    {
+        $sql = sprintf("select idx, count(idx) as total from %s", $tabname);
+        $rs=$this->mysql->tabsize($sql);
+        $no=$rs->fetch_row();
+        return $no[1];
+    }
+
     public function bench($items_number, $bench='bench')
     {   ## 测试前创建数据表格操作
-##        $del_sql = sprintf("delete from %s where idx>0;", $bench);
+        ## $del_sql = sprintf("delete from %s where idx>0;", $bench);
         $del_sql = sprintf("delete from %s;", $bench);
         $this->mysql->query($del_sql);
-##        $this->mysql->query("select * from bench;");
+        ## $this->mysql->query("select * from bench;");
         for ($i=0; $i < $items_number; $i++)
         {
-            $value = sprintf("(%d,\"name%d\",\"%s\")", $i, $i, $bench);
+            $value = sprintf("(%d,%d,\"name%d\",\"%s\")", $i, $i+1, $i, $bench);
             $insert_sql = sprintf("insert into %s values%s;",$bench,$value);
             $this->mysql->query($insert_sql);
         }

@@ -25,7 +25,8 @@ class iredis
     public function __construct()
     {
         $this->redis = new redis();
-        $this->redis->pconnect($this->redis_server, $this->redis_port);
+        $this->redis->connect($this->redis_server, $this->redis_port);
+        ## $this->redis->pconnect($this->redis_server, $this->redis_port);
     }
 
     public function __destruct() 
@@ -57,6 +58,11 @@ class iredis
     public function close()
     {
         $this->redis->close();
+    }
+
+    public function select($database=0)
+    {
+        $this->redis->select($database);
     }
     
     public function append($key, $value)

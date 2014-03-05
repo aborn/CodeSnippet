@@ -29,9 +29,10 @@ class looptest
             $ops = new dbops();
             $ops->setTBname($tbname);
             $ops->setDBname($dbname);
+            ##$start=$i*rand(1,950);  # more then 2w
             $start=$i*128;
-            $conditions = sprintf("idx > %d and idx < %d;", 
-                                  $start, $start + 1000);
+            $conditions = sprintf ("idx > %d and idx < %d;", 
+                                  $start, $start+1000);
             $sql = sprintf("select * from %s where %s", 
                            $tbname, $conditions);
             $data = $ops->query($sql);

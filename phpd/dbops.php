@@ -33,6 +33,11 @@ class dbops {
         }
     }
 
+    public function tabsize($sql)
+    {
+        return $this->mysqli->query($sql);
+    }
+    
     public function query($sql)
     {
         if ($this->connect()) {

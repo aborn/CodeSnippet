@@ -6,6 +6,7 @@
 
 #require_once('mysql_info.php');
 require_once('dbops.php');
+require_once('iredis.php');
 
 echo "数据库测试页面\n <br/>";
 date_default_timezone_set('PRC');
@@ -60,10 +61,11 @@ echo "<br/>";
 echo "<br/>";
 
 echo "follow test redis:";
-$redis = new redis();  
-$result = $redis->connect('127.0.0.1', 6379);  
+$redis = new iredis();  
+$result = $redis->configure('127.0.0.1', 6379);  
 #var_dump($result); //结果：bool(true)  
-$redis->set('test', 'hello world!');
+#$redis->set('test', 'hello world!');
+#$redis->select(1);
 echo $redis->get('test');
 
 ?>

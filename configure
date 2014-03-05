@@ -7,6 +7,21 @@
 # USAGE
 #   ./configure     -- configure local machine
 #   ./configure -c  -- collect local configure files 
+#
+# NOTE
+#    check $PATH include
+#         /usr/local/sbin
+#         /usr/local/bin
+#         /usr/sbin
+#         /usr/bin
+#         /sbin
+#         /bin
+#  
+#  AUTHOR
+#     Aborn Jiang (aborn.jiang@gmail.com)
+#  
+#  VERSION
+#    v0.1    2014-03-04
 ###############################################################
 ABSPATH=$(dirname $0)
 cd ${ABSPATH}
