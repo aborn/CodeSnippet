@@ -24,6 +24,13 @@ class iredis
     
     public function __construct()
     {
+        if (!extension_loaded('redis')) {                                                                                                                              
+            ##echo "no load!";
+            if (!dl('redis.so')) {
+                exit;
+            }
+        }
+
         $this->redis = new redis();
         $this->redis->connect($this->redis_server, $this->redis_port);
         ## $this->redis->pconnect($this->redis_server, $this->redis_port);
