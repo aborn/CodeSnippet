@@ -9,9 +9,15 @@
 
     <?php include('navbar.html'); ?>
 
-    <?php
+    <div class="container">
+      <div class="starter-template">
+
+       <?php
         require_once('redis_action.php');
        ?>
+
+        </div>
+      </div>
 
      </body>
      </html>

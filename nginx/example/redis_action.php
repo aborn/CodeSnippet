@@ -6,16 +6,18 @@ require_once('iredis.php');
 
 function judge($status, $cmd)
 {    if ($status==0 || $status == true) {
-        echo "<br/>";
+        echo "<p class=\"lead\">";
         echo $cmd." success.";
+        echo "<p/>";
     } else {
-        echo "<br/>";
+        echo "<p class=\"lead\">";
         echo $cmd." failed.";
-        var_dump($status);
+        echo "<p/>";
+#        var_dump($status);
     }
 }
 
-echo "下面为测试redis的php接口类iredis的各种命令.";
+echo "<h1>下面为测试redis的php接口类iredis的各种命令.</h1>";
 
 $rf = new iredis();
 
