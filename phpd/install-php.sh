@@ -16,9 +16,10 @@
 
 ## !!! warning=> please install php-deps before !!!
 ## wget http://cn2.php.net/distributions/php-5.5.9.tar.gz
+INSPATH="/home/aborn/php5"
 make clean;
 ./configure \
-	--prefix=/home/vagrant/php5 \
+	--prefix=${INSPATH} \
     --with-config-file-path=/home/vagrant/php5/etc \
     --with-curl \
     --with-pear \
