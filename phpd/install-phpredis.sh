@@ -14,3 +14,13 @@ make install
 ## then  add two lines in php5/etc/php.in
 # extension=redis.so
 # extension_dir = "/home/aborn/php5/lib/php/extensions/no-debug-non-zts-20121212"
+
+## if occurs 
+## Fatal error: Class 'redis' not found
+## please use follow in php code
+if (!extension_loaded('redis')) {                                     
+	##echo "no load!";
+	if (!dl('redis.so')) {
+		exit;
+	}   
+}  

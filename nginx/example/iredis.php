@@ -24,7 +24,7 @@ class iredis
     
     public function __construct()
     {
-        if (!extension_loaded('redis')) {                                                                                                                              
+        if (!extension_loaded('redis')) {
             ##echo "no load!";
             if (!dl('redis.so')) {
                 exit;
