@@ -40,6 +40,9 @@ server and desktop.
 9. .rc  
    .rc project contains lots of system configure files, like .vimrc
    .bashrc etc.
+
+10. bs
+   a customize bootstrap front-end framework for webpage.
    
 ## AUTHOR
 Aborn Jiang (aborn.jiang@gmail.com)
@@ -53,3 +56,4 @@ Aborn Jiang (aborn.jiang@gmail.com)
 * 2014-02-14 v0.6 (add phpd subrepo files)
 * 2014-02-19 v0.7 (add sql subrepo files)
 * 2014-02-20 v1.0 (add doc and kit and rename as popkit project)
+* 2014-03-06 v1.1 (add bs subrepo)
