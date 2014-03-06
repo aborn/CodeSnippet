@@ -1,0 +1,6 @@
+[Server]  
+name=rhel5server  
+baseurl=file:///media/rhel59/Server  
+enable=1  
+gpgcheck=1  
+gpgkey=file:///media/rhel59/RPM-GPG-KEY-redhat-release 

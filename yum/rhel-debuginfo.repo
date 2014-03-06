@@ -1,0 +1,6 @@
+[rhel-debuginfo]
+name=Red Hat Enterprise Linux $releasever - $basearch - Debug
+baseurl=ftp://ftp.redhat.com/pub/redhat/linux/enterprise/$releasever/en/os/$basearch/Debuginfo/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release

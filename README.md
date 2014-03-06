@@ -43,6 +43,9 @@ server and desktop.
 
 10. bs
    a customize bootstrap front-end framework for webpage.
+
+11. yum
+   redhat yum configure
    
 ## AUTHOR
 Aborn Jiang (aborn.jiang@gmail.com)
@@ -57,3 +60,4 @@ Aborn Jiang (aborn.jiang@gmail.com)
 * 2014-02-19 v0.7 (add sql subrepo files)
 * 2014-02-20 v1.0 (add doc and kit and rename as popkit project)
 * 2014-03-06 v1.1 (add bs subrepo)
+* 2014-03-06 v1.2 (add yum subrepo)

@@ -19,3 +19,9 @@ libmcrypt-dev  libjpeg-dev  libpng12-dev \
 libxpm-dev  libfreetype6-dev libt1-dev \
 libmcrypt-dev libmysql++-dev libxslt1-dev
 
+## for redhat 5.9
+sudo yum install libmcrypt libmcrypt-devel -y
+sudo yum install t1lib t1lib-devel -y
+
+## for yum software source
+## wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el5.rf.x86_64.rpm
