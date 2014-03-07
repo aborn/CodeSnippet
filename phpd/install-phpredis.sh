@@ -20,6 +20,9 @@ make install
 ## step 4. setting php.ini, add follow two lines in php5/etc/php.ini
 # extension=redis.so
 # extension_dir = "/home/aborn/php5/lib/php/extensions/no-debug-non-zts-20121212"
+## after that you should check out the phpredis extension module, using 
+#  php -m |grep redis
+
 
 ## step 5. if possible
 ## if occurs  
