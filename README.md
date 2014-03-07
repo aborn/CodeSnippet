@@ -46,6 +46,9 @@ server and desktop.
 
 11. yum
    redhat yum configure
+
+12. redis
+    install redis and configure proxy
    
 ## AUTHOR
 Aborn Jiang (aborn.jiang@gmail.com)
@@ -61,3 +64,4 @@ Aborn Jiang (aborn.jiang@gmail.com)
 * 2014-02-20 v1.0 (add doc and kit and rename as popkit project)
 * 2014-03-06 v1.1 (add bs subrepo)
 * 2014-03-06 v1.2 (add yum subrepo)
+* 2014-03-07 v1.3 (add redis)
