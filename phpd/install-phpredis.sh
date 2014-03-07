@@ -36,3 +36,9 @@ make install
 #		exit;
 #	}   
 #}  
+
+## step 6. install phpRedisAdmin, 
+##    first you show change your directory
+git clone https://github.com/ErikDubbelboer/phpRedisAdmin.git
+cd phpRedisAdmin                                                                                                                                               
+git clone https://github.com/nrk/predis.git vendor
