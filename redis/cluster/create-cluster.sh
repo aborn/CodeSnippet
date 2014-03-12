@@ -28,5 +28,5 @@ TRIBPATH="/home/vagrant/sw/redis-3.0.0-beta1/src"
 SLAVES=$(cat slaves.node |grep -v '#')
 
 ## boot redis-cluster using redis-trib.rb
-# ${TRIBPATH}/redis-trib.rb create --replicas 1 ${SLAVES}
+${TRIBPATH}/redis-trib.rb create --replicas 1 ${SLAVES}
 echo $SLAVES
