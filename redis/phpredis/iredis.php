@@ -1,3 +1,4 @@
+
 <?php
   /***
    * INTRO:
@@ -8,12 +9,15 @@
    *   2014-03-12  1.1   add extension_loaded if possible
    *
    * NOTE
-   *   You should install phpredis first from
-   *   https://code.google.com/p/phpredis/  or
-   *   https://github.com/nicolasff/phpredis
+   *   You should install phpredis first from https://code.google.com/p/phpredis/  
+   *   or https://github.com/nicolasff/phpredis
    *
    * AUTHOR:
    *   Aborn Jiang
+   * 
+   * ISSUES
+   *   if ipis error ex. 192.168.0.23, redis->connect will spend
+   *   lots of time. this is a bug in phpredis?
    *
    ***/
 
@@ -21,7 +25,8 @@ class iredis
 {
     private $redis;
     private $redis_server = '127.0.0.1';
-    private $redis_port = '6379';
+    private $redis_port = 6379;
+    private $status = TRUE;          ## connection status, TRUE or FALSE
     
     public function __construct()
     {
@@ -33,19 +38,38 @@ class iredis
         }
 
         $this->redis = new redis();
-        $this->redis->connect($this->redis_server, $this->redis_port);
-        ## $this->redis->pconnect($this->redis_server, $this->redis_port);
+        
+        $this->status=$this->redis->connect($this->redis_server, 
+                                            $this->redis_port);
+        echo "!!$this->status!!";
+        ## $this->status=$this->redis->pconnect($this->redis_server, $this->redis_port);
     }
 
     public function __destruct() 
     {
-        $this->redis->close();
+        if ($this->status)    ## when the server is open
+        {
+            $this->redis->close();
+        }
+    }
+
+    public function getStatus()
+    {
+        return $this->status;
     }
 
     public function configure($redis_server, $redis_port)
     {
         $this->redis_server = $redis_server;
         $this->redis_port = $redis_port;
+        $this->status=$this->redis->connect($this->redis_server, 
+                                            $this->redis_port);
+        return $this->status;
+    }
+
+    public function ping()
+    {
+        return $this->redis->ping();
     }
     
     public function set($key, $value)
