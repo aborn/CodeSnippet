@@ -3,7 +3,8 @@
 # clear all instances for clustering
 #################################################
 
-for (( i=0; i<6; i++ ))
+nodes=6
+for (( i=0; i<${nodes}; i++ ))
 do 
     port=$(( i+7000 ))
     echo "warning: clear an instance, its port=${port}"
