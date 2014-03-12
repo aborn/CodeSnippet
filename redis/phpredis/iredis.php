@@ -4,18 +4,18 @@
    * INTRO:
    *   This class provides an interface to redis.
    *
-   * VERSION
-   *   2014-02-27  1.0
-   *   2014-03-12  1.1   add extension_loaded if possible
-   *
    * NOTE
    *   You should install phpredis first from https://code.google.com/p/phpredis/  
    *   or https://github.com/nicolasff/phpredis
    *
+   * VERSION
+   *   2014-02-27  1.0
+   *   2014-03-12  1.1   add extension_loaded if possible
+   *
    * AUTHOR:
    *   Aborn Jiang
    * 
-   * ISSUES
+   * ISSUES:
    *   if ipis error ex. 192.168.0.23, redis->connect will spend
    *   lots of time. this is a bug in phpredis?
    *
