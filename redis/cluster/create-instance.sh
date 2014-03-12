@@ -28,7 +28,14 @@ fi
 echo "instance port is $1"
 mkdir -p $PORT
 cd $PORT
-cat ../redis-template.conf |sed -e "s/PORTVALUE/${PORT}/g" > redis.conf
+
+cpath=`pwd`
+pidpathsed="${cpath}/redis.pid"
+pidpath=$(echo ${pidpathsed} |sed -e 's/\//\\\//g' ) 
+
+echo "pidpath=${pidpathsed}"
+cat ../redis-template.conf |sed -e "s/PORTVALUE/${PORT}/g" \
+    | sed -e "s/PIDFILEPATH/${pidpath}/g" > redis.conf
 
 ## boot-up the instance
 
