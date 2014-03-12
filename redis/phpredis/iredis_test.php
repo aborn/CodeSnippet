@@ -21,9 +21,8 @@ echo "下面为测试redis的php接口类iredis的各种命令.";
 
 $rf = new iredis();
 $ipaddr='192.168.122.10';
-#$ipaddr='127.0.0.1';
 $port=7000;
-#$status=$rf->configure($ipaddr, $port);
+$status=$rf->configure($ipaddr, $port);
 
 if ($rf->getStatus()) 
 {
