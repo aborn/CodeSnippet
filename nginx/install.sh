@@ -41,6 +41,7 @@ cp ${DPS_PATH}/memcached-1.4.17/configure ${DPS_PATH}/memcached-1.4.17/config
     --user=${iUser} --group=${iUser} \
     --with-http_ssl_module \
     --with-http_stub_status_module \
+    --with-google_perftools_module \
     --with-pcre=${DPS_PATH}/pcre-8.34 \
     --with-zlib=${DPS_PATH}/zlib-1.2.8 \
     --with-openssl=${DPS_PATH}/openssl-1.0.1c  

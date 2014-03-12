@@ -1,7 +1,7 @@
 
 <?php
   /***
-   * INTRO:
+   * INTRO
    *   This class provides an interface to redis.
    *
    * DEPENDS
@@ -13,10 +13,10 @@
    *   2014-02-27  1.0
    *   2014-03-12  1.1   add extension_loaded if possible
    *
-   * AUTHOR:
+   * AUTHOR
    *   Aborn Jiang
    * 
-   * ISSUES:
+   * ISSUES
    *   if ipis error ex. 192.168.0.23, redis->connect will spend
    *   lots of time. this is a bug in phpredis?
    *
