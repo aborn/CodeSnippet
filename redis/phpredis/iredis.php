@@ -4,7 +4,8 @@
    * INTRO:
    *   This class provides an interface to redis.
    *
-   * NOTE
+   * DEPENDS
+   *   phpredis
    *   You should install phpredis first from https://code.google.com/p/phpredis/  
    *   or https://github.com/nicolasff/phpredis
    *
@@ -36,12 +37,9 @@ class iredis
                 exit;
             }
         }
-
         $this->redis = new redis();
-        
         $this->status=$this->redis->connect($this->redis_server, 
                                             $this->redis_port);
-        echo "!!$this->status!!";
         ## $this->status=$this->redis->pconnect($this->redis_server, $this->redis_port);
     }
 
