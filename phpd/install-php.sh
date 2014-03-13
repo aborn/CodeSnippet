@@ -68,3 +68,9 @@ make install
 # sudo cp sapi/fpm/php-fpm.conf.in /home/vagrant/php5/etc/php-fpm.conf 
 # modify etc/php-fpm.conf at line 148/149 with current usr and group
 # boot up php: sudo ./sbin/php-fpm 
+
+# modify etc/php.ini
+#    enable_dl = On
+#    add extension=redis.so
+#    extension_dir = "/home/vagrant/php5/lib/php/extensions/no-debug-non-zts-20121212/"
+# base on your env
