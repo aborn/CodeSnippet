@@ -27,7 +27,7 @@ class iredis
     private $redis;
     private $redis_server = '127.0.0.1';
     private $redis_port = 6379;
-    private $status = TRUE;          ## connection status, TRUE or FALSE
+    private $status = FALSE;          ## connection status, TRUE or FALSE
     
     public function __construct()
     {
