@@ -74,3 +74,6 @@ make install
 #    add extension=redis.so
 #    extension_dir = "/home/vagrant/php5/lib/php/extensions/no-debug-non-zts-20121212/"
 # base on your env
+
+# modify date.timezone, about in line 923
+#    date.timezone = "Asia/Shanghai"
