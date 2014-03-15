@@ -10,7 +10,13 @@ $options = array(
 
 $rediska = new Rediska($options);
 
-$rediska = Rediska_Manager::get('cache');
+$rediska = Rediska_Manager::get('default');
 print $rediska->getName(); #=> cache
+
+$keyName = "key0";
+$key = new Rediska_Key($keyName);
+$key->setValue("zzzzzzzzzzzzz");
+
+
 
 ?>

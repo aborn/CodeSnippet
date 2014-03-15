@@ -1,11 +1,29 @@
 <?php
-$options = array(
-   'namespace' => 'Application_',
-   'servers'   => array(
-       array('host' => '127.0.0.1', 'port' => 6379, 'alias' => '9'),
-       array('host' => '127.0.0.1', 'port' => 6380, 'alias' => '0')
-   )
- );
+  /***
+   * INTRO
+   *    The class provides an universal interface 
+   *    for call distributed redis system 
+   *
+   * DATE
+   *    2014-03-15
+   */
+
+class  dredis
+{
+    $options = array(
+        'namespace' => 'Application_',
+        'servers'   => array(
+            array('host' => '127.0.0.1', 'port' => 6379, 'alias' => 'mas01'),
+            array('host' => '127.0.0.1', 'port' => 6380, 'alias' => 'ins01')
+            array('host' => '127.0.0.1', 'port' => 6380, 'alias' => 'ins02')
+            array('host' => '10.8.8.10', 'port' => 6380, 'alias' => 'sla01')
+            array('host' => '10.8.8.10', 'port' => 6380, 'alias' => 'ins03')
+            array('host' => '10.8.8.10', 'port' => 6380, 'alias' => 'ins04')
+            )
+        );
+
+}
+
 
 require_once '/vagrant_data/data/rediska/library/Rediska.php';
 $rediska = new Rediska($options);
