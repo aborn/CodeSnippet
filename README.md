@@ -49,6 +49,9 @@ server and desktop.
 
 12. redis
     install redis and configure proxy
+
+13. conkeror
+    web emacs style browser
    
 ## AUTHOR
 Aborn Jiang (aborn.jiang@gmail.com)
@@ -65,3 +68,4 @@ Aborn Jiang (aborn.jiang@gmail.com)
 * 2014-03-06 v1.1 (add bs subrepo)
 * 2014-03-06 v1.2 (add yum subrepo)
 * 2014-03-07 v1.3 (add redis)
+* 2014-03-16 v1.4 (add conkeror)

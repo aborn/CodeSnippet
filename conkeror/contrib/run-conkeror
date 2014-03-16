@@ -1,0 +1,38 @@
+#! /bin/sh
+
+# (C) Copyright 2008-2010 John J. Foerch
+#
+# Use, modification, and distribution are subject to the terms specified in the
+# COPYING file.
+
+# This bash script can be used to launch conkeror on *nix systems that
+# support symlinking.  Create a symlink to this script in a directory
+# in your executable search path.
+#
+# For example:
+#
+#   sudo ln -s /path/to/conkeror/contrib/run-conkeror /usr/local/bin/conkeror
+#
+
+## locate conkeror
+thisscript=$(readlink -f "$0")
+contrib=${thisscript%/*}
+conkeror=${contrib%/*}
+
+## locate xulrunner
+versions=${CONKEROR_XULRUNNER_VERSION:-$(grep -h '^\[' "$HOME"/.gre.d/*.conf /etc/gre.d/*.conf 2>/dev/null \
+    | sed -e 's/^\[\(.*\)\]/\1/' \
+    | sort -urV)}
+for version in ${versions}; do
+    xrdir=$(grep -Fxh -A2 -m1 "[$version]" "$HOME"/.gre.d/*.conf /etc/gre.d/*.conf 2>/dev/null |\
+            grep GRE_PATH |\
+            cut -d= -f2)
+    xulrunner="${xrdir%/}/xulrunner"
+    if [ -x "$xulrunner" ]; then
+        exec "$xulrunner" "$conkeror"/application.ini "$@"
+    fi
+done
+
+## if we get this far, we didn't find xulrunner
+echo "$0: cannot continue. XULRunner not found." >&2
+exit 1

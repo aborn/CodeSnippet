@@ -1,0 +1,14 @@
+content  conkeror                file:../modules/
+
+content  conkeror-gui            file:../content/
+skin     conkeror-gui   default  file:../style/
+locale   conkeror-gui   en-US    file:../locale/en-US/
+
+content  conkeror-help           file:../help/
+content  conkeror-contrib        file:../contrib/modules/
+content  conkeror-test           file:../tests/
+
+content  branding                file:../branding/content/
+locale   branding       en-US    file:../branding/
+
+override chrome://global/locale/netErrorApp.dtd chrome://conkeror-gui/locale/netErrorApp.dtd

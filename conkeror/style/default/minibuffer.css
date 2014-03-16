@@ -1,0 +1,92 @@
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#minibuffer {
+  border-top: 1px solid -moz-Dialog;
+  -moz-box-align: baseline;
+}
+
+#minibuffer-input {
+  background-color: -moz-field !important;
+}
+
+#minibuffer-input .textbox-input-box {
+  width: 5em;
+}
+
+#minibuffer-input [anonid="annotation"] {
+  font-style: oblique;
+}
+
+#minibuffer-input [anonid="strut"] {
+  padding-right: 1em !important;
+}
+
+/* mode text widgets */
+
+#minibuffer .mode-text-widget {
+  display: none;
+}
+
+#minibuffer[minibuffermode="message"] .mode-text-widget {
+  display: block;
+  border-left: 1px solid threedshadow;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+#minibuffer[minibuffermode="message"] .mode-text-widget[value=""] {
+  display: none;
+}
+
+
+/* minibuffer highlighting */
+
+#minibuffer.highlight {
+  background-color: Highlight;
+  color: HighlightText;
+}
+
+#minibuffer.highlight[minibuffermode="message"] .mode-text-widget {
+  border-left: 1px solid highlighttext;
+}
+
+
+/* Completions display */
+
+tree.completions { margin: 0px !important; }
+
+tree.completions treechildren { border: none !important; }
+
+tree.completions treecol { -moz-binding: none !important; }
+tree.completions {
+  -moz-appearance: none !important;
+  border: 0px none !important;
+  border-top: 1px solid -moz-Dialog !important;
+  -moz-border-top-colors: -moz-initial !important;
+}
+
+tree.completions treechildren::-moz-tree-row {
+  border: none;
+}
+
+tree.completions treechildren::-moz-tree-row(current) {
+  background-color: Highlight !important;
+  color: HighlightText !important;
+}
+
+tree.completions treechildren::-moz-tree-cell-text(completion-description) {
+  font-weight: bold !important;
+}
+
+tree.completions treechildren::-moz-tree-cell-text(current) {
+  color: HighlightText !important;
+}
+
+tree.completions[hasicons="true"] treechildren::-moz-tree-image {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}

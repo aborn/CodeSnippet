@@ -1,0 +1,13 @@
+conkeror for Debian
+-------------------
+
+The conkeror package is split up into two packages:
+
++ conkeror including all the non-architecture-specific files. This
+  package is sufficient to run conkeror but you may not be able to
+  spawn external commands like editors, etc.
+
++ conkeror-spawn-process-helper including the helper binary
+  conkeror-spawn-helper (formerly spawn-process-helper)
+
+ -- Axel Beckert <abe@deuxchevaux.org>, Sun,  1 Feb 2009 20:48:59 +0100

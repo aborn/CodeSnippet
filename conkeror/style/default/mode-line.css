@@ -1,0 +1,13 @@
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.mode-line {
+  padding: 2px;
+  -moz-appearance: toolbar;
+  -moz-box-align: center;
+  overflow: hidden;
+}
+
+.mode-line label[value=""] {
+  display: none;
+}

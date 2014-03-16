@@ -1,0 +1,32 @@
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#tab2-bar {
+  border-bottom: 1px solid threedshadow;
+}
+
+.tab2 {
+    -moz-appearance: tab;
+    -moz-box-align: center;
+    min-width: 10em;
+    max-width: 15em;
+}
+
+.tab2-label {
+    -moz-box-flex: 100;
+    margin-left: 4pt;
+    padding-top: 1pt;
+}
+
+.tab2-index {
+    padding: 0pt 2pt 0pt 3pt;
+    font-weight: 900;
+    text-align: center;
+}
+
+.tab2-icon  {
+  width: 16px;
+  height: 16px;
+  -moz-margin-start: 4pt;
+  -moz-margin-end: 3pt;
+}

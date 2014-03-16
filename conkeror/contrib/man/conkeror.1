@@ -1,0 +1,96 @@
+.\" This man page was created following the guidelines in GROFF_MDOC(7).
+.Dd $Mdocdate: Novermber 3, 2013 $
+.Dt CONKEROR 1
+.Os
+.Sh NAME
+.Nm Conkeror
+.Nd a keyboard-oriented, highly-customizable web browser
+.Sh SYNOPSIS
+.Nm conkeror
+.Op Ar options ...
+.Op Ar url
+.Sh DESCRIPTION
+.Nm
+is a keyboard-oriented, highly-customizable, highly-extensible web browser based
+on Mozilla XULRunner, written mainly in JavaScript, and inspired by Emacs and
+vi.
+.Nm
+features a sophisticated keyboard system, allowing users to run
+commands and interact with content in powerful and novel ways. It is
+self-documenting, featuring a powerful interactive help system.
+.Pp
+The primary documentation is the inline manual.  To read the manual use the key
+combination C-h i (CTRL-h i).  The manual includes a tutorial for new users that
+can be accessed directly with C-h t (CTRL-h t).  The
+.Nm
+wiki, found at
+http://conkeror.org/, is another resource.
+.Sh OPTIONS
+.Nm
+has the same options as all other XULRunner applications plus a few more.
+.Pp
+X11 options
+.Bl -tag -width indent
+.It \fB\-\-display=DISPLAY\fR
+X display to use
+.It \fB\-\-sync\fR
+Make X calls synchronous
+.It \fB\-\-g\-fatal\-warnings\fR
+Make all warnings fatal
+.El
+.Bl -tag -width indent
+.Pp
+.Nm
+options
+.It \fB\-h\fR or \fB\-help\fR
+Print this message
+.It \fB\-v\fR or \fB\-version\fR
+Print conkeror version
+.It \fB\-P <profile>\fR
+Start with <profile>
+.It \fB\-migration\fR
+Start with migration wizard
+.It \fB\-ProfileManager\fR
+Start with ProfileManager
+.It \fB\-no\-remote\fR
+Do not accept or send remote commands; implies \-new\-instance
+.It \fB\-new\-instance\fR
+Open new instance, not a new window in running instance
+.It \fB\-UILocale <locale>\fR
+Start with <locale> resources as UI Locale
+.It \fB\-safe\-mode\fR
+Disables extensions and themes for this session
+.It \fB\-jsconsole\fR
+Open the Error console
+.It \fB-recording <file>\fR
+Record drawing for a given URL
+.It \fB\-recording\-output <file>\fR
+Specify destination file for a drawing recording
+.El
+.Sh KNOWN BUGS
+See http://bugs.conkeror.org/.
+.Sh FILES
+The default location of the user configuration file is \fI$HOME/.conkerorrc\fP.
+.Pp
+This can be changed by setting the preference \fBconkeror.rcfile\fP. The rc can
+be an ordinary file or a directory. If it is an ordinary file,
+.Nm
+will evaluate that file as javascript. If it is a directory,
+.Nm
+will evaluate all files in that directory that have the \fI.js\fP file
+extension.  See \fIhttp://conkeror.org/ConkerorRC\fP for the details.
+.Sh SEE ALSO
+The
+.Nm
+manual (C-h i), tutorial (C-h t) and wiki (http://conkeror.org/).
+.Sh AUTHORS
+.Nm
+was written by Shawn Betts, John J. Foerch, Jeremy Maitin-Shepard and
+others. See the \fBCREDITS\fP file included with
+.Nm
+for a full list of contributors.
+.Pp
+The
+.Nm
+manual page was originally written by Axel Beckert <abe@deuxchevaux.org>
+and updated by Joseph Mingrone <jrm@ftfl.ca>.

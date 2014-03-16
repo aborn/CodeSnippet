@@ -1,0 +1,465 @@
+conkeror (1.0~~pre+git140115-1) UNRELEASED; urgency=low
+
+  * New upstream snapshot
+  * Add support for xulrunner 28.
+  * Reformat debian/control in wrap-and-sort style.
+  * Bump Standards-Version to 3.9.5 (no changes).
+
+ -- Axel Beckert <abe@debian.org>  Sun, 17 Nov 2013 14:43:47 +0100
+
+conkeror (1.0~~pre+git131116-1) unstable; urgency=low
+
+  * New upstream snapshot
+    + Fixes scroll-top-left issue (Closes: #726245)
+  * Add support for xulrunner 26 and 27.
+  * Follow Debian Unstable and switch default xulrunner dependency from 17
+    to 24.
+
+ -- Axel Beckert <abe@debian.org>  Sat, 16 Nov 2013 17:38:11 +0100
+
+conkeror (1.0~~pre+git130817-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Add support for xulrunner 25.
+
+ -- Axel Beckert <abe@debian.org>  Sat, 17 Aug 2013 15:42:01 +0200
+
+conkeror (1.0~~pre+git130522-2) unstable; urgency=low
+
+  * Add support for xulrunner 24.
+
+ -- Axel Beckert <abe@debian.org>  Sat, 06 Jul 2013 22:13:48 +0200
+
+conkeror (1.0~~pre+git130522-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Upload to unstable again
+  * Add support for xulrunner 23
+  * Make xulrunner-17.0 the default xulrunner dependency as that's the
+    version currently in Debian unstable.
+
+ -- Axel Beckert <abe@debian.org>  Thu, 06 Jun 2013 02:09:43 +0200
+
+conkeror (1.0~~pre+git130407-1) experimental; urgency=low
+
+  * New upstream snapshot
+    - Properly passes CFLAGS, fully enables dpkg build flags
+  * Add support for xulrunner 18 to 22 (Closes: #699239)
+  * Bump debhelper compatibility to 9
+    - Remove inclusion of buildflags.mk from debian/rules, no more needed
+  * Bump Standards-Version to 3.9.4 (no changes)
+  * Clean up debian/rules:
+    - Use dh_auto_build and dh_auto_clean.
+    - Don't clean up stamp files manually; this is already done by
+      dh_clean plus debhelper compatibility level >= 7.
+    - Use more debhelper magic, no more manual cp, ln, or mkdir.
+    - Finally switch to a dh style debian/rules.
+
+ -- Axel Beckert <abe@debian.org>  Sun, 07 Apr 2013 03:47:35 +0200
+
+conkeror (1.0~~pre+git120901-1) experimental; urgency=low
+
+  * New upstream snapshot
+  * Add support for xulrunner 17
+
+ -- Axel Beckert <abe@debian.org>  Sat, 01 Sep 2012 11:20:23 +0200
+
+conkeror (1.0~~pre+git120804-1) experimental; urgency=low
+
+  * Add support for xulrunner 15 and 16 with according versioned
+    dependencies plus conflicts for earlier package versions (See #683157
+    and https://bugzilla.mozilla.org/show_bug.cgi?id=756786)
+  * Add Lintian overrides for using Conflicts instead of Breaks as
+    Conkeror fails if these versions are just only unpacked.
+  * Use `seq 13.0 -1 5.0` instead of `seq 5.0 13.0 | tac` in conkeror.bin
+
+ -- Axel Beckert <abe@debian.org>  Wed, 08 Aug 2012 02:11:58 +0200
+
+conkeror (1.0~~pre+git120527-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - Update debian patches to fit new module API
+    - Synced debian/NEWS with http://conkeror.org/BreakingChanges
+  * Don't pass locale settings to seq in /usr/bin/conkeror (Closes: #674171)
+  * Update buildd-ports webjump. Thanks Christoph Egger!
+  * Add debpopcon webjump.
+  * Also install new file content-policy.manifest. Thanks Joseph Gay!
+  * Support xulrunner 12.0 and 13.0
+    - Update search list in debian/conkeror.bin
+    - Add alternative dependency on xulrunner-12.0 and xulrunner-13.0
+    - xulrunner-14.0 and newer not yet supported due to
+      https://bugzilla.mozilla.org/show_bug.cgi?id=756786
+  * Make 10.0 (ESR) first xulrunner dependency.
+  * Expand sensible-editor.diff to also patch modules/mime.js, replace
+    hardcoded application names with xdg-open. (Closes: #570086)
+    - Rename patch to sensible-editor-xdg-open.diff
+    - Recommend xdg-utils
+  * Reformat long list of alternative xulrunner dependencies to one
+    alternative per line for better readability and better diffing.
+  * debian/conkeror.bin: Generate long list of consecutive versioned
+    xulrunner binary names with seq and tac.
+  * debian/rules: Enable hardening options for conkeror-spawn-helper
+    - Add build-dependency on dpkg-dev (>= 1.16.1~).
+    - Consistently use "$(MAKE)" instead of "make".
+  * Bump Standards-Version to 3.9.3 (no changes)
+  * Switch source format to "3.0 (quilt)"
+    - Remove quilt usage from debian/rules
+    - Drop build dependency on quilt
+  * Rename debian/NEWS to debian/conkeror.NEWS so it no more gets included
+    in the conkeror-spawn-process-helper package.
+
+ -- Axel Beckert <abe@debian.org>  Sun, 27 May 2012 17:07:33 +0200
+
+conkeror (1.0~~pre+git120102-1) unstable; urgency=low
+
+  [ Axel Beckert ]
+  * Upstream version bump
+  * Upstream changed minimum xulrunner requirement to 1.9.1: Update
+    debian/control and debian/conkeror.bin accordingly.
+  * Reorder xulrunner alternative dependencies so the current xulrunner
+    from unstable (9.0) is chosen by default.
+  * Make package usable on Ubuntu again despite their xulrunner removal.
+    - debian/control: Add alternative dependencies on firefox instead of
+      xulrunner
+    - debian/conkeror.bin: If no xulrunner is found, look for firefox
+      instead
+    - debian/control: Update long description to mention Firefox, too.
+  * Add alternative dependencies on xulrunner-11.0, -10.0, and -9.0.
+  * Support xulrunner 11.0 in debian/conkeror.bin
+
+  [ Luca Capello ]
+  * Support xulrunner 10.0 and 9.0 in debian/conkeror.bin, drop support
+    for unversioned xulrunner binaries. (Closes: #649199)
+
+ -- Axel Beckert <abe@debian.org>  Mon, 02 Jan 2012 20:12:01 +0100
+
+conkeror (0.9.4-1) unstable; urgency=low
+
+  * New upstream milestone
+  * Add support for xulrunner-7.0 and xulrunner-8.0
+  * Reorder xulrunner dependencies in debian/control:
+    + xulrunner-6.0 is the first dependency as that's the highest version
+      currently in Debian unstable.
+    + All other versions are sorted descending by their version, the
+      non-versioned xulrunner being the last one.
+
+ -- Axel Beckert <abe@debian.org>  Sun, 04 Sep 2011 22:32:03 +0200
+
+conkeror (0.9.3+git110719-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - Fullscreen toggling support, use F11 or M-S-Return
+  * Make reportbug helper script to work with any installed xulrunner
+    package. Thanks to Luca Capello!
+  * Change versioned dependency on "xulrunner" to a non-versioned
+    dependency, because xulrunner 1.8 is really history (last seen in
+    Etch) and it should work with a potential virtual "xulrunner"
+    package. (See #567169)
+  * debian/control: Prefer xulrunner-5.0 over xulrunner-1.9.1 as 5.0 is
+    now in unstable and 1.9.1 will probably vanish soon.
+  * Add alternative dependency on xulrunner-6.0 which was missing in the
+    last upload.
+
+ -- Axel Beckert <abe@debian.org>  Tue, 19 Jul 2011 23:13:57 +0200
+
+conkeror (0.9.3+git110602-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Add alternative dependencies on (upcoming) xulrunner-5.0 and -6.0
+    packages
+  * Bump Standards-Version to 3.9.2 (no changes)
+
+ -- Axel Beckert <abe@debian.org>  Fri, 27 May 2011 03:07:21 +0200
+
+conkeror (0.9.3+git110307-2) unstable; urgency=low
+
+  * debian/conkeror.bin: Change search order for searching xulrunner
+    binaries from the confusing current state of "squeeze/sid, (former)
+    experimental, lenny, experimental, generic/sarge" to descending
+    "highest, most specific versions first; lowest, generic versions
+    last", so it should take the newest xulrunner version which is
+    installed.
+
+ -- Axel Beckert <abe@debian.org>  Tue, 08 Mar 2011 16:28:38 +0100
+
+conkeror (0.9.3+git110307-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - Fixes network and SSL error pages under xulrunner-2.0
+
+ -- Axel Beckert <abe@debian.org>  Mon, 07 Mar 2011 18:05:33 +0100
+
+conkeror (0.9.3+git110224-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - Further xulrunner-2.0 fixes
+  * Add missing alternative dependency on xulrunner-2.0 (Thanks to Micah
+    Gersten!)
+  * Also look for xulrunner-2.0 in debian/conkeror.bin aka /usr/bin/conkeror
+
+ -- Axel Beckert <abe@debian.org>  Thu, 24 Feb 2011 19:46:28 +0100
+
+conkeror (0.9.3+git110219-1) unstable; urgency=low
+
+  * The Works-with-2.0 Package
+  * New upstream snapshot
+    - Minor fixes for xulrunner-2.0 support
+  * debian/rules: Include chrome.manifest which is necessary for
+    xulrunner-2.0 support.
+
+ -- Axel Beckert <abe@debian.org>  Sat, 19 Feb 2011 08:02:05 +0100
+
+conkeror (0.9.3+git110213-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - Sorts keybindings and command line options alphabetically. Thanks
+      Jari Aalto for the patches. (Closes: #606878, #606880)
+  * Upload to unstable again since the Squeeze Release Freeze is over.
+
+ -- Axel Beckert <abe@debian.org>  Sun, 13 Feb 2011 14:20:11 +0100
+
+conkeror (0.9.3+git101015-1) experimental; urgency=low
+
+  * New upstream snapshot
+  * Also ship contrib/modules with the binary package to allow usage of
+    the mode line buttons module.
+
+ -- Axel Beckert <abe@debian.org>  Fri, 15 Oct 2010 00:27:47 +0200
+
+conkeror (0.9.3-1) experimental; urgency=low
+
+  * New upstream milestone
+    - Supports XULRunner 2
+    - New minibuffer handling, no more input-modes
+    - Offers a Twitter page mode
+  * Fix (.deb package specific) ubuntubugs webjump
+  * debian/patches/deb-webumps.diff no more modifies
+    defaults/preferences/default-modules.js but creates a new file named
+    defaults/preferences/debian-default-modules.js instead. This should
+    make the patch much more robust against changes in upstream's default
+    modules list. Thanks to John J. Foerch for the suggestion.
+
+ -- Axel Beckert <abe@debian.org>  Wed, 06 Oct 2010 20:59:43 +0200
+
+conkeror (0.9.2+git100804-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Bump Standards-Version to 3.9.1
+    - Use "Breaks" instead of "Conflicts".
+
+ -- Axel Beckert <abe@debian.org>  Wed, 04 Aug 2010 23:04:35 +0200
+
+conkeror (0.9.2+git100420-2) unstable; urgency=low
+
+  * The "forgotten details" upload
+  * Add appropriate NEWS entry with breaking changes for last upload.
+  * Renamed NEWS.Debian in the source package so that it will be
+    automatically installed as NEWS.Debian.
+  * Add "mentions Conkeror in the user agent string" to last changelog entry.
+
+ -- Axel Beckert <abe@debian.org>  Tue, 20 Apr 2010 23:34:00 +0200
+
+conkeror (0.9.2+git100420-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - many xulrunner 1.9.2 compatibility fixes
+    - minibuffer overhaul
+    - mentions "Conkeror" in the user agent string
+
+ -- Axel Beckert <abe@debian.org>  Tue, 20 Apr 2010 17:42:01 +0200
+
+conkeror (0.9.2+git100324-2) unstable; urgency=low
+
+  * Further adaptions of the debian webjumps to the new module system as
+    suggested by John J. Foerch. Includes renaming the webjumps' file from
+    modules/debian/webjumps.js to modules/debian/debian-webjumps.js.
+
+ -- Axel Beckert <abe@debian.org>  Wed, 24 Mar 2010 23:45:50 +0100
+
+conkeror (0.9.2+git100324-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - some minor bug fixes
+  * Refresh quilt patches (should have been done already for the last
+    upload)
+  * Adapt debian webjumps module to new module system (fixes lost default
+    webjumps in the previous upload). Thanks to gzeus for noticing!
+  * Add debian/source/format to silence lintian.
+
+ -- Axel Beckert <abe@debian.org>  Wed, 24 Mar 2010 01:27:57 +0100
+
+conkeror (0.9.2-1) unstable; urgency=low
+
+  * New upstream release
+    - Contains a new module system providing the capability for modules to
+      have their own namespace.
+
+ -- Axel Beckert <abe@debian.org>  Mon, 22 Mar 2010 19:11:32 +0100
+
+conkeror (0.9.1+git100317-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - venkman support
+    - noscript support overhaul, now enabled by default
+    - fixes building conkeror-spawn-process-helper with clang compiler
+    - several new page modes
+    - many cosmetic changes and minor bugfixes
+    - outdated emacswiki webjump removed
+  * [debian/rules] Also install contrib/art
+
+ -- Axel Beckert <abe@debian.org>  Wed, 17 Mar 2010 01:49:54 +0100
+
+conkeror (0.9.1+git100220-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - Honors cmdline.preventDefault as used since xulrunner 1.9.1.6-2
+  * Add support for the reportbug-helper-script of Debian's xulrunner
+    - Raise build-deps to debhelper >= 7.2.3~ due to dh_bugfiles
+  * Add alternative dependency on upcoming experimental xulrunner-1.9.2.
+  * Reorder xulrunner dependencies to have the current and preferred
+    versions first instead of sorting by package name. (Fixes piuparts
+    warning "dependency-does-not-exist".)
+  * Add a lintian override for the non-standard Xb-Xul-AppId header
+  * Removed Luca from the uploaders list (on his request)
+
+ -- Axel Beckert <abe@debian.org>  Sat, 20 Feb 2010 01:07:48 +0100
+
+conkeror (0.9.1+git100131-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Make package working on Ubuntu again by reverting debian/conkeror.bin
+    to not using xulrunner-stub symbolic links anymore since Ubuntu doesn't
+    support this feature. Meh.
+  * Fix new Lintian 2.3.x warnings:
+    - debhelper-but-no-misc-depends
+    - obsolete-relation-form-in-source
+  * Add new Debian related webjumps:
+    - debpopcon
+    - buildd
+    - buildd-ports
+    - debqa
+  * Add Xb-Xul-AppId header to conkeror binary package for use with
+    mozilla-devscripts. (Closes: #562986)
+  * Bumped Standards-Version to 3.8.4 (no changes)
+  * Changed my e-mail address to my debian.org address
+
+ -- Axel Beckert <abe@debian.org>  Sun, 31 Jan 2010 17:52:43 +0100
+
+conkeror (0.9.1-1) unstable; urgency=low
+
+  * New upstream version
+    + Closes: #542252 (YouTube download broken)
+  * Added alternative dependency on xulrunner-1.9.1
+  * Moved from directly calling "xulrunner application.ini" to calling a
+    symlinked xulrunner-stub (symlinking xulrunner-stub only works with
+    Debian's xulrunner-stub, thanks Mike Hommey :-), so that xulrunner can
+    decide which version of xulrunner is actually used.
+  * Refreshed debian/patches/sensible-editor.diff after upstream
+    whitespace changes.
+  * Changed debian/rules to not use the old $CONKEROR_VERSION$ macro
+    anymore.
+  * Do not include the whole contrib subdirectory in the binary
+    package. (Closes: #547896) Only include the xrev debugging tool for
+    now.
+  * A few Debian and Ubuntu webjumps have been added and enabled by
+    default. (Closes: #547908)
+  * Bumped Standards-Version to 3.8.3 (no changes)
+
+ -- Axel Beckert <abe@deuxchevaux.org>  Thu, 24 Sep 2009 02:35:02 +0200
+
+conkeror (0.9~git090624-1) unstable; urgency=low
+
+  * Based on new snapshot (tagged with debian-0.9--git090624-1)
+    - Session saving support has been added, but not loaded by default
+    - Theming support has been removed (native GUI theming should be used
+      instead, e.g. GTK theming)
+  * Bumped Standards-Version to 3.8.2 (no changes)
+  * Replaced deprecated dh_clean -k by dh_prep and bumped debhelper
+    compatibility to 7.
+  * Removed deprecated dh_desktop. May cause not immediately registered
+    .desktop files on Debian Lenny.
+  * Moved MPL from debian/copyright to debian/MPL to allow compression in
+    the installed binary packages (as with the xulrunner-1.9 packages)
+
+ -- Axel Beckert <abe@deuxchevaux.org>  Thu, 25 Jun 2009 01:02:45 +0200
+
+conkeror (0.9~git090223-1) unstable; urgency=low
+
+  * Debian packaging is now hosted in the upstream repository at
+    http://repo.or.cz/w/conkeror.git:
+    - Adjusted the Vcs-* headers in debian/control.
+    - Changed the build id to contain username and hostname instead of
+      commit id.
+  * Based on new snapshot (tagged with debian-0.9--git090223-1)
+    - spawn-process-helper has been renamed upstream to
+      conkeror-spawn-helper -- package names remain unchanged, conflict to
+      earlier versions of conkeror-spawn-process-helper
+    - Links on mouse over images now shown
+    - command switch -uu for universal-arg of following -f command
+  * Added NEWS.Debian to list changes relevant for users.
+  * Added README.source which documents how to build a Debian (source)
+    package from a Git working copy.
+  * Changed licencing of packaging from GPLv2 to the same licencing terms
+    as Conkeror itself.
+  * Updated debian/copyright to reflect current state of the project
+  * man page conkeror.1 now part of upstream.
+  * Added a call to dh_desktop (Thanks, Lintian 2.x!)
+  * Added a description to patches/sensible-editor.diff (Thanks, Lintian 2.x!)
+  * Replaced lintian overrides by an empty watch file with comment.
+
+ -- Axel Beckert <abe@deuxchevaux.org>  Mon, 23 Feb 2009 19:19:19 +0100
+
+conkeror (0.9~git080629-2) unstable; urgency=low
+
+  * Don't suppress conkeror's output if we don't have to change it in the
+    wrapper [conkeror.bin]. (Closes: #498515)
+
+ -- Axel Beckert <abe@deuxchevaux.org>  Thu, 25 Sep 2008 01:40:07 +0200
+
+conkeror (0.9~git080629-1) unstable; urgency=low
+
+  * Based on new snapshot (commit
+    6944096a1af033d0aa70d8b4cc19b271e0d832b1)
+  * Uses now quilt for patch management, added appropriate build-deps.
+  * Use sensible-editor instead of emacs by default.
+  * Changed default desktop icon from "web-browser.png" to
+    "browser". (Closes: #491880; fixes a desktop-file-validate warning)
+  * Made M-x conkeror-version show the Debian version instead of
+    '$CONKEROR_VERSION$'.
+  * Remove suggestion of zile since conkeror currently can't handle
+    text-mode only editors. Suggest the virtual package emacsen instead.
+  * Depends now on "xulrunner (>= 1.9~) | xulrunner-1.9" instead of solely
+    "xulrunner-1.9".
+  * Added a lintian override for debian-watch-file-is-missing since there
+    are no upstream releases to watch (yet).
+
+ -- Axel Beckert <abe@deuxchevaux.org>  Thu, 24 Jul 2008 00:49:28 +0200
+
+conkeror (0.9~git080522-2) unstable; urgency=low
+
+  * Initial release for Debian (Closes: #394566)
+  * Cleaned up and removed files and directories not in the upstream git
+    repository.
+  * Unified file names in the debian directory.
+  * Bumped standards version to 3.8.0.
+  * Removed -height and -width options from man page and --help since them
+    being documented but not working is an open bug in Mozilla since 2000.
+    (See #267344 and https://bugzilla.mozilla.org/show_bug.cgi?id=50201)
+  * Added some more details to the man page.
+  * Added a CREDITS.Debian file.
+  * Added an automatically generated build id to application.ini. (See
+    http://developer.mozilla.org/en/docs/application.ini#The_.5BApp.5D_section)
+  * Added the Debian version to the version string in application.ini.
+  * Added a desktop file for conkeror.
+  * Made several several cosmetic changes to docs, etc.
+  * Added Luca Capello as co-maintainer.
+  * conkeror-spawn-process-helper now suggests conkeror.
+
+ -- Axel Beckert <abe@deuxchevaux.org>  Thu, 26 Jun 2008 01:31:32 +0200
+
+conkeror (0.9~git080522-1) unstable; urgency=low
+
+  * Initial release for beta testers
+  * Based on commit fead87b7fa1156e750dcb01f903e6b8a35e43a37
+
+ -- Axel Beckert <abe@deuxchevaux.org>  Sun, 08 Jun 2008 23:08:34 +0200

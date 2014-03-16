@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   id="main"
+   title="Xulrunner Event Viewer"
+   width="800"
+   height="300"
+   onload="onload_handler();">
+
+<script src="xrev.js"/>
+
+<!-- put a "Quit" item in the OS X Application Menu.  The id
+  "menu_FileQuitItem" on the menuitem is the magic cookie. -->
+<menubar id="menubar" hidden="true">
+  <menu label="xrev" hidden="true">
+    <menupopup>
+      <menuitem
+         id="menu_FileQuitItem"
+         label="Quit Xulrunner Event Viewer"
+         hidden="true"
+         oncommand="quit();"/>
+    </menupopup>
+  </menu>
+</menubar>
+
+<caption>
+Xulrunner Event Viewer is for inspecting keyboard events.
+</caption>
+
+<listbox id="event-table"/>
+
+<textbox/>
+
+</window>

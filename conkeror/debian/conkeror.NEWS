@@ -1,0 +1,422 @@
+conkeror (1.0~~pre+git130407-1) experimental; urgency=low
+
+  * Spellchecking is no longer enabled by default. To allow Gecko to
+    decorate your text boxes with red marks, put the following in your
+    rc: session_pref("layout.spellcheckDefault", 1);
+
+  * The deprecated procedures add_delicious_webjumps and
+    add_lastfm_webjumps have now been removed. Use
+    define_delicious_webjumps and define_lastfm_webjumps instead.
+
+ -- Axel Beckert <abe@debian.org>  Mon, 04 Mar 2013 20:32:59 +0100
+
+conkeror (1.0~~pre+git120527-1) unstable; urgency=low
+
+  * hints-minibuffer-annotation-mode is now enabled by default. To disable:
+
+    hints_minibuffer_annotation_mode(false);
+
+  * Variable hints_display_url_panel removed. Instead of the url-panel,
+    Conkeror now has hints-minibuffer-annotation-mode. To use it:
+
+    hints_minibuffer_annotation_mode(true);
+
+  * buffer_loaded_hook now fires only for the main document of the buffer,
+    not documents in subframes.
+
+  * The test property of page-mode objects is now an array.
+
+  * in_module removed
+
+    The module system introduced 2010-03-19 had a fatal flaw in its
+    design. We have known about this for quite some time, but fixing it
+    was a complex undertaking. Now the 'in_module' procedure has been
+    removed from the program, because it doesn't work, and a new module
+    system has been added, the jsx module system.
+
+    Anybody who has written a module that is not part of Conkeror will
+    need to update their code. Remove uses of 'in_module'. If you only did
+    'in_module(null);' then you can just remove that line and you are
+    done. If you used 'in_module("module_name");' you will need to remove
+    that, and rename your file to have the extension ".jsx". The rest of
+    the filename should match the name of the module, except using hyphens
+    to separate words.
+
+  * skip_module_load removed
+
+  * casual-spelling.js renamed to casual-spelling.jsx
+
+  * The "up-url" browser object will now trim a #ref fragment as one of its
+    steps. New buffers with an opener buffer in the same window open to the
+    right of their opener.
+
+  * build_url_regex renamed to build_url_regexp
+
+  * choice_regex renamed to choice_regexp
+
+  * Call forms of define_buffer_mode and define_page_mode changed.  See
+    http://conkeror.org/WritingBufferModes and
+    http://conkeror.org/WritingPageModes.
+
+  * auto_mode_alist no longer exists.
+
+    The way to deactivate page-modes has changed.
+
+    Instead of the old way of doing complicated array manipulations on
+    'auto_mode_list', the new way is much simpler. If I want to deactivate
+    xkcd-mode for example (make it so it won't automatically turn on when
+    I visit xkcd), I do the following:
+
+    page_mode_deactivate(xkcd_mode);
+
+    The call form to enable or disable a buffer-mode or page-mode in javascript has changed.
+
+    (Note the distinction between 'deactivating' and 'disabling'.) Instead
+    of the mode being a function that takes a flag -1/+1 or true/false
+    (like in emacs), it is now an object with 'enable' and 'disable'
+    methods:
+
+    some_mode.enable(buffer);
+
+    some_mode.disable(buffer);
+
+ -- Axel Beckert <abe@debian.org>  Sun, 27 May 2012 16:37:13 +0200
+
+conkeror (1.0~~pre+git120102-1) unstable; urgency=low
+
+  * clusty webjump removed. clusty no longer exists.
+
+  * The copy command now copies the action attribute of the form when
+    called on a submit button.
+
+  * Google-maps: changed bindings '+' and '-' to 'C-c +' and 'C-c -',
+    because it is poor practice to override basic browsing keys then they
+    are still clearly useful on the site in question.
+
+  * Renamed get_file_in_path to find_file_in_path.
+
+  * Formfill is now enabled by default. To turn it off, do:
+    session_pref("browser.formfill.enable", false);
+
+  * youtube_scrape_function and associated helpers removed.
+
+ -- Axel Beckert <abe@debian.org>  Sun, 27 May 2012 16:37:13 +0200
+
+conkeror (0.9.3+git110307-2) unstable; urgency=low
+
+  The search order for searching xulrunner binaries has been changed
+  since current state became quite confusing:
+  
+  /usr/bin/conkeror first looked for the xulrunner of Squeeze and Sid
+  (1.9.1), then the (former) experimental xulrunner (1.9.2), then the
+  one from Lenny (1.9.0/generic 1.9), then the current one from
+  experimental (2.0), and then for generic ones like the one from
+  Sarge.
+  
+  It now looks first for xulrunner 2.0, then 1.9.2, then 1.9.1, then
+  1.9 (aka 1.9.0) and then for a xulrunner binary without version
+  suffix (as e.g. xulrunner 1.8 from Sarge used to be called). This
+  means it now checks for the highest version first, then checks for
+  lower and less specific versions, taking the generic one as last
+  one.
+  
+  This should be more future-proof and is less Debian-centric,
+  i.e. helps Debian-based distributions which maintain their own
+  xulrunner packages. But it also helps people who have the xulrunner
+  packages from experimental installed as conkeror now uses the xulrunner
+  version from experimental if it is installed.
+
+ -- Axel Beckert <abe@debian.org>  Tue, 08 Mar 2011 16:41:21 +0100
+
+conkeror (0.9.3+git110213-1) unstable; urgency=low
+
+  * The format of the auto-save session file has changed slightly to be
+    more robust. Conkeror automatically converts the file on first usage.
+
+  * In the new-tabs module, the widgets that show the buffer index in each
+    tab now have the class "tab2-index" instead of "tab2-icon". This
+    change affects anybody who has written a theme which styles the
+    new-tabs tab bar.
+
+  * The variable edit_field_in_external_editor_extension has been removed,
+    and superseded by a mime-type table
+    external_editor_extension_overrides which maps mime types to
+    extensions. If you previously used this variable to set the temp file
+    extension to "foo", for example, you would update your rc to now do
+    the following:
+
+      external_editor_extension_overrides.set("text/plain", "foo");
+
+  * The function get_filename_for_current_textfield has been superseded by
+    external_editor_make_base_filename, which takes as its arguments the
+    root element being edited and the top document of the buffer
+    containing the element. The top document is more useful than the
+    element's own ownerDocument in some cases, such as when about:blank is
+    used for the document of an editable iframe. The new function returns
+    only the base filename, with no extension, as the extension is
+    generated by means described above.
+
+  * buffer_favicon_change_hook renamed to buffer_icon_change_hook
+
+  * current_buffer_favicon_change_hook renamed to
+    current_buffer_icon_change_hook
+
+  * reddit-mode is no longer loaded by default. Consensus was that it is a
+    confusing mode, mainly because of how it overrides several default
+    browser objects. If you use this mode, you will now need to load it by
+    putting the following in your rc:
+
+      require("reddit");
+
+  * Module search-engine.js replaced by opensearch.js. API for defining
+    opensearch webjumps has changed to be more conventional. Opensearch
+    webjumps can now be defined like either of the following:
+
+      define_opensearch_webjump("foo", make_file("/opensearch/files/foo.xml"));
+
+      opensearch_load_paths.unshift(make_file("/opensearch/files/"));
+      define_opensearch_webjump("foo", "foo.xml");
+
+  * The browser object browser-object-links, which is used by follow,
+    copy, etc, no longer matches anchors which do not have an href
+    attribute.
+
+ -- Axel Beckert <abe@debian.org>  Sun, 13 Feb 2011 18:47:03 +0100
+
+conkeror (0.9.3+git101015-1) experimental; urgency=low
+
+  * The eval-expression command (M-:) now evaluates directly in
+    application scope. This lets you do things like set user variables and
+    define functions without fully qualifying names with "conkeror.".
+
+  * Page-modes no longer bind alternative keys for keys that they shadow
+    in the normal keymaps. These were bindings like 'C-c f' for follow,
+    etc. The key C-z can now be used as a prefix to access bindings that
+    are shadowed by a page-mode keymap.
+
+ -- Axel Beckert <abe@debian.org>  Fri, 15 Oct 2010 00:29:44 +0200
+
+conkeror (0.9.3-1) experimental; urgency=low
+
+  * Input-modes removed. Instead of an input-mode display in the
+    minibuffer, there is now a keymaps-display.
+
+    - quote-next-input-mode renamed to quote-next-mode
+    - gmail_edit_keymap removed (no longer necessary)
+    - buffer-reset-input-mode command removed (no longer necessary)
+
+  * overlink_mode rewritten
+
+    - content_buffer_overlink_change_hook removed
+    - current_content_buffer_overlink_change_hook removed
+
+  * Hinting now performs a case-sensitive match if the user's text
+    includes upper-case letters.
+
+  * stackoverflow-mode has been renamed to stackexchange-mode.
+
+ -- Axel Beckert <abe@debian.org>  Wed, 06 Oct 2010 21:02:21 +0200
+
+conkeror (0.9.2+git100804-1) unstable; urgency=low
+
+  * Editing in the minibuffer is now done with the normal editing commands
+    instead of a special set of editing commands. All of the editing
+    commands which begin with the prefix "minibuffer-" have been
+    removed. Also, editing commands are now bound in the keymap
+    text_keymap instead of content_buffer_text_keymap and
+    minibuffer_base_keymap. If you have written custom bindings for
+    editing in your rc, you will need to change [pairs of] bindings like
+    this:
+
+      define_key(minibuffer_base_keymap, "C-l", "minibuffer-forward-char");
+      define_key(content_buffer_text_keymap, "C-l", "forward-char");
+
+    to this:
+
+      define_key(text_keymap, "C-l", "forward-char");
+
+  * In hinting mode, right and left are no longer bound to
+    next/previous-hint. Hinting mode now supports editing in the
+    minibuffer, so right and left move the cursor. Down, up, C-n, C-p,
+    C-s, and C-r are all bound to next/previous-hint.
+
+  * Due to a change in Mozilla as of XULRunner 1.9.3a5pre, Conkeror's
+    feature of automatically loading glue code for extensions is no longer
+    possible. This means that when you have one of the previously
+    supported extensions installed, you will no longer automatically have
+    Conkeror commands for using the extension. The extensions that were
+    previously supported in this way were adblockplus, dom-inspector,
+    noscript, and venkman. If you have any of these extensions installed,
+    you will now have to load the glue module from your rc, with a line
+    like the following, substituting in the appropriate module name:
+
+      require("dom-inspector");
+
+    With some of these modules, loading the module when the extension is
+    not installed could result in an error, so to be safe, you could wrap
+    the call to 'require' in a try/catch block:
+
+      try { require("dom-inspector"); } catch (e) {}
+
+    Further information: http://bugs.conkeror.org/issue272
+
+  * The variable download_buffer_automatic_open_target can no longer be an
+    array of two targets. This is a reversion from 2009-06-07 back to how
+    it was before. The behavior of the download-show command is now
+    configured independently of this variable. To configure download-show,
+    use set_handler and alternates. The following handlers are provided:
+    download_show_new_window, download_show_new_buffer,
+    download_show_new_buffer_background. The default handler of
+    download_show is alternates(download_show_new_buffer,
+    download_show_new_window).
+
+ -- Axel Beckert <abe@debian.org>  Wed, 04 Aug 2010 23:04:22 +0200
+
+conkeror (0.9.2+git100420-2) unstable; urgency=low
+
+  * Function load_rc no longer supports loading arbitrary js files. Use
+    load instead.
+
+  * Function load_rc_file removed. Use load instead.
+
+  * call_after_load now takes a feature name, not a filename. In general
+    this simply means trimming off any ".js" extension.
+
+  * Modules API overhaul (already included in 0.9.2-1 and caused the
+    uploads 0.9.2+git100324-1 and -2):
+    - Modules should have an in_module assertion as their first
+      expression. For modules to be loaded directly into application
+      scope, it should be in_module(null);
+    - Modules should have as their last expression a provide call, like
+      provide("feature"); where "feature" is the name of the feature
+      provided by the module.
+
+ -- Axel Beckert <abe@debian.org>  Tue, 20 Apr 2010 23:38:49 +0200
+
+conkeror (0.9.1+git100317-1) unstable; urgency=low
+
+  * emacswiki webjump removed. better version posted on
+    http://conkeror.org/Webjumps
+
+  * M-< and home keys now scroll to the top left corner of the buffer.
+
+  * minibuffer.read_url now returns a load_spec instead of a simple
+    string.
+
+  * The command confirm-quit has been removed. To have a quit
+    confirmation, see the code example on
+    http://conkeror.org/BreakingChanges
+
+ -- Axel Beckert <abe@debian.org>  Wed, 17 Mar 2010 02:04:20 +0100
+
+conkeror (0.9.1+git100131-1) unstable; urgency=low
+
+  Please see http://conkeror.org/BreakingChanges for the complete list of
+  breaking changes. Just the most important ones are listed here.
+  
+  * mime_type_external_handlers removed. Replaced by
+    external_content_handlers.
+  
+  * define_buffer_mode, define_input_mode, and define_page_mode no longer
+    take display_name or doc as positional arguments. They are now given
+    as keyword arguments: $display_name and $doc.
+  
+  * The variable browser_automatic_form_focus_window_duration was renamed
+    to block_content_focus_change_duration.
+  
+  * The commands follow-current, follow-current-new-buffer,
+    follow-current-new-buffer-background, and follow-current-new-window
+    have been removed.
+  
+  * browser_prevent_automatic_form_focus_mode has been renamed and put in
+    its own file. To use this mode, simply do this:
+    require("block-content-focus-change.js");
+
+  * The default of hints_auto_exit_delay has been changed to 0.
+
+    This change means that by default, the user has to hit return to exit
+    the hints interaction. This change makes Conkeror's UI more
+    predictable for new users, less prone to run unintended commands
+    because of extra keystrokes outside the timeout window, and removes
+    assumptions about people's typing speed, browsing style, and focus of
+    attention when using the hints system.
+  
+    To use the hints-auto-exit feature, put a line like the following in
+    your rc, adjusting the number to suit your preference. 500 was the old
+    default.
+
+      hints_auto_exit_delay = 500;
+
+ -- Axel Beckert <abe@debian.org>  Sun, 31 Jan 2010 17:55:04 +0100
+
+conkeror (0.9~git090708-1) unstable; urgency=low
+
+  The conkeror Debian package now works with the upcoming experimental
+  xulrunner-1.9.1 packages (see http://glandium.org/blog/?p=370) in
+  Debian, too.
+  
+  Since conkeror still throws much more warnings with xulrunner 1.9.1 than
+  with 1.9.0.x, for now the package currently prefers 1.9.0.x over 1.9.1
+  if both are installed.
+  
+  Call "xulrunner-1.9.1 /usr/share/conkeror/application.ini" if you have
+  xulrunner-1.9 and xulrunner-1.9.1 installed and want to checkout
+  conkeror in combination with xulrunner 1.9.1.
+
+ -- Axel Beckert <abe@deuxchevaux.org>  Wed, 08 Jul 2009 20:48:36 +0200
+
+conkeror (0.9~git090617-1) unstable; urgency=low
+
+  There were a few changes since the last conkeror version in Debian which
+  may cause troubles to users of the previous version.
+  
+  Short summary follows:
+  * The key bindings `<<` and `>>` are now simply `<` and `>`.
+  * page-mode keymaps are now declared in the `define_page_mode` form with
+    a new keyword argument, `$keymaps`.  See
+    http://conkeror.org/WritingPageModes for more information about the
+    new style.
+  * `default_directory` and `set_default_directory` have been removed and
+    replaced by the variable `cwd`.
+  * buffer-local variables are now indexed by `buffer.local.foo`.
+    page-local variables are indexed by `buffer.page.local.foo`.
+  * The command `send-ret` was removed since it is redundant of the
+    module `global-overlay-keymap`.
+  * Buffer-local cwd is no longer set or inherited automatically.
+  * `download-cancel` is now bound to `d` instead of `C-g`, and it asks
+    for confirmation.
+  * In order to make Conkeror compatible with native toolkit theming,
+    Conkeror's themes have undergone a big rewrite:
+    - Conkeror no longer specifies its own gui colors.
+    - The blackened theme no longer exists.
+    - It is no longer possible to theme scrollbars.
+    From now on, the right way to change Conkeror's gui colors is to do so
+    at the OS level, for example, with a GTK theme.
+  * Conkeror has now session saving support. See
+    http://conkeror.org/Sessions for details.
+
+  See http://article.gmane.org/gmane.comp.mozilla.conkeror/1547 and
+  http://thread.gmane.org/gmane.comp.mozilla.conkeror/1451 for the
+  details and what to change in case you run over some removed or renamed
+  functions or variables.
+  
+ -- Axel Beckert <abe@deuxchevaux.org>  Wed, 17 Jun 2009 00:04:58 +0200
+
+conkeror (0.9~git090223-1) unstable; urgency=low
+
+  There were a few changes since the last conkeror version in Debian which
+  may cause troubles to users of the previous version:
+  * Changes to the behaviour of the universal argument C-u.
+  * Loads now ~/.conkerorrc as the default rc file
+  * Many simple webjumps previously enabled by default have been removed
+    from upstream. Non-default webjumps are now collected and shared at
+    http://conkeror.org/Webjumps
+  * Many additional keybindings, e.g.
+      - pasting current paste buffer content bound to `C-y'
+      - new command `submit-form' bound to `C-c C-c' in forms
+  * Incremental search for URLs in the mini-buffer can currently include
+    _either_ the history or the bookmarks, but not both at the same
+    time. See http://bugs.conkeror.org/issue10 for details on choosing
+    which one to use.
+
+ -- Axel Beckert <abe@deuxchevaux.org>  Mon, 23 Feb 2009 21:04:41 +0100

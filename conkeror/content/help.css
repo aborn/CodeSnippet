@@ -1,0 +1,43 @@
+/**
+ * (C) Copyright 2008 Jeremy Maitin-Shepard
+ * (C) Copyright 2008 David Glasser
+ *
+ * Use, modification, and distribution are subject to the terms specified in the
+ * COPYING file.
+**/
+
+body {
+  background-color: #eeeeee;
+}
+
+body.help-list {
+  padding: 0px;
+  margin: 0px;
+}
+
+.help-list table { border-collapse: collapse; margin: 0px; width: 100%; }
+
+.help-list td {
+  border: 1px solid #999;
+  padding-left: .3em;
+  padding-right: .3em;
+  margin: 0px;
+  white-space: nowrap;
+}
+
+.help-list tr.even { background-color: #dddddd; }
+
+
+.source-code-reference {
+  font-family: monospace;
+}
+
+.command {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.key-binding {
+  font-family: monospace;
+  font-weight: bold;
+}
