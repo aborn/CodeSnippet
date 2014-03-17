@@ -4,6 +4,9 @@ CONKEROR
 ###INTRO
 Conkeror is a mozilla-based emacs-style web browser.
 
+###INSTALL
+Please read INSTALL file, which tells you install conkeror step by step.
+
 ###KEY-BINDING
 * M-p     previous buffer
 * M-n     forward buffer
@@ -16,7 +19,7 @@ Conkeror is a mozilla-based emacs-style web browser.
 * f       follow link in current buffer, i.e. hints mode
 * C-u f   follow link in new buffer
 * c 0     copy(yank) current url
-* c       copy link url
+* c       copy link url (style like f follow)
 * i c     copy image url
 * s       save link
 * i s     save image
@@ -25,3 +28,4 @@ Conkeror is a mozilla-based emacs-style web browser.
 * t       input text
 * C-h k   key-binding describe
 * C-h f   command describe
+

@@ -1,3 +1,11 @@
 // .conkerorrc is conkeror configure file
 
-define_key(default_global_keymap, "y", "switch-to-buffer");
+define_key(default_global_keymap, "\C-j", "switch-to-buffer");
+define_key(default_global_keymap, "\M-j", "find-url-new-buffer");
+define_key(default_global_keymap, "\C-m", "find-url");
+
+// define M-m to go google buffer directory
+//define_key(default_global_keymap, "\M-m", "find-url");
+
+// To add a new web jump
+//add_webjump("keyword", "url");

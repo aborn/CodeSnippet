@@ -1,10 +1,15 @@
+Following modified by Aborn Jiang (aborn.jiang@foxmail.com)
 
-Please read the page from the following list most specific to your OS.
+In linux system, install conkeror follow steps:
+1. download xulrunner 
+   http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/latest/runtimes/
 
+2. edit file conkeror 
+   XPATH   -- replace with your xulrunner path
+   CONPATH -- replace with your conkeror path
 
-For Debian, Ubuntu, and similar OSes: http://conkeror.org/InstallationDebian
+3. copy the conkeror shell script to /usr/local/bin/
+   cp conkeror /usr/local/bin/
 
-For Mac OS X: http://conkeror.org/InstallationOSX
-
-For other Unix-like systems and Windows: http://conkeror.org/Installation
-
+4. copy the .conkerorrc file to your HOME path
+   cp .conkerorrc ~
