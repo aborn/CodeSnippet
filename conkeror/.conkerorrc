@@ -25,7 +25,7 @@ interactive("find-url-from-history-new-buffer",
 
 define_key(content_buffer_normal_keymap, "h", "find-url-from-history-new-buffer");
 define_key(content_buffer_normal_keymap, "H", "find-url-from-history");
-session_pref('browser.history_expire_days',7); // seting url history within 7 days
+session_pref('browser.history_expire_days',7); // setting url history within 7 days
 
 // hot-key setting
 define_key(default_global_keymap, "\C-j", "switch-to-buffer");
