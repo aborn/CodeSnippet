@@ -1,10 +1,11 @@
 /conkeror.xulapp
 #*#
 .#*
+nohup.out
 TAGS
 xulrunner-stub
 conkeror-spawn-helper
-conkeror
+#conkeror
 plugins
 /components/xpti.dat
 /components/compreg.dat

@@ -1,0 +1,18 @@
+#!/bin/bash
+#####################################################
+#  NAME
+#    conkeror    
+#      running conkeror web browser program
+#  
+#  VERSION
+#    v0.1  2014-03-17
+#  
+#  AUTHOR
+#    Aborn Jiang (aborn.jiang@foxmail.com)
+#
+#####################################################
+
+XPATH="/home/aborn/sw/xulrunner"
+CONPATH="/home/aborn/github/popkit/conkeror"
+
+nohup ${XPATH}/xulrunner ${CONPATH}/application.ini & 
