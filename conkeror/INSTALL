@@ -15,3 +15,4 @@ In linux system, install conkeror follow steps:
    cp .conkerorrc ~
 
 5. sudo cp conkeror.desktop /usr/share/applications
+   sudo cp contrib/art/conkeror.png /usr/share/icons/hicolor/scalable/apps/
