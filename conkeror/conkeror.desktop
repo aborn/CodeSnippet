@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Conkeror
+GenericName=Web Browser
+Comment=Mozilla-base emacs-style web browser
+Exec=/usr/local/bin/conkeror %F
+TryExec=conkeror
+Icon=/home/aborn/github/popkit/conkeror/contrib/art/conkeror.png
+Type=Application
+Terminal=false

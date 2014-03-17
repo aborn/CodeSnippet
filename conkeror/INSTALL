@@ -13,3 +13,5 @@ In linux system, install conkeror follow steps:
 
 4. copy the .conkerorrc file to your HOME path
    cp .conkerorrc ~
+
+5. sudo cp conkeror.desktop /usr/share/applications
