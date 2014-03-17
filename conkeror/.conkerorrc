@@ -1,0 +1,3 @@
+// .conkerorrc is conkeror configure file
+
+define_key(default_global_keymap, "y", "switch-to-buffer");
