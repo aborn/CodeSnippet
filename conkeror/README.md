@@ -2,7 +2,7 @@ CONKEROR
 ==========
 
 ###INTRO
-Conkeror is a mozilla-based emacs-style web browser.
+[Conkeror](http://conkeror.org/) is a mozilla-based emacs-style web browser.
 
 ###INSTALL
 Please read INSTALL file, which tells you install conkeror step by step.
