@@ -1,16 +1,19 @@
 #!/bin/bash
-#####################################################
+###############################################################
 #  NAME
 #    conkeror    
 #      running conkeror web browser program
+#
+#  INTRO
+#      conkeror is a Mozilla-based emacs-style web browser, 
+#    you find more detail intro in conkeror.org
 #  
 #  VERSION
 #    v0.1  2014-03-17
 #  
 #  AUTHOR
 #    Aborn Jiang (aborn.jiang@foxmail.com)
-#
-#####################################################
+###############################################################
 
 XPATH="/home/aborn/sw/xulrunner"
 CONPATH="/home/aborn/github/popkit/conkeror"
