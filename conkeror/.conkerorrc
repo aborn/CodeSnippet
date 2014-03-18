@@ -1,8 +1,59 @@
 // .conkerorrc is conkeror configure file
-
+require("gmail");
+require("github");
+require("twitter");
+require("duckduckgo");
+require("facebook");
+require("gmane");
+require("google-calendar");
+require("google-maps");
+require("stackexchange");
+require("wikipedia");
+require("xkcd");
+require("youtube-player");
+require("youtube");
 require("new-tabs.js");    // shows tab like chrome web browser
+homepage = "www.google.com";
 
+
+// ***********************************************************************
+// load download buffers in the background in the current
+// window, instead of in new windows.
+// ***********************************************************************
+download_buffer_automatic_open_target = OPEN_NEW_BUFFER_BACKGROUND;
+
+
+// ***********************************************************************
+// default directory for downloads and shell commands.
+// ***********************************************************************
+cwd = get_home_directory();
+cwd.append("Downloads");
+
+// ***********************************************************************
+// save a keystroke when selecting a dom node by number.
+// ***********************************************************************
+hints_auto_exit_delay = 3000;
+hints_ambiguous_auto_exit_delay = 1200;
+url_remoting_fn = load_url_in_new_buffer;
+
+// ***********************************************************************
+// Session manager
+// ***********************************************************************
+require("session.js");
+session_auto_save_auto_load = true;
+session_auto_save_auto_load_fn = session_auto_save_load_window_current;
+
+// ***********************************************************************
+// Password manager
+// ***********************************************************************
+session_pref("signon.rememberSignons", true);
+session_pref("signon.expireMasterPassword", false);
+session_pref("signon.SignonFileName", "signons.txt");
+Components.classes["@mozilla.org/login-manager;1"].getService(Components.interfaces.nsILoginManager);
+
+// ***********************************************************************
 // history style
+// ***********************************************************************
 url_completion_use_history = true;
 define_browser_object_class(
     "history-url", null, 
@@ -25,12 +76,19 @@ interactive("find-url-from-history-new-buffer",
 
 define_key(content_buffer_normal_keymap, "h", "find-url-from-history-new-buffer");
 define_key(content_buffer_normal_keymap, "H", "find-url-from-history");
-session_pref('browser.history_expire_days',7); // setting url history within 7 days
 
+// ***********************************************************************
+// keep one week url history in conkeror
+// ***********************************************************************
+session_pref('browser.history_expire_days',7); 
+
+// ***********************************************************************
 // hot-key setting
+// ***********************************************************************
 define_key(default_global_keymap, "\C-j", "switch-to-buffer");
 define_key(default_global_keymap, "\M-j", "find-url-new-buffer");
 define_key(default_global_keymap, "\C-m", "find-url");
+define_key(content_buffer_normal_keymap, "`", "follow-new-buffer-background");
 
 // define M-m to go google buffer directory
 //define_key(default_global_keymap, "\M-m", "find-url");
@@ -38,11 +96,95 @@ define_key(default_global_keymap, "\C-m", "find-url");
 // To add a new web jump
 //add_webjump("keyword", "url");
 define_webjump("reddit", "http://www.reddit.com/search?q=%s");
+define_webjump("google", "http://www.google.com/search?q=%s");
 
+// ***********************************************************************
 // Configure mode-line (between minor-bar and content)
+// ***********************************************************************
 add_hook("mode_line_hook", mode_line_adder(downloads_status_widget));
 load_paths.unshift("chrome://conkeror-contrib/content/");
 require("mode-line-buttons.js");
 mode_line_add_buttons(standard_mode_line_buttons, true);
 add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
 add_hook("mode_line_hook", mode_line_adder(loading_count_widget), true);
+
+// ***********************************************************************
+// big-hints
+// ***********************************************************************
+
+hints_display_url_panel = true;
+hint_background_color = 'white';
+active_hint_background_color = '#00ccff';
+register_user_stylesheet(
+    "data:text/css," +
+        escape(
+            "@namespace url(\"http://www.w3.org/1999/xhtml\");\n" +
+            "span.__conkeror_hint {\n"+
+            "  font-size: 14px !important;\n"+
+            "  line-height: 14px !important;\n"+
+            "}"));
+register_user_stylesheet(
+    "data:text/css," +
+        escape (
+            "span.__conkeror_hint {" +
+            " border: 1px solid #dddddd !important;" +
+            " color: white !important;" +
+            " background-color: black !important;" +
+            "}"));
+
+require("casual-spelling");
+
+// ***********************************************************************
+// firebug setting
+// ***********************************************************************
+define_variable("firebug_url",
+    "http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js");
+function firebug (I) {
+    var doc = I.buffer.document;
+    var script = doc.createElement('script');
+    script.setAttribute('type', 'text/javascript');
+    script.setAttribute('src', firebug_url);
+    script.setAttribute('onload', 'firebug.init();');
+    doc.body.appendChild(script);
+}
+interactive("firebug", "open firebug lite", firebug);
+
+// ***********************************************************************
+// favicon
+// ***********************************************************************
+require("favicon");
+read_buffer_show_icons = true;
+
+// ***********************************************************************
+// read url handle list
+// ***********************************************************************
+read_url_handler_list = [read_url_make_default_webjump_handler("google")];
+function possibly_valid_url (str) {
+    return /^\s*[^\/\s]*(\/|\s*$)/.test(str)
+        && /[:\/\.]/.test(str);
+}
+
+// ***********************************************************************
+// sure to quit
+// ***********************************************************************
+add_hook("window_before_close_hook",
+         function () {
+             var w = get_recent_conkeror_window();
+             var result = (w == null) ||
+                 "y" == (yield w.minibuffer.read_single_character_option(
+                     $prompt = "Quit Conkeror? (y/n)",
+                     $options = ["y", "n"]));
+             yield co_return(result);
+         });
+
+// ***********************************************************************
+// theme setting
+// ***********************************************************************
+let (themes = get_home_directory()) {
+    themes.append(".conkerorrc");
+    themes.append("themes");
+    theme_load_paths.unshift(themes);
+};
+
+theme_load("mono");
+theme_load("jjf");
