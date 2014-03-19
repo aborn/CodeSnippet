@@ -14,7 +14,7 @@
    *
    ***/
 
-require_once 'iredis.php'
+require_once '/vagrant_data/data/iredis.php';
 
 class monitor
 {
@@ -35,6 +35,21 @@ class monitor
     public function getSize()
     {
         return $this->redis->dbSize();
+    }
+
+    public function flushAll()
+    {
+        $this->redis->flushAll();
+    }
+    
+    public function flushDB()
+    {
+        $this->redis->flushDB();
+    }
+
+    public function info()
+    {
+        $this->redis->info();
     }
     
 }

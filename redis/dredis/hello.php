@@ -1,6 +1,7 @@
 <?php
 
 require_once 'dredis.php';
+require_once 'monitor.php';
 // Initialize Rediska
 
 echo "<br/>";
@@ -12,6 +13,11 @@ $redis->set('unix','good bsd');
 $redis->set('linux','line us');
 
 $redis->t_print('linux');
+
+$imonitor = new monitor();
+echo "<br/>";
+echo $imonitor->getSize();
+
 
 ?>
 

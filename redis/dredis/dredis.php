@@ -14,7 +14,7 @@
    ***/
 
 require_once '/vagrant_data/data/rediska/library/Rediska.php';
-require_once '/vagrant_data/data/rediska/dmanager.php';
+require_once '/vagrant_data/data/rediska/manager.php';
 
 class  dredis
 {
