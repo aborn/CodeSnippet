@@ -57,6 +57,11 @@ class iredis
         return $this->status;
     }
 
+    public function getRedis()
+    {
+        return $this->redis;
+    }
+    
     public function configure($redis_server, $redis_port)
     {
         $this->redis_server = $redis_server;
