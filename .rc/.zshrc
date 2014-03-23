@@ -11,6 +11,7 @@ for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
 done
 FINISH="%{$terminfo[sgr0]%}"
 #}}}
+source ~/.bashrc
 source ~/.bash_aliases
 
 # ------------------------------------------------------------------

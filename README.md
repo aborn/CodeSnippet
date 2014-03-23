@@ -41,17 +41,20 @@ server and desktop.
    .rc project contains lots of system configure files, like .vimrc
    .bashrc etc.
 
-10. bs
+10. bs  
    a customize bootstrap front-end framework for webpage.
 
-11. yum
+11. yum  
    redhat yum configure
 
-12. redis
+12. redis  
     install redis and configure proxy
 
-13. conkeror
+13. conkeror  
     web emacs style browser
+
+14. squid  
+    the proxy server setting
    
 ## AUTHOR
 Aborn Jiang (aborn.jiang@gmail.com)
@@ -69,3 +72,4 @@ Aborn Jiang (aborn.jiang@gmail.com)
 * 2014-03-06 v1.2 (add yum subrepo)
 * 2014-03-07 v1.3 (add redis)
 * 2014-03-16 v1.4 (add conkeror)
+* 2014-03-23 v1.5 (add squid proxy stting files)
