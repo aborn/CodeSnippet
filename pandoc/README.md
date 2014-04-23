@@ -26,7 +26,7 @@ convert one format file into another.
      > pandoc --template=pandoc.template --latex-engine=xelatex -o
      > example.pdf exam-chn.md
 
-3. HTML slide shows. I prefer the dzslides.  
+3. HTML slide shows. I prefer the dzslides and revealjs style.  
    > pandoc -s --mathml -i -t dzslides SLIDES -o dzslides.html  
    > pandoc -s --webtex -i -t slidy SLIDES -o slidy.html  
    > pandoc -s --mathjax -i -t revealjs SLIDES -o revealjs.html  
