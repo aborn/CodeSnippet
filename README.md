@@ -55,6 +55,9 @@ server and desktop.
 
 14. squid  
     the proxy server setting
+
+15. pandoc  
+    the universal document converter
    
 ## AUTHOR
 Aborn Jiang (aborn.jiang@gmail.com)
@@ -70,7 +73,8 @@ Aborn Jiang (aborn.jiang@gmail.com)
 * 2014-02-20 v1.0 (add doc and kit and rename as popkit project)
 * 2014-03-06 v1.1 (add bs subrepo)
 * 2014-03-06 v1.2 (add yum subrepo)
-* 2014-03-07 v1.3 (add redis)
-* 2014-03-16 v1.4 (add conkeror)
+* 2014-03-07 v1.3 (add redis subrepo)
+* 2014-03-16 v1.4 (add conkeror subrepo)
 * 2014-03-23 v1.5 (add squid proxy stting files)
 * 2014-03-23 v1.5.1 (add send-weather file to kit)
+* 2014-04-23 v1.6 (add pandoc subrepo)
