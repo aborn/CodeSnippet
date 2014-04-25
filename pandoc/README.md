@@ -12,6 +12,9 @@ convert one format file into another.
 * install latex  
 > sudo apt-get install texlive-full
 
+* install markdown  
+> sudo apt-get install markdown 
+
 ## USAGE
 1. convert markdown format to html   
    > pandoc -0 out.html in.md  

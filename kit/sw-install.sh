@@ -15,7 +15,8 @@ virtualbox-guest-additions-iso virtualbox-guest-utils\
 terminator pepperflashplugin-nonfree python-scrapy \
 autoconf autogen libtool markdown pandoc latex-beamer \
 texlive-latex3 texlive-latex-extra texlive-fonts-recommended \
-texlive-fonts-extra texlive-lang-cjk texlive-full 
+texlive-fonts-extra texlive-lang-cjk texlive-full \
+scm clisp mit-scheme
 
 # sudo apt-get install -y texlive-full
 # sudo apt-get install -y clisp
