@@ -16,7 +16,8 @@ terminator pepperflashplugin-nonfree python-scrapy \
 autoconf autogen libtool markdown pandoc latex-beamer \
 texlive-latex3 texlive-latex-extra texlive-fonts-recommended \
 texlive-fonts-extra texlive-lang-cjk texlive-full \
-scm clisp mit-scheme
+scm clisp mit-schem libgtk2.0-dev libxpm-dev libgif-dev \
+libncurses-dev 
 
 # sudo apt-get install -y texlive-full
 # sudo apt-get install -y clisp
