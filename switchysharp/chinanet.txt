@@ -13,6 +13,7 @@
 *51ping.com*
 *amazeui.org*
 *anjuke.com*
+*aliyun.com*
 *baidu.com*
 *bootcss.com*
 *.dp*
