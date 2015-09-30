@@ -1,17 +1,17 @@
 ; Summary: Example Rule List for SwitchySharp
 ; Author: Aborn Jiang (aborn.jiang AT foxmail.com)
-; Date: 2015-09-29
-; URL: http://appkit.popkit.org/files/chinanet.txt
-; 注意: 这个列表是国内网络不走socket proxy的列表
+; Update Date: 2015-09-30
+; URL: http://appkit.popkit.org/kit/chinanet.txt
+; 注意: 这个列表是gfwlist，外网地址
 
 #BEGIN
 
 [Wildcard]
-*baidu.com*
-*dapenti.com*
-*jobbole.com*
-*dianping.com*
-*192.168.*
-*10.*
+*google.com*
+*facebook.com*
+
+[RegExp]
+^http://code\.google\.com/.*
+youtube
 
 #END
