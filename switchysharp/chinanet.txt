@@ -35,6 +35,7 @@
 *jobbole.com*
 *localhost:8080*
 *popkit.org*
+*shgjj.com*
 *sohu.com*
 *tapd.cn*
 *tudou.com*
