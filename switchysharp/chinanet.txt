@@ -14,6 +14,7 @@
 *amazeui.org*
 *anjuke.com*
 *aliyun.com*
+*appkit.org*
 *baidu.com*
 *bootcss.com*
 *.dp*
