@@ -24,11 +24,13 @@
 *dper.com*
 *dpfile.com*
 *dianpingoa.com*
+*doukit.org*
 *fudan.edu.cn*
 *ifeng.com*
 *iqiyi.com*
 *jobbole.com*
 *localhost:8080*
+*popkit.org*
 *sohu.com*
 *tapd.cn*
 *tudou.com*
