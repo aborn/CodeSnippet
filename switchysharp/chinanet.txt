@@ -16,6 +16,7 @@
 *aliyun.com*
 *appkit.org*
 *baidu.com*
+*baidustatic.com*
 *bootcss.com*
 *.dp*
 *cnblogs.com*
