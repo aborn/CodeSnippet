@@ -58,7 +58,12 @@ server and desktop.
 
 15. pandoc  
     the universal document converter
-   
+
+16. tomcat  
+    the default tomcat appkit server config
+17. switchysharp  
+    the chrome switchysharp plugin chinanet and gfwlist config files.    
+
 ## AUTHOR
 Aborn Jiang (aborn.jiang@gmail.com)
 
@@ -76,5 +81,5 @@ Aborn Jiang (aborn.jiang@gmail.com)
 * 2014-03-07 v1.3 (add redis subrepo)
 * 2014-03-16 v1.4 (add conkeror subrepo)
 * 2014-03-23 v1.5 (add squid proxy stting files)
-* 2014-03-23 v1.5.1 (add send-weather file to kit)
 * 2014-04-23 v1.6 (add pandoc subrepo)
+* 2015-09-30 v2.0 (add tomcat and switchysharp config files)
