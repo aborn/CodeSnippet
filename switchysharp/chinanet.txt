@@ -35,6 +35,8 @@
 *localhost:8080*
 *popkit.org*
 *sohu.com*
+*shgjj.com*
+*persons.shgjj.com*
 *tapd.cn*
 *tudou.com*
 *qq.com*
