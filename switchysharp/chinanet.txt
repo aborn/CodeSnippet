@@ -16,6 +16,7 @@
 *aliyun.com*
 *appkit.org*
 *baidu.com*
+*baidustatic.com*
 *bootcss.com*
 *.dp*
 *cnblogs.com*
@@ -34,6 +35,7 @@
 *jobbole.com*
 *localhost:8080*
 *popkit.org*
+*shgjj.com*
 *sohu.com*
 *shgjj.com*
 *persons.shgjj.com*
