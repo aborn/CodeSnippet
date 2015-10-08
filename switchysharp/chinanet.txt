@@ -46,5 +46,7 @@
 *weiyun.com*
 *youku.com*
 *jianshu.com*
+*fitness.dp*
+*appkit.dp*
 
 #END
