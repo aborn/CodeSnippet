@@ -5,3 +5,6 @@ lsof -i | grep -E "(LISTEN|ESTABLISHED)"
 
 # 列出当前网络打开的端口号与进程的对应关系
 lsof -i :portNumber
+
+# 列出mvn的依赖树
+mvn dependency:tree
