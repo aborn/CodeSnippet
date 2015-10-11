@@ -49,5 +49,6 @@
 *fitness.dp*
 *appkit.dp*
 *persons.shgjj.com*
+*://*.pptv.com/*
 
 #END
