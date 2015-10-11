@@ -8,3 +8,6 @@ lsof -i :portNumber
 
 # 列出mvn的依赖树
 mvn dependency:tree
+
+# 检查网络端口监听也可以用(linux only)
+sudo netstat -tupln
