@@ -25,7 +25,7 @@
 *dapenti.com*
 *dper.com*
 *dpfile.com*
-*dianpingoa.com*
+*://*.dianpingoa.com/*
 *doukit.org*
 *doukit.com*
 *doukit.cn*
@@ -34,7 +34,7 @@
 *iqiyi.com*
 *jobbole.com*
 *localhost:8080*
-*popkit.org*
+*://*.popkit.org/*
 *://*.sohu.com/*
 *://*.shgjj.com/*
 *persons.shgjj.com*
