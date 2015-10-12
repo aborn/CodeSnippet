@@ -27,9 +27,10 @@
 *://*.dpfile.com/*
 *://*.dianpingoa.com/*
 *://*.dianping.com/*
-*doukit.org*
-*doukit.com*
-*doukit.cn*
+*://*.doukit.org/*
+*://*.doukit.com/*
+*://*.doukit.cn/*
+*://*.ehnchina.com/*
 *://*.fudan.edu.cn/*
 *://*.ifeng.com/*
 *://*.iqiyi.com/*
@@ -37,6 +38,7 @@
 *://*.localhost:8080/*
 *://*.popkit.org/*
 *://*.sohu.com/*
+*://*.sharepoint.cn/*
 *://*.shgjj.com/*
 *://*.tapd.cn/*
 *://*.tudou.com/*
