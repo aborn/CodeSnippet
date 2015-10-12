@@ -1,6 +1,6 @@
 ; Summary: Example Rule List for SwitchySharp
 ; Author: Aborn Jiang (aborn.jiang AT foxmail.com)
-; Update Date: 2015-09-30
+; Update Date: 2015-10-12
 ; URL: http://appkit.popkit.org/kit/chinanet.txt
 ; 注意: 这个列表是国内网络不走socket proxy的列表
 
@@ -8,46 +8,42 @@
 
 [Wildcard]
 *10.*
-*163.com*
+*://*.163.com/*
 *192.168.*
-*51ping.com*
-*amazeui.org*
-*anjuke.com*
+*://*.51ping.com/*
+*://*.amazeui.org/*
+*://*.anjuke.com/*
 *://*.aliyun.com/*
-*appkit.org*
+*://*.appkit.org/*
 *://*.baidu.com/*
-*baidustatic.com*
-*bootcss.com*
-*.dp*
-*cnblogs.com*
-*dianping.com*
-*csdn.net*
-*dapenti.com*
-*dper.com*
-*dpfile.com*
+*://*.baidustatic.com/*
+*://*.bootcss.com/*
+*://*.dp/*
+*://*.cnblogs.com/*
+*://*.csdn.net/*
+*://*.dapenti.com/*
+*://*.dper.com/*
+*://*.dpfile.com/*
 *://*.dianpingoa.com/*
+*://*.dianping.com/*
 *doukit.org*
 *doukit.com*
 *doukit.cn*
-*fudan.edu.cn*
-*ifeng.com*
-*iqiyi.com*
-*jobbole.com*
-*localhost:8080*
+*://*.fudan.edu.cn/*
+*://*.ifeng.com/*
+*://*.iqiyi.com/*
+*://*.jobbole.com/*
+*://*.localhost:8080/*
 *://*.popkit.org/*
 *://*.sohu.com/*
 *://*.shgjj.com/*
-*persons.shgjj.com*
-*tapd.cn*
+*://*.tapd.cn/*
 *://*.tudou.com/*
 *://*.qq.com/*
-*weibo.com*
-*weiyun.com*
+*://*.weibo.com/*
+*://*.weiyun.com/*
 *://*.youku.com/*
-*jianshu.com*
-*fitness.dp*
-*appkit.dp*
-*persons.shgjj.com*
+*://*.jianshu.com/*
 *://*.pptv.com/*
 
 #END
