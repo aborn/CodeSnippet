@@ -19,6 +19,7 @@
 *://*.baidustatic.com/*
 *://*.bootcss.com/*
 *://*.dp/*
+*://*.*.dp/*
 *://*.cnblogs.com/*
 *://*.csdn.net/*
 *://*.dapenti.com/*
