@@ -11,3 +11,6 @@ mvn dependency:tree
 
 # 检查网络端口监听也可以用(linux only)
 sudo netstat -tupln
+
+# grep查找，递归查找关键字 Redis
+grep -r  "Redis" .
