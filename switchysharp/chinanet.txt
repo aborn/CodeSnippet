@@ -32,22 +32,24 @@
 *://*.doukit.cn/*
 *://*.ehnchina.com/*
 *://*.fang.com/*
+*://*.fangdi.com.cn/*
 *://*.fudan.edu.cn/*
 *://*.ifeng.com/*
 *://*.iqiyi.com/*
+*://*.jianshu.com/*
 *://*.jobbole.com/*
 *://*.localhost:8080/*
 *://*.popkit.org/*
+*://*.pptv.com/*
+*://*.qq.com/*
 *://*.sohu.com/*
 *://*.sharepoint.cn/*
 *://*.shgjj.com/*
 *://*.tapd.cn/*
 *://*.tudou.com/*
-*://*.qq.com/*
 *://*.weibo.com/*
 *://*.weiyun.com/*
 *://*.youku.com/*
-*://*.jianshu.com/*
-*://*.pptv.com/*
+*://*.zhihu.com/*
 
 #END
