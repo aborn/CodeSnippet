@@ -26,6 +26,7 @@
 *://*.dper.com/*
 *://*.dpfile.com/*
 *://*.dianpingoa.com/*
+*://*.*.dianpingoa.com/*
 *://*.dianping.com/*
 *://*.doukit.org/*
 *://*.doukit.com/*
@@ -47,6 +48,7 @@
 *://*.shgjj.com/*
 *://*.tapd.cn/*
 *://*.tudou.com/*
+*://*.v2ex.com/*
 *://*.weibo.com/*
 *://*.weiyun.com/*
 *://*.youku.com/*
