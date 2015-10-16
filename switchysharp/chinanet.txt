@@ -36,6 +36,7 @@
 *://*.fangdi.com.cn/*
 *://*.fudan.edu.cn/*
 *://*.ifeng.com/*
+*://*.importnew.com/*
 *://*.iqiyi.com/*
 *://*.jianshu.com/*
 *://*.jobbole.com/*
