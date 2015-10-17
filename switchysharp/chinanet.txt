@@ -9,6 +9,7 @@
 [Wildcard]
 *10.*
 *://*.163.com/*
+*://*.12333sh.gov.cn/*
 *192.168.*
 *://*.51ping.com/*
 *://*.amazeui.org/*
