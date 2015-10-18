@@ -33,6 +33,7 @@
 *://*.doukit.com/*
 *://*.doukit.cn/*
 *://*.ehnchina.com/*
+*://*.ezhangdan.com/*
 *://*.fang.com/*
 *://*.fangdi.com.cn/*
 *://*.fudan.edu.cn/*
