@@ -46,6 +46,7 @@
 *://*.popkit.org/*
 *://*.pptv.com/*
 *://*.qq.com/*
+*://*.ruanyifeng.com/*
 *://*.sohu.com/*
 *://*.sharepoint.cn/*
 *://*.shgjj.com/*
