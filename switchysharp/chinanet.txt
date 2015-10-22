@@ -40,6 +40,7 @@
 *://*.ifeng.com/*
 *://*.importnew.com/*
 *://*.iqiyi.com/*
+*://*.iteye.com/*
 *://*.jianshu.com/*
 *://*.jobbole.com/*
 *://*.localhost:8080/*
@@ -52,6 +53,8 @@
 *://*.sharepoint.cn/*
 *://*.shgjj.com/*
 *://*.tapd.cn/*
+*://*.taobao.com/*
+*://*.taobao.org/*
 *://*.tudou.com/*
 *://*.v2ex.com/*
 *://*.weibo.com/*
