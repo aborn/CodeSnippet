@@ -23,6 +23,7 @@
 *://*.*.dp/*
 *://*.cnblogs.com/*
 *://*.csdn.net/*
+*://*.dangdang.com/*
 *://*.dapenti.com/*
 *://*.dper.com/*
 *://*.dpfile.com/*
@@ -43,6 +44,7 @@
 *://*.iteye.com/*
 *://*.jianshu.com/*
 *://*.jobbole.com/*
+*://*.jd.com/*
 *://*.localhost:8080/*
 *://*.popkit.org/*
 *://*.pptv.com/*
