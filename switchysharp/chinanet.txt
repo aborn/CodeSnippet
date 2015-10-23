@@ -23,6 +23,7 @@
 *://*.*.dp/*
 *://*.cnblogs.com/*
 *://*.csdn.net/*
+*://*.dangdang.com/*
 *://*.dapenti.com/*
 *://*.dper.com/*
 *://*.dpfile.com/*
@@ -41,22 +42,28 @@
 *://*.ifeng.com/*
 *://*.importnew.com/*
 *://*.iqiyi.com/*
+*://*.iteye.com/*
 *://*.jianshu.com/*
 *://*.jobbole.com/*
+*://*.jd.com/*
 *://*.localhost:8080/*
 *://*.popkit.org/*
 *://*.pptv.com/*
 *://*.qq.com/*
 *://*.*.qq.com/*
 *://*.ruanyifeng.com/*
+*://*.sina.com.cn/*
 *://*.sohu.com/*
 *://*.sharepoint.cn/*
 *://*.shgjj.com/*
 *://*.tapd.cn/*
+*://*.taobao.com/*
+*://*.taobao.org/*
 *://*.tudou.com/*
 *://*.v2ex.com/*
 *://*.weibo.com/*
 *://*.weiyun.com/*
+*://*.xinnet.com/*
 *://*.youku.com/*
 *://*.zhihu.com/*
 
