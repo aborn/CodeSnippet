@@ -37,6 +37,7 @@
 *://*.fang.com/*
 *://*.fangdi.com.cn/*
 *://*.fudan.edu.cn/*
+*://*.iconfont.cn/*
 *://*.ifeng.com/*
 *://*.importnew.com/*
 *://*.iqiyi.com/*
