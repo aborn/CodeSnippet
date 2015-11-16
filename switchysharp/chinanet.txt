@@ -64,6 +64,7 @@
 *://*.v2ex.com/*
 *://*.weibo.com/*
 *://*.weiyun.com/*
+*://*.*.dp:*/*
 *://*.xinnet.com/*
 *://*.youku.com/*
 *://*.zhihu.com/*
