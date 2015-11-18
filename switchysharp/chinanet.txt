@@ -68,5 +68,6 @@
 *://*.xinnet.com/*
 *://*.youku.com/*
 *://*.zhihu.com/*
+*://fonts.googleapis.com/*
 
 #END
