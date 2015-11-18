@@ -69,5 +69,6 @@
 *://*.youku.com/*
 *://*.zhihu.com/*
 *://fonts.googleapis.com/*
+https://fonts.googleapis.com/css*
 
 #END
