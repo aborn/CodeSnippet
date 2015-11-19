@@ -1,8 +1,13 @@
 function query(key) {
+    var url;
+    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+        url = tabs[0].url;
+    });
+
     if (key == 'abc') {
         return null;
     } else {
-        return 'result:' + key;
+        return 'result:' + key + url;
     }
 };
 
