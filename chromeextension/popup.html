@@ -2,10 +2,40 @@
 <html>
 <head>
     <title>demo</title>
-    <script src="popup.js"></script>
+    <link rel="stylesheet" href="./semantic/semantic.min.css">
+    <link rel="stylesheet" href="./dist/base.css">
 </head>
 <body>
-<h1>demo</h1>
-<button id="checkPage">click here</button>
+
+<div class="ui vertical menu" style="border:none">
+    <div class="item">
+        <div class="ui transparent icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search icon"></i>
+        </div>
+    </div>
+    <div class="item">
+        Home
+        <div class="menu">
+            <a class="active item">Search</a>
+            <a class="item">Add</a>
+            <a class="item">Remove</a>
+        </div>
+    </div>
+    <a class="item" id="Browse">
+        <i class="grid layout icon"></i>Browse
+    </a>
+    <a class="item">
+        Messages
+    </a>
+    <div class="ui dropdown item">
+        More
+        <i class="dropdown icon"></i>
+    </div>
+</div>
+
+<script src="popup.js"></script>
+<script src="./dist/jquery-2.1.3.min.js"></script>
+<script src="./semantic/semantic.min.js"></script>
 </body>
 </html>
