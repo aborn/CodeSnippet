@@ -4,3 +4,7 @@ body {
     padding: 0;
     min-width: 180px;
 }
+
+.hidden {
+    display: none;
+}

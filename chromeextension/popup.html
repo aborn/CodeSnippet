@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    <meta charset="utf-8" />
     <title>demo</title>
     <link rel="stylesheet" href="./semantic/semantic.min.css">
     <link rel="stylesheet" href="./dist/base.css">
@@ -10,10 +11,15 @@
 <div class="ui vertical menu" style="border:none">
     <div class="item">
         <div class="ui transparent icon input">
-            <input type="text" placeholder="Search...">
+            <input type="text" placeholder="Search..." id="querykey">
             <i class="search icon"></i>
         </div>
     </div>
+
+    <a class="item" id="queryresultitem" style="display: none">
+        <p id="queryresult"></p>
+    </a>
+
     <div class="item">
         Home
         <div class="menu">
@@ -22,14 +28,17 @@
             <a class="item">Remove</a>
         </div>
     </div>
-    <a class="item" id="Browse">
-        <i class="grid layout icon"></i>Browse
+
+    <a class="item" id="Browse" href="http://rangejs.doukit.org/" target="_blank">
+        <i class="grid layout icon"></i>range.js
     </a>
+
     <a class="item">
         Messages
     </a>
+
     <div class="ui dropdown item">
-        More
+        <a href="index.html" target="_blank">More..</a>
         <i class="dropdown icon"></i>
     </div>
 </div>

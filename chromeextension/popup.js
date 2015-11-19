@@ -1,4 +1,28 @@
+function query(key) {
+    if (key == 'abc') {
+        return null;
+    } else {
+        return 'result:' + key;
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
+    $('#querykey').on('input', function(){
+        var searchKey = this.value;
+        var searchResult = query(searchKey);
+        if (searchKey != null && searchKey != '') {
+            $('#queryresult').parent().css({'display' : 'block'});
+            if (searchResult != undefined && searchResult != '') {
+                $('#queryresult').html(searchResult);
+            } else {
+                $('#queryresult').html('未找到相关结果!');
+            }
+        } else {
+            $('#queryresult').parent().css({'display' : 'none'});
+            $('#queryresult').html('');
+        }
+    })
+
     var checkPageButton = document.getElementById('Browse');
     checkPageButton.addEventListener('click', function() {
 
