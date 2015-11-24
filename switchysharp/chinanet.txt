@@ -32,6 +32,7 @@
 *://*.dianpingoa.com/*
 *://*.*.dianpingoa.com/*
 *://*.dianping.com/*
+*://mvn.dianpingoa.com/*
 *://*.doukit.org/*
 *://*.doukit.com/*
 *://*.doukit.cn/*
