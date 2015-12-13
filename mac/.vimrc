@@ -8,3 +8,4 @@ set ignorecase
 filetype on
 set showcmd
 filetype plugin indent on
+execute pathogen#infect() 
