@@ -14,3 +14,13 @@ $('#checkBox').prop('checked', true); // 设置为true
 $('#dynamicPlugArea').append("<div class='ui button'>ddd</div>")
 // 将内容插入到一个容器里，放到容器所有元素的最前面
 $('#dynamicPlugArea').prepend(get_content_container(timeStamp, elements.get_plugin_cn_name(plugName) || ''));
+
+var dataArr = ["a", "b", "c"]
+dataArr.unshift("d");   // 插入js数组最前面
+dataArr.push("d");      // 插入js数组最后面
+
+dataArr.map(function(item, index)   // js array的map，返回array
+// jQuery的遍历每个array的item
+$('.pluginFormDiv').each(function(index, eachItem) {
+                arrResult.push($(eachItem).attr('id'));
+            });
