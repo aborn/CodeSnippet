@@ -55,6 +55,7 @@
 *://*.qq.com/*
 *://*.*.qq.com/*
 *://*.ruanyifeng.com/*
+*://*.sankuai.com/*
 *://*.sina.com.cn/*
 *://*.sohu.com/*
 *://*.sohucs.com/*
