@@ -12,6 +12,7 @@
 *://*.12333sh.gov.cn/*
 *192.168.*
 *://0.0.0.0:*/*
+*://*172.24.38.*:*/*
 *://*.51ping.com/*
 *://*.amazeui.org/*
 *://*.anjuke.com/*
@@ -30,6 +31,7 @@
 *://*.dper.com/*
 *://*.dpfile.com/*
 *://*.dianpingoa.com/*
+*://mobile-tracer-web01.nh/*
 *://*.*.dianpingoa.com/*
 *://*.dianping.com/*
 *://mvn.dianpingoa.com/*
