@@ -22,8 +22,13 @@ dataArr.push("d");      // 插入js数组最后面
 // unshift/push - add an element to the beginning/end of an array
 // shift/pop - remove and return the first/last element of and array
 
+$('#formid').serializeArray()
+
 dataArr.map(function(item, index)   // js array的map，返回array
 // jQuery的遍历每个array的item
 $('.pluginFormDiv').each(function(index, eachItem) {
                 arrResult.push($(eachItem).attr('id'));
-            });
+});
+
+$.post(url, data, callback)
+location.reload() // 刷新页面            
