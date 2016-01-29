@@ -31,4 +31,7 @@ $('.pluginFormDiv').each(function(index, eachItem) {
 });
 
 $.post(url, data, callback)
-location.reload() // 刷新页面            
+location.reload() // 
+
+// freemarker原样输出            
+${r"${pageName}"}            
