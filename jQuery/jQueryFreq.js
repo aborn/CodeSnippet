@@ -24,14 +24,39 @@ dataArr.push("d");      // 插入js数组最后面
 
 $('#formid').serializeArray()
 
-dataArr.map(function(item, index)   // js array的map，返回array
+// js array的map，返回array
+dataArr.map(function(item, index) {
+    console.log('good');
+})
+
 // jQuery的遍历每个array的item
 $('.pluginFormDiv').each(function(index, eachItem) {
-                arrResult.push($(eachItem).attr('id'));
+    arrResult.push($(eachItem).attr('id'));
 });
 
-$.post(url, data, callback)
+$.post(url, data, callback);
+
+$.ajax({
+    url : '/eleconfig/appconfig/' + tabName + "FormSubmit.gson",
+    type: "POST",
+    data: $('#' + tabName + "Form").serialize(),//$(this).serialize(),
+    dataType: 'json',
+    success: function (data) {
+        console.log("status:" + data.status + " info:" + data.info)
+        if (data.status == 'success') {
+            displaySuccMsg("提交成功:" + data.info);
+        } else {
+            displayErrorMsg("提交失败:" + data.info);
+        }
+    },
+    error: function (jXHR, textStatus, errorThrown) {
+        alert(errorThrown);
+    }
+});
+
 location.reload() // 
 
+// 跳转链接
+window.location.href = "/configtester/listGroups.html";
 // freemarker原样输出            
 ${r"${pageName}"}            
