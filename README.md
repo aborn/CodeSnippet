@@ -1,9 +1,6 @@
 popkit
 =========
-
-## INTRO
- This repo includes lots of configure scripts, which can be used in
-server and desktop.
+This repo includes lots of configure scripts, code snippet, which can be used in server and desktop.
 
 ## USAGE
 * ./configure   -- configure local machine with this repo
@@ -64,23 +61,5 @@ server and desktop.
 17. switchysharp  
     the chrome switchysharp plugin chinanet and gfwlist config files.    
 
-## AUTHOR
-Aborn Jiang (aborn.jiang@gmail.com)
-
-## VERSION
-* 2014-01-21 v0.1 (add rsync configure files)
-* 2014-01-22 v0.2 (add .rc and elisp files)
-* 2014-01-24 v0.3 (add nginx configure files)
-* 2014-01-26 v0.4 (add kit subrepo files)
-* 2014-02-12 v0.5 (add vagrant subrepo files)
-* 2014-02-14 v0.6 (add phpd subrepo files)
-* 2014-02-19 v0.7 (add sql subrepo files)
-* 2014-02-20 v1.0 (add doc and kit and rename as popkit project)
-* 2014-03-06 v1.1 (add bs subrepo)
-* 2014-03-06 v1.2 (add yum subrepo)
-* 2014-03-07 v1.3 (add redis subrepo)
-* 2014-03-16 v1.4 (add conkeror subrepo)
-* 2014-03-23 v1.5 (add squid proxy stting files)
-* 2014-04-23 v1.6 (add pandoc subrepo)
-* 2015-09-30 v2.0 (add tomcat and switchysharp config files)
-* 2015-11-19 v2.1 (add chrome extension example)
+## update
+2016-02-03
