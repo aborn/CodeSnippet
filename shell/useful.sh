@@ -14,3 +14,6 @@ sudo netstat -tupln
 
 # grep查找，递归查找关键字 Redis
 grep -r  "Redis" .
+
+# 查找文件
+sudo find / -name erl_crash.dump
