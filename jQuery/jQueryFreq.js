@@ -1,4 +1,3 @@
-
 /**
  * jQuery常用的一些操作
  */
@@ -59,6 +58,19 @@ location.reload(); //  刷新页面
 
 // 跳转链接
 window.location.href = "/configtester/listGroups.html";
+
+// form data
+function convertFormDataArray2Obj(formDataArray) {
+    var formObj = {};
+    formDataArray.forEach(function(eachItem, index){
+        if (formObj[eachItem.name] != undefined) {
+            formObj[eachItem.name] = formObj[eachItem.name] + ',' + eachItem.value;
+        } else {
+            formObj[eachItem.name] = eachItem.value || '';
+        }
+    });
+    return formObj;
+}
 
 // freemarker原样输出
 // ${r"${pageName}"}
