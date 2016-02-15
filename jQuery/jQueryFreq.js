@@ -28,6 +28,10 @@ $('#formid').serializeArray();
 dataArr.map(function(item, index) {
     console.log('good');
 });
+// js array的forEach遍历数组
+dataArr.forEach(function(eachItem){
+    console.log('eachItem=' + eachItem);
+});
 
 // jQuery的遍历每个array的item
 $('.pluginFormDiv').each(function(index, eachItem) {
