@@ -16,8 +16,8 @@ $('#dynamicPlugArea').append("<div class='ui button'>ddd</div>");
 $('#dynamicPlugArea').prepend(get_content_container(timeStamp, elements.get_plugin_cn_name(plugName) || ''));
 
 var dataArr = ["a", "b", "c"];
-dataArr.unshift("d");   // 插入js数组最前面
-dataArr.push("d");      // 插入js数组最后面
+dataArr.unshift("d");   // 插入js数组最前面,dataArr.shift()删除数组最前面元素
+dataArr.push("d");      // 插入js数组最后面,dataArr.pop()删除数组最后一个元素
 
 // unshift/push - add an element to the beginning/end of an array
 // shift/pop - remove and return the first/last element of and array
