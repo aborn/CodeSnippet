@@ -39,6 +39,7 @@ $('.pluginFormDiv').each(function(index, eachItem) {
 });
 
 $.post(url, data, callback);
+$.get(url, data, callback);
 
 $.ajax({
     url : '/eleconfig/appconfig/' + tabName + "FormSubmit.gson",
@@ -75,6 +76,11 @@ function convertFormDataArray2Obj(formDataArray) {
     });
     return formObj;
 }
+
+// 页面加载完成事件
+$(document).ready(function(){
+    console.log('document ready!.');
+});
 
 // freemarker原样输出
 // ${r"${pageName}"}
