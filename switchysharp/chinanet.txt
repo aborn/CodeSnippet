@@ -42,6 +42,7 @@
 *://*.ezhangdan.com/*
 *://*.fang.com/*
 *://*.fangdi.com.cn/*
+*://*.fonts.useso.com/*
 *://*.fudan.edu.cn/*
 *://*.iconfont.cn/*
 *://*.ifeng.com/*
