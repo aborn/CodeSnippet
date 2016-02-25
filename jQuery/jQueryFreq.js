@@ -24,8 +24,9 @@ dataArr.push("d");      // 插入js数组最后面,dataArr.pop()删除数组最�
 
 $('#formid').serializeArray();
 
-String.fromCharCode("a".charCodeAt(0) + 1); // => 得到"b"
-
+String.fromCharCode("a".charCodeAt(0) + 1); // 下一个字符 => 得到"b"
+var obj = [];
+Array.isArray(obj)  // 判断ojb是否为数组
 // js array的map，返回array
 dataArr.map(function(item, index) {
     console.log('good');
