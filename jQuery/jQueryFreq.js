@@ -94,3 +94,11 @@ document.getElementById("here").scrollIntoView();
 
 // freemarker原样输出
 // ${r"${pageName}"}
+
+// 选择的值
+var checkValues = $('input[name=eachAppSource]:checked').map(function(){
+    return $(this).val();
+}).get();
+
+// 将,全局替换成&
+"a,b,c".replace(/,/g, "&");
