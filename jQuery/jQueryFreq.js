@@ -26,7 +26,10 @@ $('#formid').serializeArray();
 
 String.fromCharCode("a".charCodeAt(0) + 1); // 下一个字符 => 得到"b"
 var obj = [];
-Array.isArray(obj)  // 判断ojb是否为数组
+if (Array.isArray(obj)){  // 判断ojb是否为数组
+    console.log("obj is array.");
+}
+
 // js array的map，返回array
 dataArr.map(function(item, index) {
     console.log('good');
