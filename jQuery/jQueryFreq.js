@@ -26,7 +26,8 @@ $('#formid').serializeArray();
 
 String.fromCharCode("a".charCodeAt(0) + 1); // 下一个字符 => 得到"b"
 var obj = [];
-if (Array.isArray(obj)){  // 判断ojb是否为数组
+
+if (Array.isArray(obj)){  // 判断obj是否为数组
     console.log("obj is array.");
 }
 
@@ -74,7 +75,7 @@ window.location.href = "/configtester/listGroups.html";
 function convertFormDataArray2Obj(formDataArray) {
     var formObj = {};
     formDataArray.forEach(function(eachItem, index){
-        if (formObj[eachItem.name] != undefined) {
+        if (formObj[eachItem.name] !== undefined) {
             formObj[eachItem.name] = formObj[eachItem.name] + ',' + eachItem.value;
         } else {
             formObj[eachItem.name] = eachItem.value || '';
