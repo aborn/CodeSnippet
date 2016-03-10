@@ -38,28 +38,28 @@ This repo includes lots of configure scripts, code snippet, which can be used in
    .rc project contains lots of system configure files, like .vimrc
    .bashrc etc.
 
-10. yum
+10. yum  
    redhat yum configure
 
-11. redis
+11. redis  
     install redis and configure proxy
 
-12. conkeror
+12. conkeror  
     web emacs style browser
 
-13. squid
+13. squid  
     the proxy server setting
 
-14. pandoc
+14. pandoc  
     the universal document converter
 
-15. tomcat
+15. tomcat  
     the default tomcat appkit server config
 
-16. switchysharp
+16. switchysharp  
     the chrome switchysharp plugin chinanet and gfwlist config files.
 
-17. js
+17. js  
     some awesome javascript and frequency used js code.
 
 ## update
