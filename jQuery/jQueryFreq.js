@@ -1,13 +1,11 @@
 /**
  * jQuery常用的一些操作
  */
-
 // 从当前myId找最近为table的parent
 $('#myId').closest('table');
 
 // 是否选中 jQuery 1.6
-$('#checkMeOut').prop('checked'); // true
-
+$('#checkBox').prop('checked');       // true
 $('#checkBox').prop('checked', true); // 设置为true
 
 // 将内容插入到一个容器里，放到容器的元素最后面
@@ -89,7 +87,8 @@ $(document).ready(function(){
     console.log('document ready!.');
 });
 
-// 移动到锚点 http://stackoverflow.com/questions/1586341/how-can-i-scroll-to-a-specific-location-on-the-page-using-jquery
+// 通过动画移动到锚点
+// http://stackoverflow.com/questions/1586341/how-can-i-scroll-to-a-specific-location-on-the-page-using-jquery
 var divPosition = $('#divId').offset();
 $('html, body').animate({scrollTop: divPosition.top}, "slow");
 
