@@ -4,9 +4,13 @@
 // 从当前myId找最近为table的parent
 $('#myId').closest('table');
 
-// 是否选中 jQuery 1.6
+// 是否选中 jQuery 1.6及以上版本
 $('#checkBox').prop('checked');       // true
 $('#checkBox').prop('checked', true); // 设置为true
+
+// jQuery 1.5及以下版本
+$('#checkBox').attr('checked');
+$('#checkBox').attr('checked', 'checked');
 
 // 将内容插入到一个容器里，放到容器的元素最后面
 $('#dynamicPlugArea').append("<div class='ui button'>ddd</div>");
