@@ -69,6 +69,7 @@ $.ajax({
 });
 
 location.reload(); //  刷新页面
+location.reload(true);
 
 // 跳转链接
 window.location.href = "/configtester/listGroups.html";
