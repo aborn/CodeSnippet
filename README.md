@@ -63,4 +63,4 @@ This repo includes lots of configure scripts, code snippet, which can be used in
     some awesome javascript and frequency used js code.
 
 ## update
-2016-03-10
+2016-03-18
