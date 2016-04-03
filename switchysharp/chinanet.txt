@@ -60,6 +60,7 @@
 *://*.ruanyifeng.com/*
 *://*.sankuai.com/*
 *://*.sina.com.cn/*
+*://*.smartisan.com/*
 *://*.sohu.com/*
 *://*.sohucs.com/*
 *://*.cdn.sohucs.com/*
