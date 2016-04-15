@@ -37,6 +37,11 @@ if (Array.isArray(obj)){  // 判断obj是否为数组
 dataArr.map(function(item, index) {
     console.log('good');
 });
+
+// 返回的是一个新的array
+dataArr.filter(function(item){
+    return true;
+});
 // js array的forEach遍历数组
 dataArr.forEach(function(eachItem){
     console.log('eachItem=' + eachItem);
