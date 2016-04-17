@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+# ----------------------------------------------
+# ubuntu 安装oracle-java
+# ----------------------------------------------
+
+# for unbutntu 14
+sudo apt-get install software-properties-common
 
 # unbuntu加入java源
 sudo apt-add-repository ppa:webupd8team/java
