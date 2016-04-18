@@ -60,7 +60,7 @@ $.post("/jsbridge/deleteJSBridge.html", {id:id},
        function(data, textStatus, jqXHR){
            if (data.status === 'success') {
                console.log("操作成功!");
-               location.reload = true;
+               location.reload();
            } else {
                console.log(data.info);
            }
