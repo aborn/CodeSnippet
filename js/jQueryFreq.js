@@ -52,8 +52,19 @@ $('.pluginFormDiv').each(function(index, eachItem) {
     arrResult.push($(eachItem).attr('id'));
 });
 
+// jQuery.post( url [, data ] [, success ] [, dataType ] )
 $.post(url, data, callback);
 $.get(url, data, callback);
+// 下面是一个例子
+$.post("/jsbridge/deleteJSBridge.html", {id:id},
+       function(data, textStatus, jqXHR){
+           if (data.status === 'success') {
+               console.log("操作成功!");
+               location.reload = true;
+           } else {
+               console.log(data.info);
+           }
+       }, "json");
 
 $.ajax({
     url : '/eleconfig/appconfig/' + tabName + "FormSubmit.gson",
