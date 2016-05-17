@@ -57,6 +57,8 @@
 *://*.pptv.com/*
 *://*.qq.com/*
 *://*.*.qq.com/*
+*://*.qcloud.com/*
+*://*.*.qcloud.com/*
 *://*.ruanyifeng.com/*
 *://*.sankuai.com/*
 *://*.sina.com.cn/*
