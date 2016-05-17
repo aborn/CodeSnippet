@@ -17,3 +17,12 @@ grep -r  "Redis" .
 
 # 查找文件
 sudo find / -name erl_crash.dump
+
+# 创建用户
+useradd -m USERNAME
+passwd USERNAME
+
+# change zsh
+chsh -s $(which zsh)
+# You may not change the shell for 'popkit'
+sudo usermod -s /bin/zsh popkit
