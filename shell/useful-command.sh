@@ -18,7 +18,7 @@ grep -r  "Redis" .
 # 查找文件
 sudo find / -name erl_crash.dump
 
-# 创建用户
+# 创建用户及创建用户对应的home目录
 useradd -m USERNAME
 passwd USERNAME
 
