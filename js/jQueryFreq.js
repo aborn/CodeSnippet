@@ -126,3 +126,9 @@ var checkValues = $('input[name=eachAppSource]:checked').map(function(){
 
 // 将,全局替换成&
 "a,b,c".replace(/,/g, "&");
+
+// select option 的操作
+// 选中的值对就的desc
+$( "#businessGroup option:selected" ).text();
+// 选中的option
+$( "#businessGroup option:selected");
