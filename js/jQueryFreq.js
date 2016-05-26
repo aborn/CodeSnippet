@@ -132,3 +132,6 @@ var checkValues = $('input[name=eachAppSource]:checked').map(function(){
 $( "#businessGroup option:selected" ).text();
 // 选中的option
 $( "#businessGroup option:selected");
+// find操作
+var appName = $(form).find('input#appName').val();   // id为appName的
+var groupName = $(form).find('select#businessGroup option:selected').text();
