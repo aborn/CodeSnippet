@@ -135,3 +135,4 @@ $( "#businessGroup option:selected");
 // find操作
 var appName = $(form).find('input#appName').val();   // id为appName的
 var groupName = $(form).find('select#businessGroup option:selected').text();
+$('#appListTable').find('tr[data-id="13"]');    // find attribute equals value
