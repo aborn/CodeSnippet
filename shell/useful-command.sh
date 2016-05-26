@@ -31,4 +31,5 @@ sudo usermod -s /bin/zsh popkit
 # 按文件大小排序
 ls -lhtr --sort=size
 # 查看当前目录下所占空间
-du -h --max-depth=0 .
+du -h --max-depth=0 .  # linux
+du -h -d=0 .           # mac
