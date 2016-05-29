@@ -33,3 +33,4 @@ ls -lhtr --sort=size
 # 查看当前目录下所占空间
 du -h --max-depth=0 .  # linux
 du -h -d=0 .           # mac
+du -h --max-depth=1 .  |sort -h   # 从小到大排序
