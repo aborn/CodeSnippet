@@ -34,3 +34,6 @@ ls -lhtr --sort=size
 du -h --max-depth=0 .  # linux
 du -h -d=0 .           # mac
 du -h --max-depth=1 .  |sort -h   # 从小到大排序
+# 找到当前文件夹下大于10M的文件
+find . -type f -size +10M
+find . -maxdepth 1 -type f -size +10M  # 递归
