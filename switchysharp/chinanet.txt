@@ -9,6 +9,7 @@
 [Wildcard]
 *10.*
 *://*.163.com/*
+*://*.aborn.me/*
 *://*.12333sh.gov.cn/*
 *192.168.*
 *://0.0.0.0:*/*
@@ -40,6 +41,7 @@
 *://*.doukit.cn/*
 *://*.ehnchina.com/*
 *://*.ezhangdan.com/*
+*://*.ele.me/*
 *://*.fang.com/*
 *://*.fangdi.com.cn/*
 *://*.fonts.useso.com/*
@@ -55,6 +57,7 @@
 *://*.jobbole.com/*
 *://*.jd.com/*
 *://*.localhost:8080/*
+*://*.meituan.com/*
 *://*.popkit.org/*
 *://*.pptv.com/*
 *://*.qq.com/*
