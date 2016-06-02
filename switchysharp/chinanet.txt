@@ -66,6 +66,7 @@
 *://*.*.qcloud.com/*
 *://*.ruanyifeng.com/*
 *://*.sankuai.com/*
+*://*.sankuai.info/*
 *://*.sina.com.cn/*
 *://*.smartisan.com/*
 *://*.sohu.com/*
