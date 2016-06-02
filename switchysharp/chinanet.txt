@@ -45,6 +45,7 @@
 *://*.fang.com/*
 *://*.fangdi.com.cn/*
 *://*.fonts.useso.com/*
+*://*.fontstatic.useso.com/*
 *://*.foxmail.com/*
 *://*.*.foxmail.com/*
 *://*.fudan.edu.cn/*
