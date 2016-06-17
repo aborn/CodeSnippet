@@ -20,6 +20,7 @@
 *://*.aliyun.com/*
 *://*.appkit.org/*
 *://*.baidu.com/*
+*://*.zhidao.baidu.com/*
 *://*.baidustatic.com/*
 *://*.bootcss.com/*
 *://*.dp/*
