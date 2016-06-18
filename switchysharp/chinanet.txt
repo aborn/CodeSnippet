@@ -50,6 +50,7 @@
 *://*.foxmail.com/*
 *://*.*.foxmail.com/*
 *://*.fudan.edu.cn/*
+*://*.hexun.com/*
 *://*.iconfont.cn/*
 *://*.ifeng.com/*
 *://*.importnew.com/*
@@ -69,7 +70,9 @@
 *://*.ruanyifeng.com/*
 *://*.sankuai.com/*
 *://*.sankuai.info/*
+*://*.sina.com/*
 *://*.sina.com.cn/*
+*://*.house.sina.com.cn/*
 *://*.smartisan.com/*
 *://*.sohu.com/*
 *://*.sohucs.com/*
