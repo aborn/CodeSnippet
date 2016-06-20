@@ -137,3 +137,6 @@ var appName = $(form).find('input#appName').val();   // id为appName的
 var groupName = $(form).find('select#businessGroup option:selected').text();
 $('#appListTable').find('tr[data-id="13"]');    // find attribute equals value
 $('#select-beast').parent().find('.selectize-control').css('background', 'red');
+
+// 是否有某个class
+$(this).hasClass('disabled');
