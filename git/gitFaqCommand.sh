@@ -19,3 +19,17 @@ git pull origin master
 
 ## 撤销add
 git reset <filename>
+
+
+## github fork and sync upstream
+
+# 如果没有upstram，添加之
+git remote add upstream https://github.com/whoever/whatever.git
+# example
+git remote add upstream https://github.com/melpa/melpa.git #git@github.com:melpa/melpa.git
+# 拉取所有远端，同步之
+git fetch upstream
+# 切到master
+git checkout master
+# rebase
+git rebase upstream/master
