@@ -140,3 +140,9 @@ $('#select-beast').parent().find('.selectize-control').css('background', 'red');
 
 // 是否有某个class
 $(this).hasClass('disabled');
+
+// div的显示与隐藏
+$('.news').css('display','none');
+$('.news').hide();
+$('.news').show();
+$('.news').css('display','block');
