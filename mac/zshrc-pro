@@ -101,8 +101,6 @@ export PATH=$PATH:/Users/aborn/dpcode/insight-js/sh
 export PATH=$PATH:/Users/aborn/github/step-js/sh
 export PATH=$PATH:/usr/local/Cellar/grep/2.22/bin
 export PATH=$PATH:/usr/local/Cellar/ack/2.14/bin
-#export http_proxy=133.130.54.33:1984
-#export https_proxy=133.130.54.33:1984
 
 function exists { which $1 &> /dev/null }
 
