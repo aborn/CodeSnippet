@@ -40,3 +40,7 @@ find . -maxdepth 1 -type f -size +10M  # 递归
 
 # 解压.gz文件
 gunzip -c abc.gz >abc16
+# 解压.xz文件
+xz -d <filename>.tar.xz
+# 解压.tar文件
+tar -xvf emacs-25.0.95.tar
