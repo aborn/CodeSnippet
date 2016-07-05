@@ -20,9 +20,8 @@ git pull origin master
 ## 撤销add
 git reset <filename>
 
-
+## github 的pull/request前先同步上流源
 ## github fork and sync upstream
-
 # 如果没有upstram，添加之
 git remote add upstream https://github.com/whoever/whatever.git
 # example
