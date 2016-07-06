@@ -3,3 +3,19 @@ ${content.url?substring(0, 30)}...
 <#else>
 ${(content.url)!}
 </#if>
+
+<!--赋值-->
+<#assign no = 0 >
+<#list itemVo.atoms as atomVo>
+<td class="text-center">
+    <#if no == 0>
+    <#if itemVo.changeType=1>
+    <i class="edit icon"></i>
+    <#elseif itemVo.changeType=2>
+    <i class="plus square outline icon"></i>
+    </#if>
+    <#assign no = no + 1 >
+    </#if>
+    ${atomVo}
+</td>
+</#list>
