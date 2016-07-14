@@ -63,6 +63,7 @@
 *://*.meituan.com/*
 *://*.popkit.org/*
 *://*.pptv.com/*
+*://*.processon.com/*
 *://*.qq.com/*
 *://*.*.qq.com/*
 *://*.qcloud.com/*
