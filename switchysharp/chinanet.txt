@@ -43,6 +43,7 @@
 *://*.ehnchina.com/*
 *://*.ezhangdan.com/*
 *://*.ele.me/*
+*://*.emacswiki.org/*
 *://*.fang.com/*
 *://*.fangdi.com.cn/*
 *://*.fonts.useso.com/*
