@@ -146,3 +146,6 @@ $('.news').css('display','none');
 $('.news').hide();
 $('.news').show();
 $('.news').css('display','block');
+
+// 删除一个div里的子节点
+$("#foo").empty();
