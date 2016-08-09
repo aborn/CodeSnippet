@@ -10,3 +10,8 @@ delete from Ele_Config where `eleScene` = 'testop2';
 
 # 按月统计上线量
 select month(`createTime`), count(*) from `Ele_Config_Package` where year(createTime) = 2015 group by month(createTime)
+
+# 修改字段scene的长度,有以下两种方式
+ALTER TABLE `Ele_Scene_Lock` CHANGE COLUMN `scene` `scene` VARCHAR(128);
+
+ALTER TABLE `Ele_Scene_Lock` MODIFY `scene` VARCHAR(128);
