@@ -15,3 +15,6 @@ select month(`createTime`), count(*) from `Ele_Config_Package` where year(create
 ALTER TABLE `Ele_Scene_Lock` CHANGE COLUMN `scene` `scene` VARCHAR(128);
 
 ALTER TABLE `Ele_Scene_Lock` MODIFY `scene` VARCHAR(128);
+
+# 两个表通过id关联
+select * from `Ele_Content_Config` where eleId in (select eleId from Ele_Config where `eleScene` = 'appconfigtool');
