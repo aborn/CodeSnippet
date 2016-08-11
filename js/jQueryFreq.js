@@ -149,3 +149,14 @@ $('.news').css('display','block');
 
 // 删除一个div里的子节点
 $("#foo").empty();
+
+// js 对每个array的reduce操作
+var sourceArr = ['a', 'b', 'c', 'd'];
+var valueItems = ['a', 'b', 'c'];
+var needChecked = valueItems.reduce(
+    function(previous, current, index, array) {
+        return (previous & sourceArr.indexOf(current) >= 0);
+    }, true);
+
+//查找所有名为eachAppSource的checkbox
+var checkboxs = $('input[name=eachAppSource]');
