@@ -135,6 +135,8 @@ $( "#businessGroup option:selected");
 if ($('#waxPatch option[value="a"]').length > 0) {
     console.log("有这个option");
 }
+// semantic-ui,当value为空时，手动设置显示的值
+$('#waxPatch').parent().find('.text').html('请选择');
 
 // find操作
 var appName = $(form).find('input#appName').val();   // id为appName的
