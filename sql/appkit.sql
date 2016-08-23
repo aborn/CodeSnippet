@@ -18,3 +18,6 @@ ALTER TABLE `Ele_Scene_Lock` MODIFY `scene` VARCHAR(128);
 
 # 两个表通过id关联
 select * from `Ele_Content_Config` where eleId in (select eleId from Ele_Config where `eleScene` = 'appconfigtool');
+
+# 删除UNIQUE KEY
+alter table tablename drop index key;
