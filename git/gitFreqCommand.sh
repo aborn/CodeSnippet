@@ -32,3 +32,9 @@ git fetch upstream
 git checkout master
 # rebase
 git rebase upstream/master
+
+# pull request  ID为PR的ID
+git fetch origin pull/ID/head:BRANCHNAME
+
+# git fetch origin pull/157/head:B157
+# git checkout B157
