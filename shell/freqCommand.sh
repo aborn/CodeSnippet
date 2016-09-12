@@ -14,6 +14,8 @@ sudo netstat -tupln
 
 # grep查找，递归查找关键字 Redis
 grep -r  "Redis" .
+# 对于.gz包的查找
+zgrep "xxx" /path/to/zipfile/file.2016-09-10.gz
 
 # 查找文件
 sudo find / -name erl_crash.dump
