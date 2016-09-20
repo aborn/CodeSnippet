@@ -1,0 +1,5 @@
+
+<!--返回List<String>-->
+<select id="queryDomainKeyList" resultClass="java.lang.String">
+  SELECT DISTINCT domainKey FROM MetaInfo
+</select>
