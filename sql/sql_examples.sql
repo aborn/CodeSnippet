@@ -20,3 +20,6 @@ insert into temp values("gr", 108333, "goooogle");
 
 # 查询表中某个字段(eleName)是否重复行
 select * from <table-name> where a="avalue" group by `eleName` having count(eleName)<>1
+
+# 查询某个字段不重复的记录
+select distinct domainKey from MetaInfo;
