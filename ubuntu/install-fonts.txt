@@ -1,0 +1,3 @@
+在ubuntu下安装字体
+1. 将字体拷贝到/usr/share/fonts下面
+2. 重启电脑或者执行fc-cache -f -v
