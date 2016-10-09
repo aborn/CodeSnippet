@@ -23,3 +23,6 @@ select * from <table-name> where a="avalue" group by `eleName` having count(eleN
 
 # 查询某个字段不重复的记录
 select distinct domainKey from MetaInfo;
+
+# 修改字段长度 (修改表user中字段name的长度为50)
+alter table user modify column name varchar(50);

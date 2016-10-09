@@ -1,5 +1,5 @@
 # 更新appconfig
-update `Ele_Config` set `status` = 0 where eleScene = 'appconfig' and parentId=0
+update `Ele_Config` set `status` = 0 where eleScene = 'indexhoticon' and eleId=2619
 
 # 删除
 delete from Ele_Scene where id=38
