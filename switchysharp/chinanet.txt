@@ -25,6 +25,10 @@
 *://*.bootcss.com/*
 *://*.dp/*
 *://*.*.dp/*
+*://*.nh/*
+*://*.*.nh/*
+*://*.gq/*
+*://*.*.gq/*
 *://*.cnblogs.com/*
 *://*.cnbeta.com/*
 *://*.csdn.net/*
