@@ -29,6 +29,8 @@
 *://*.*.nh/*
 *://*.gq/*
 *://*.*.gq/*
+*://*.beta/*
+*://*.*.beta/*
 *://*.cnblogs.com/*
 *://*.cnbeta.com/*
 *://*.csdn.net/*
