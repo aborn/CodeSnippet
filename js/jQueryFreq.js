@@ -166,3 +166,8 @@ var needChecked = valueItems.reduce(
 
 //查找所有名为eachAppSource的checkbox
 var checkboxs = $('input[name=eachAppSource]');
+
+// javascript字符串的contains操作
+var string = "foo",
+    substring = "oo";
+console.log(string.indexOf(substring) !== -1);
