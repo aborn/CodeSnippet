@@ -171,3 +171,7 @@ var checkboxs = $('input[name=eachAppSource]');
 var string = "foo",
     substring = "oo";
 console.log(string.indexOf(substring) !== -1);
+
+// 设置css样式
+$('#unLockSceneDiv').css({ display: "none" });  // 隐藏
+$('#unLockSceneDiv').css({display:""});         // 显示
