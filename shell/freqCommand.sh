@@ -10,6 +10,9 @@ lsof -i :portNumber
 # 列出mvn的依赖树
 mvn dependency:tree
 
+# 手动安装jar包到本地
+mvn install:install-file -Dfile=/Users/aborn/Downloads/joda-time-2.9.6.jar -DgroupId=joda-time -DartifactId=joda-time -Dversion=2.9.6 -Dpackaging=jar -DgeneratePom=true
+
 # 检查网络端口监听也可以用(linux only)
 sudo netstat -tupln
 
