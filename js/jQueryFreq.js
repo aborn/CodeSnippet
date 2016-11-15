@@ -175,3 +175,6 @@ console.log(string.indexOf(substring) !== -1);
 // 设置css样式
 $('#unLockSceneDiv').css({ display: "none" });  // 隐藏
 $('#unLockSceneDiv').css({display:""});         // 显示
+
+// 通过js设置其值
+$('#dropdown').dropdown("set selected", "1");
