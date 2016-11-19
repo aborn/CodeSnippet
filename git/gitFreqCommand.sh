@@ -10,6 +10,10 @@ git config --list
 git init
 git add .
 git commit -m "Initial commit"
+## 删除远程分支
+git push origin :<branch_name>            # v1.5+
+git push origin --delete <branch_name>    # v1.7+
+
 ## 与远端关联
 git remote add origin <remote-git-url>
 # example: git remote add origin git@code.dianpingoa.com:mobile/knb-ua-kit.git
