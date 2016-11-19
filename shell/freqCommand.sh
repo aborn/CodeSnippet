@@ -52,3 +52,6 @@ xz -d <filename>.tar.xz
 tar -xvf emacs-25.0.95.tar
 # 打.tar包
 tar -cvf FileName.tar DirName
+
+# 查看上一条命令执行的状态
+$?
