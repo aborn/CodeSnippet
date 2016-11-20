@@ -16,6 +16,7 @@ git push origin --delete <branch_name>    # v1.7+
 
 ## 与远端关联
 git remote add origin <remote-git-url>
+git config --get remote.origin.url        # 获得远端git地址
 # example: git remote add origin git@code.dianpingoa.com:mobile/knb-ua-kit.git
 git push --set-upstream origin master
 # 如果远端有了，则git pull下
