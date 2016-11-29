@@ -1,0 +1,7 @@
+#+TITILE: Intellij
+
+* 1. Error:java: javacTask: source release 1.6 requires target release 1.6
+解决方法如下：
+[[./images/s1.png]]
+
+* 2.
