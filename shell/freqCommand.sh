@@ -55,3 +55,6 @@ tar -cvf FileName.tar DirName
 
 # 查看上一条命令执行的状态 determine last command status
 echo $?
+
+# 用curl下载远程文件
+curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.2.zip
