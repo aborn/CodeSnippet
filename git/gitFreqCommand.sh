@@ -21,6 +21,10 @@ git config --get remote.origin.url        # 获得远端git地址
 git push --set-upstream origin master
 # 如果远端有了，则git pull下
 git pull origin master
+# 如果本地已经Commit过，可能会报如下错误：
+# fatal: refusing to merge unrelated histories
+# 请执行
+git pull origin master --allow-unrelated-histories
 
 ## 撤销add
 git reset <filename>
