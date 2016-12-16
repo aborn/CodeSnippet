@@ -4,4 +4,5 @@ public static void main(String[] args){
     //return "redirect:/index.html?c=scene&key=hot";
     for (Map.Entry<String, EleDataAtom> entry : eleDataAtomMap.entrySet()) {
     }
+    String[] strings = os.trim().split("\\s+");
 }
