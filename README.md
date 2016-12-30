@@ -61,6 +61,3 @@ This repo includes lots of configure scripts, code snippet, which can be used in
 
 17. js  
     some awesome javascript and frequency used js code.
-
-## update
-2016-07-06
