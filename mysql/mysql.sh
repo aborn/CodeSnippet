@@ -1,5 +1,5 @@
 
-# reset password
+# ubuntu mysql password reset
 # https://help.ubuntu.com/community/MysqlPasswordReset
 
 
@@ -16,4 +16,16 @@ sudo rm -rf /etc/mysql /var/lib/mysql
 sudo apt-get autoremove
 sudo apt-get autoclean
 
-#
+# ubuntu install mysql
+sudo apt-get install mysql-server mysql-client
+
+# 学用mysql命令
+
+# 查看数据引擎
+show engines;
+
+# 注意: /etc/mysql/mysql.conf.d/mysqld.cnf
+# bind-address           = 127.0.0.1
+
+# centos安装mysql client
+yum install mysql
