@@ -23,6 +23,7 @@ zgrep "xxx" /path/to/zipfile/file.2016-09-10.gz
 
 # 查找文件
 sudo find / -name erl_crash.dump
+sudo find / -name Gemfile
 
 # 创建用户及创建用户对应的home目录
 useradd -m USERNAME
