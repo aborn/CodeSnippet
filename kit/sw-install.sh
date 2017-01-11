@@ -19,6 +19,9 @@ texlive-fonts-extra texlive-lang-cjk texlive-full \
 scm clisp mit-schem libgtk2.0-dev libxpm-dev libgif-dev \
 libncurses-dev 
 
+# 安装oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # sudo apt-get install -y texlive-full
 # sudo apt-get install -y clisp
 # sudo apt-get install -y lispbox
