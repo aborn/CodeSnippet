@@ -62,3 +62,6 @@ curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.
 
 # 修改用户密码
 sudo passwd USERNAME
+
+# 拨出U盘
+sudo umount /dev/sdb1
