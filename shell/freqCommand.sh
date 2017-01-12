@@ -59,3 +59,6 @@ echo $?
 
 # 用curl下载远程文件
 curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.2.zip
+
+# 修改用户密码
+sudo passwd USERNAME
