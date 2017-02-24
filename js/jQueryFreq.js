@@ -159,6 +159,7 @@ $("#foo").empty();
 // js 对每个array的reduce操作 (js > 1.8版本才支持)
 var sourceArr = ['a', 'b', 'c', 'd'];
 var valueItems = ['a', 'b', 'c'];
+sourceArr.join(',');  // array join
 var needChecked = valueItems.reduce(
     function(previous, current, index, array) {
         return (previous & sourceArr.indexOf(current) >= 0);
