@@ -47,6 +47,8 @@ du -h --max-depth=1 .  |sort -h   # 从小到大排序
 # 找到当前文件夹下大于10M的文件
 find . -type f -size +10M
 find . -maxdepth 1 -type f -size +10M  # 递归
+# 找出当前builds目录下,时间超过7天的文件并删除之(不加 -delete选项表示查看)
+sudo find ./builds -mtime +7 -type f -delete
 
 # 解压.gz文件
 gunzip -c abc.gz >abc16
