@@ -11,6 +11,7 @@ public static void main(String[] args){
     cal.set(2017, Calendar.MARCH, 16, 0, 0, 0);
     Date date = cal.getTime();
 
-    // java ArrayList swap elements
+    // url decode using java
+    String result = java.net.URLDecoder.decode(url, "UTF-8");// java ArrayList swap elements
     Collections.swap(List<?> list, int i, int j);
 }

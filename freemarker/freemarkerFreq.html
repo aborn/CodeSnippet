@@ -26,3 +26,10 @@ ${(content.url)!}
 
 <!--time-->
 ${listVo.updateTime?string('yyyy-MM-dd HH:mm:ss')}
+
+<!--maps -->
+<#list testMap?keys as testKey> 
+<option value="${testKey}" >
+    ${testMap[testKey]}
+</option> 
+</#list>
