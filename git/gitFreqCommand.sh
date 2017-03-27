@@ -42,6 +42,11 @@ git checkout master
 # rebase
 git rebase upstream/master
 
+# 当rebase发生冲突时怎么处理?
+git rebase master
+git add .
+git rebase --continue
+
 # pull request  ID为PR的ID
 git fetch origin pull/ID/head:BRANCHNAME
 
