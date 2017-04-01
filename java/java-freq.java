@@ -14,4 +14,26 @@ public static void main(String[] args){
     // url decode using java
     String result = java.net.URLDecoder.decode(url, "UTF-8");// java ArrayList swap elements
     Collections.swap(List<?> list, int i, int j);
+
+    try {
+        //方法一:采用IOUtils
+        InputStream inputStream = request.getInputStream();
+        String rs = IOUtils.toString(inputStream);
+
+        // 方法二:分段读
+        final int bufferSize = 1024;
+        final char[] buffer = new char[bufferSize];
+        final StringBuilder out = new StringBuilder();
+        Reader in = new InputStreamReader(inputStream, "UTF-8");
+        for (; ; ) {
+            int rsz = in.read(buffer, 0, buffer.length);
+            if (rsz < 0)
+                break;
+            out.append(buffer, 0, rsz);
+        }
+
+        JSONArray jsonArray = JSONArray.parseArray(out.toString());
+    } catch (IOException e) {
+        APISysLog.warn("", e);
+    }
 }
