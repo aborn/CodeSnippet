@@ -36,4 +36,7 @@ public static void main(String[] args){
     } catch (IOException e) {
         APISysLog.warn("", e);
     }
+
+    // java 7 随机int区间
+    int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
 }
