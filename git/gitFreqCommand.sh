@@ -52,3 +52,6 @@ git fetch origin pull/ID/head:BRANCHNAME
 
 # git fetch origin pull/157/head:B157
 # git checkout B157
+
+# 查看单个文件的修改历史
+git log -p filename
