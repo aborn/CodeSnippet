@@ -10,3 +10,8 @@ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
 
 brew update
+
+# install gnutls manually https://gist.github.com/morgant/1753095
+
+# gmp
+# https://homebrew.bintray.com/bottles/gmp-6.1.1.sierra.bottle.tar.gz
