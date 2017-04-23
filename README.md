@@ -18,6 +18,9 @@ Order by alphabeta.
    
 + elisp  
    This subrepo contains lots of emacs lisp scripts.
+   
++ git  
+   Git usage and frequency command.
 
 + intellij  
   Intellij config related.
