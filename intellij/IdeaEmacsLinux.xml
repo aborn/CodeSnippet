@@ -10,9 +10,6 @@
     <keyboard-shortcut first-keystroke="meta v" />
   </action>
   <action id="AceJumpAction" />
-  <action id="ActivateProjectToolWindow">
-    <keyboard-shortcut first-keystroke="meta 1" />
-  </action>
   <action id="ActivateTerminalToolWindow">
     <keyboard-shortcut first-keystroke="meta m" />
   </action>
