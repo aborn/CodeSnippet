@@ -1,4 +1,10 @@
 <keymap version="1" name="IdeaEmacsLinux" parent="Emacs">
+  <action id="$Copy">
+    <keyboard-shortcut first-keystroke="ctrl insert" />
+    <keyboard-shortcut first-keystroke="escape" second-keystroke="w" />
+    <keyboard-shortcut first-keystroke="ctrl c" />
+    <keyboard-shortcut first-keystroke="alt w" />
+  </action>
   <action id="$Paste">
     <keyboard-shortcut first-keystroke="ctrl y" />
     <keyboard-shortcut first-keystroke="meta v" />
@@ -16,9 +22,8 @@
   <action id="Back">
     <keyboard-shortcut first-keystroke="ctrl alt left" />
   </action>
-  <action id="CallHierarchy">
+  <action id="CallHierarchy.BaseOnThisType">
     <keyboard-shortcut first-keystroke="ctrl alt h" />
-    <keyboard-shortcut first-keystroke="ctrl c" />
   </action>
   <action id="CloseAllEditors" />
   <action id="CloseAllEditorsButActive" />
@@ -51,6 +56,10 @@
   </action>
   <action id="Diff.PrevChange">
     <keyboard-shortcut first-keystroke="alt left" />
+  </action>
+  <action id="Editor Copy">
+    <keyboard-shortcut first-keystroke="ctrl c" />
+    <keyboard-shortcut first-keystroke="alt w" />
   </action>
   <action id="Editor Paste">
     <keyboard-shortcut first-keystroke="ctrl y" />
