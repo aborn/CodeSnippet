@@ -133,7 +133,7 @@ $( "#businessGroup option:selected" ).text();
 // 选中的option
 $( "#businessGroup option:selected");
 if ($('#waxPatch option[value="a"]').length > 0) {
-m    console.log("有这个option");
+    console.log("有这个option");
 }
 // semantic-ui,当value为空时，手动设置显示的值
 $('#waxPatch').parent().find('.text').html('请选择');
