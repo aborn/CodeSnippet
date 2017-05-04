@@ -179,3 +179,5 @@ $('#unLockSceneDiv').css({display:""});         // 显示
 
 // 通过js设置其值
 $('#dropdown').dropdown("set selected", "1");
+// 随机字符串p
+Math.random().toString(36).substring(7);
