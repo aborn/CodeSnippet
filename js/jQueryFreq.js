@@ -181,3 +181,18 @@ $('#unLockSceneDiv').css({display:""});         // 显示
 $('#dropdown').dropdown("set selected", "1");
 // 随机字符串p
 Math.random().toString(36).substring(7);
+
+
+// remove all options & add it
+$('#models').empty();
+$.getJSON('@Url.Action("YourUrl")',function(data){
+    var dropdown=$('#models');
+    dropdown.empty();
+    $.each(data, function (index, item) {
+        dropdown.append(
+            $('<option>', {
+                value: item.valueField,
+                text: item.DisplayField
+            }, '</option>'));
+    });
+});
