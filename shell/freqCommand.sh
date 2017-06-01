@@ -70,3 +70,6 @@ sudo passwd USERNAME
 
 # 拨出U盘
 sudo umount /dev/sdb1
+
+
+https://unix.stackexchange.com/questions/151689/how-can-i-instruct-yum-to-install-a-specific-version-of-package-x

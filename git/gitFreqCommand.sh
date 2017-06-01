@@ -60,3 +60,10 @@ git log -p filename
 git checkout tag_name
 # 注意: tag 相当于是一个快照，是不能更改它的代码的，如果要在 tag 代码的基础上做修改，你需要一个分支：
 git checkout -b branch_name tag_name
+
+# git打tag
+git tag v0.3.4
+# 将tag推送到远端
+git push origin v0.3.4
+# 显示tag列表
+git tag -l
