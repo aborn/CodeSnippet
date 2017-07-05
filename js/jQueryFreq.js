@@ -82,6 +82,7 @@ $.ajax({
     error: function (jXHR, textStatus, errorThrown) {
         alert(errorThrown);
     }
+    //async: false  // 同步的ajax
 });
 
 location.reload(); //  刷新页面
