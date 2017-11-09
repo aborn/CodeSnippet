@@ -47,6 +47,11 @@ dataArr.forEach(function(eachItem){
     console.log('eachItem=' + eachItem);
 });
 
+// js 按order大小从小到大排序
+dataArr.sort(function (o1, o2) {
+    return o1.order - o2.order;
+});
+
 // jQuery的遍历每个array的item
 $('.pluginFormDiv').each(function(index, eachItem) {
     arrResult.push($(eachItem).attr('id'));
