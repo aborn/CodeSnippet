@@ -67,3 +67,17 @@ git tag v0.3.4
 git push origin v0.3.4
 # 显示tag列表
 git tag -l
+
+## 删除所有commit，仅保留当前文件
+# 1. Checkout
+git checkout --orphan latest_branch
+# 2. Add all the files
+git add -A
+# 3. Commit the changes
+git commit -am "re-init"
+# 4. Delete current master branch
+git branch -D master
+# 5. Rename the current branch to master
+git branch -m master
+# Finally, force update your repository
+git push -f origin master
