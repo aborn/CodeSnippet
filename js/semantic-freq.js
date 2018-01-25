@@ -6,6 +6,7 @@ $('#eleType').dropdown("set selected", 2);
 // dropdown的change事件
 $('.valueType-dropdown').on('change', function () {
     var value = $(this).dropdown('get item').attr('value');
+    //var value = $(this).val();   // 如果是option
     $('#valueType').val(value);
     console.log($('#valueType').val());
 });
