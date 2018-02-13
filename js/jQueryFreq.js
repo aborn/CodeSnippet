@@ -202,3 +202,7 @@ $.getJSON('@Url.Action("YourUrl")',function(data){
             }, '</option>'));
     });
 });
+
+// 绑定和解除绑定
+$('.check-select-type-action').unbind();
+$('.check-select-type-action').on("click", function () {});
