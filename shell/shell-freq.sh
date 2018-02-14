@@ -2,7 +2,6 @@
 # shell 的常用语法
 
 # for 循环
-CURRENTPATH=`pwd`
 for item in `ls`;
 do
 	  echo ${item} ;
