@@ -7,6 +7,12 @@ do
 	  echo ${item} ;
 done
 
+# 数字for循环
+for((i=1;i<=10;i++));
+do
+    echo $(expr $i \* 3 + 1);
+done
+
 # 判断文件夹是否存在
 if [ ! -d "/data/" ];then
     mkdir /data
