@@ -22,7 +22,8 @@ libncurses-dev
 # 安装oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-sudo apt-get install screen
+# 下面为 VPS 基本安装软件
+sudo apt-get install -y git vim screen zsh
 
 # sudo apt-get install -y texlive-full
 # sudo apt-get install -y clisp
