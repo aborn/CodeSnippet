@@ -25,6 +25,10 @@ sudo apt-get install -y git vim screen zsh
 # 安装oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# 修改默认shell,如果出现 You may not change the shell for 'aborn'.
+chsh -s /bin/zsh
+sudo usermod -s /bin/zsh aborn
+
 # sudo apt-get install -y texlive-full
 # sudo apt-get install -y clisp
 # sudo apt-get install -y lispbox
