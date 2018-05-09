@@ -31,6 +31,7 @@ sudo find / -name Gemfile
 # 创建用户及创建用户对应的home目录
 useradd -m USERNAME
 passwd USERNAME
+usermod -d /home/path/to/newhome username
 
 # change zsh
 chsh -s $(which zsh)
