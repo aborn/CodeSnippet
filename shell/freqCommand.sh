@@ -29,7 +29,7 @@ sudo find / -name erl_crash.dump
 sudo find / -name Gemfile
 
 # 创建用户及创建用户对应的home目录
-useradd -m USERNAME
+useradd -m USERNAME -d /path/to/home
 passwd USERNAME
 usermod -d /home/path/to/newhome username
 
@@ -74,3 +74,7 @@ sudo umount /dev/sdb1
 
 
 https://unix.stackexchange.com/questions/151689/how-can-i-instruct-yum-to-install-a-specific-version-of-package-x
+
+
+# 查看Log文件a.log 在 2018-05-15T13:40:00+08:00 到 2018-05-15T13:55:00+08:00 的日志，并将其保存在out.log文件中
+sed -n '/2018-05-15T13:40:00+08:00/,/2018-05-15T13:55:00+08:00/p' a.log >> out.log
