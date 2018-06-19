@@ -82,3 +82,9 @@ git branch -D master
 git branch -m master
 # Finally, force update your repository
 git push -f origin master
+
+# 查看commitA到commitB之间的diff
+git diff commitA^ commitB
+# 查看某一次的commit的diff，下面两个命令都可以实现
+git diff commit^
+git show commit    # 更优
