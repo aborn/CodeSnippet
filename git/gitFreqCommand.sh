@@ -7,6 +7,10 @@ git config user.name "Aborn Jiang"
 git config --global user.name "Aborn Jiang"
 git config --global user.email loveaborn@foxmail.com
 git config --list
+## 设置用户名(只对当前项目有效)，切到项目根目录
+git config user.name "Aborn Jiang"
+git config user.email loveaborn@foxmail.com
+
 ## 初始化
 git init
 git add .
