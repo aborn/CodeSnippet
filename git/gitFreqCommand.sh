@@ -1,17 +1,18 @@
-## 强制回滚到本地的本次历史commit
+## 强制回滚到本地的某次历史commit
 git reset --hard <commit-hash>
 ## 远程也进行强制同步
 git push -f origin <branch>
+
 ## 设置用户名
 git config user.name "Aborn Jiang"
 git config --global user.name "Aborn Jiang"
 git config --global user.email loveaborn@foxmail.com
 git config --list
-## 设置用户名(只对当前项目有效)，切到项目根目录
+## 设置用户名(只对当前项目有效)，注意切到项目根目录
 git config user.name "Aborn Jiang"
 git config user.email loveaborn@foxmail.com
 
-## 初始化
+## 初始化一个空项目到本地git仓库
 git init
 git add .
 git commit -m "Initial commit"
@@ -24,7 +25,7 @@ git remote add origin <remote-git-url>
 git config --get remote.origin.url        # 获得远端git地址
 # example: git remote add origin git@code.dianpingoa.com:mobile/knb-ua-kit.git
 git push --set-upstream origin master
-# 如果远端有了，则git pull下
+# 如果与远端有了关联，则直接git pull就好
 git pull origin master
 # 如果本地已经Commit过，可能会报如下错误：
 # fatal: refusing to merge unrelated histories
