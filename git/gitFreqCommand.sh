@@ -73,6 +73,13 @@ git tag v0.3.4
 git push origin v0.3.4
 # 显示tag列表
 git tag -l
+# 删除tag
+git tag -d tagName
+# 删除远端tag
+git push origin :refs/tags/tagName
+# 或者
+git push --delete origin tagName
+
 
 ## 删除所有commit，仅保留当前文件
 # 1. Checkout
