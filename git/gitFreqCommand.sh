@@ -34,6 +34,8 @@ git pull origin master --allow-unrelated-histories
 
 ## 撤销add
 git reset <filename>
+## reset single file
+git checkout HEAD -- my-file.txt
 
 ## github 的pull/request前先同步上流源
 ## github fork and sync upstream
