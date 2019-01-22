@@ -32,6 +32,7 @@ sudo find / -name Gemfile
 useradd -m USERNAME -d /path/to/home
 passwd USERNAME
 usermod -d /home/path/to/newhome username
+sudo adduser username sudo  # 添加给用户添加sudo group
 
 # change zsh
 chsh -s $(which zsh)
