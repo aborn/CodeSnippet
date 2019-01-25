@@ -206,3 +206,10 @@ $.getJSON('@Url.Action("YourUrl")',function(data){
 // 绑定和解除绑定
 $('.check-select-type-action').unbind();
 $('.check-select-type-action').on("click", function () {});
+
+
+// 原生态
+var list = document.getElementsByClassName("node");
+for (let item of list) {
+    console.log(item.textContent);
+}
