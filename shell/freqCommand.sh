@@ -79,3 +79,8 @@ https://unix.stackexchange.com/questions/151689/how-can-i-instruct-yum-to-instal
 
 # 查看Log文件a.log 在 2018-05-15T13:40:00+08:00 到 2018-05-15T13:55:00+08:00 的日志，并将其保存在out.log文件中
 sed -n '/2018-05-15T13:40:00+08:00/,/2018-05-15T13:55:00+08:00/p' a.log >> out.log
+
+screen mix eeb.deploy  # C-a d
+# screen -ls
+# screen -r id
+# screen -X -S id quit #(Attached)
