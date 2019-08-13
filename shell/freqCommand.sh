@@ -84,3 +84,6 @@ screen mix eeb.deploy  # C-a d
 # screen -ls
 # screen -r id
 # screen -X -S id quit #(Attached)
+
+# 通过ls找到需要的文件名，再将其移动到outdir路径下
+ls |grep "keyword"| while read f; do mv "$f" outdir; done
