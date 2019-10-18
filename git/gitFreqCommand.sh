@@ -102,3 +102,9 @@ git diff commitA^ commitB
 # 查看某一次的commit的diff，下面两个命令都可以实现
 git diff commit^
 git show commit    # 更优
+
+
+# 清理不必要的文件，优化本地Rep
+git gc --prune=now
+# 删除所有远端在orgin下所有无用的分支
+git remote prune origin
