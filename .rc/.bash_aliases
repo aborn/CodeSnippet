@@ -1,5 +1,4 @@
 alias vi='vim'
-alias ls='ls --color=always'
 alias la='ls -A'
 alias l='ls -CF'
 alias ll='ls -alFh'
