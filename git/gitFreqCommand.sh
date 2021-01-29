@@ -9,7 +9,7 @@ git config --global user.name "Aborn Jiang"
 git config --global user.email loveaborn@foxmail.com
 git config --list
 ## 设置用户名(只对当前项目有效)，注意切到项目根目录
-git config user.name "Aborn Jiang"
+git config user.name "aborn"
 git config user.email loveaborn@foxmail.com
 
 ## 初始化一个空项目到本地git仓库
@@ -36,6 +36,7 @@ git pull origin master --allow-unrelated-histories
 git reset <filename>
 ## reset single file
 git checkout HEAD -- my-file.txt
+git reset HEAD~1  ## 撤销上次commit，保留文件的改变，只将指针调到上一次
 
 ## github 的pull/request前先同步上流源
 ## github fork and sync upstream
