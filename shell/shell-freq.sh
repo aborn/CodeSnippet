@@ -27,6 +27,11 @@ else
     rm -rf /data/filename
 fi
 
+# 循环判断pid是否还活着
+while kill -0 $PID; do
+    sleep 1
+done
+
 # 常见的判断
 # -e filename  如果 filename存在，则为真  [ -e /var/log/syslog ]
 # -d filename  如果 filename为目录，则为真  [ -d /tmp/mydir ]
