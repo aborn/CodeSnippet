@@ -9,10 +9,16 @@ import java.util.List;
  */
 public class StringTools {
 
-    public static void main(String[] args) {
-        String inputValue = "zhangsan <zhangsan@qq.com>; lisi <lisi@hotmail.com>; ";
+    /**
+     * 从邮件列表获取用户列表，以 ; 作为分割
+     *
+     * @param mailListContent 邮件列表内容，如
+     * @return
+     */
 
-        String[] arr = inputValue.split(";");
+    public static String getEmailNameInfo(String mailListContent) {
+
+        String[] arr = mailListContent.split(";");
         List<String> resultList = new ArrayList<>();
 
         for (String item : arr) {
@@ -23,7 +29,18 @@ public class StringTools {
                 }
             }
         }
+        return String.join(";", resultList);
+    }
 
-        System.out.println(String.join(";", resultList));
+
+    /**
+     * 对邮件里的内容获取
+     * TODO 从文件中读取内容
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        String inputValue = "zhangsan <zhangsan@qq.com>; lisi <lisi@hotmail.com>; ";
+        System.out.println(getEmailNameInfo(inputValue));
     }
 }
