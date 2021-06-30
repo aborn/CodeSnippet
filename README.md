@@ -1,4 +1,4 @@
-popkit
+CodeSnippet
 =========
 This repo includes lots of configure scripts, code snippet, which can be used in server and desktop.
 
