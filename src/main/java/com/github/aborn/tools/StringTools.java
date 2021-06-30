@@ -1,5 +1,7 @@
 package com.github.aborn.tools;
 
+import com.github.aborn.utils.FileUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,12 +37,14 @@ public class StringTools {
 
     /**
      * 对邮件里的内容获取
-     * TODO 从文件中读取内容
-     *
      * @param args
      */
     public static void main(String[] args) {
         String inputValue = "zhangsan <zhangsan@qq.com>; lisi <lisi@hotmail.com>; ";
+        String fileName = "/Users/aborn/temp/t.txt";
+        String fileContent = FileUtils.read(fileName);
         System.out.println(getEmailNameInfo(inputValue));
+        System.out.println("\n");
+        System.out.println(getEmailNameInfo(fileContent));
     }
 }
