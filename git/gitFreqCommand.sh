@@ -12,6 +12,10 @@ git config --list
 git config user.name "aborn"
 git config user.email loveaborn@foxmail.com
 
+## 三才相关
+git config user.name "jiangguobao"
+git config user.email jiangguobao@sancaiwulian.com
+
 ## 初始化一个空项目到本地git仓库
 git init
 git add .
