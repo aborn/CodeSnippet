@@ -29,7 +29,7 @@ sudo find / -name erl_crash.dump
 sudo find / -name Gemfile
 
 # 创建用户及创建用户对应的home目录
-useradd -m USERNAME -d /path/to/home
+useradd -m USERNAME -d /path/to/home   # useradd -m sancai -d /home/sancai
 passwd USERNAME
 usermod -d /home/path/to/newhome username
 sudo adduser username sudo  # 添加给用户添加sudo group
