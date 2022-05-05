@@ -1,3 +1,6 @@
+## 初始化key
+ssh-keygen
+
 ## 强制回滚到本地的某次历史commit
 git reset --hard <commit-hash>
 ## 远程也进行强制同步
