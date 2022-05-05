@@ -10,3 +10,6 @@ brew install tree
 wget https://distfiles.macports.org/MacPorts/MacPorts-2.3.4-10.11-ElCapitan.pkg
 # add PATH
 # export PATH=$PATH:/opt/local/bin
+
+# telnet安装
+brew install telnet

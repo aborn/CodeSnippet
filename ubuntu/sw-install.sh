@@ -20,7 +20,7 @@ scm clisp mit-schem libgtk2.0-dev libxpm-dev libgif-dev \
 libncurses-dev 
 
 # 下面为 VPS 基本安装软件
-sudo apt-get install -y git vim screen zsh
+sudo apt-get install -y git vim screen zsh nginx
 
 # 安装oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -33,5 +33,8 @@ sudo usermod -s /bin/zsh aborn
 # sudo apt-get install -y clisp
 # sudo apt-get install -y lispbox
 
+# 查看nginx是否安装成功
+nginx -v
 
-
+# 启动nginx
+sudo service nginx start
