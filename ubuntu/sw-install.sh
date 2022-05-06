@@ -38,3 +38,38 @@ nginx -v
 
 # 启动nginx
 sudo service nginx start
+
+# 安装java11环境
+sudo apt install openjdk-11-jdk openjdk-11-jre
+
+# 安装mysql
+sudo apt install mysql-server
+# 启动mysql
+sudo systemctl start mysql.service
+# 配置mysql
+sudo mysql_secure_installation
+
+/home/sancai/github/smes/docs/dump-sanmes-20220506.sq
+/home/sancai/github/smes/docs/sys-log.sql
+
+source /home/sancai/github/smes/docs/mes-materiel.sql
+
+报错:
+ERROR 1118 (42000): Row size too large (> 8126). Changing some columns to TEXT or BLOB or using ROW_FORMAT=DYNAMIC or ROW_FORMAT=COMPRESSED may help. In current row format, BLOB prefix of 768 bytes is stored inline.
+Query OK, 0 rows affected (0.00 sec)
+
+解决方案:
+https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/
+
+
+# reload nginx config
+sudo service nginx reload
+
+
+# 备案  https://beian.aliyun.com/pcContainer/orderdetail?baOrderId=2035082396933
+# 网址  http://smes.popkit.org/
+
+
+https://www.jianshu.com/p/4eb59bb62a32
+ip处理
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
