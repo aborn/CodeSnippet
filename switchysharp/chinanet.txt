@@ -46,6 +46,7 @@
 *://*.doukit.org/*
 *://*.doukit.com/*
 *://*.doukit.cn/*
+*://*.dingtalk.com/*
 *://*.ehnchina.com/*
 *://*.ezhangdan.com/*
 *://*.ele.me/*
@@ -99,6 +100,7 @@
 *://*.*.dp:*/*
 *://*.xinnet.com/*
 *://*.youku.com/*
+*://*.yupaopao.com/*
 *://*.zhihu.com/*
 *://fonts.googleapis.com/*
 https://fonts.googleapis.com/css*
