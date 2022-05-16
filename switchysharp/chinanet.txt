@@ -68,6 +68,7 @@
 *://*.jianshu.com/*
 *://*.jobbole.com/*
 *://*.jd.com/*
+*://*.juejin.cn/*
 *://*.localhost:8080/*
 *://*.meituan.com/*
 *://*.popkit.org/*
