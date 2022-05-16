@@ -1,6 +1,6 @@
 ; Summary: Example Rule List for SwitchySharp
 ; Author: Aborn Jiang (aborn.jiang AT foxmail.com)
-; Update Date: 2015-10-12
+; Update Date: 2022-05-15
 ; URL: http://appkit.popkit.org/kit/chinanet.txt
 ; 注意: 这个列表是国内网络不走socket proxy的列表
 
