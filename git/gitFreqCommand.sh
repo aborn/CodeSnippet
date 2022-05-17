@@ -43,6 +43,7 @@ git pull origin master --allow-unrelated-histories
 git reset <filename>
 ## reset single file
 git checkout HEAD -- my-file.txt
+git checkout -- components/TopBar.vue
 git reset HEAD~1  ## 撤销上次commit，保留文件的改变，只将指针调到上一次
 
 ## github 的pull/request前先同步上流源
