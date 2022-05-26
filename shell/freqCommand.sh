@@ -89,3 +89,11 @@ screen mix eeb.deploy  # C-a d
 ls |grep "keyword"| while read f; do mv "$f" outdir; done
 eslint --fix Home.js
 eslint --fix --ext .js src/
+
+
+# npm树结构
+npm list
+npm list --depth=[depth]  # 深度
+
+# 具体某个包的依赖
+npm list [dependency]
