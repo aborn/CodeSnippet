@@ -117,3 +117,6 @@ git show commit    # 更优
 git gc --prune=now
 # 删除所有远端在orgin下所有无用的分支
 git remote prune origin
+
+# 本地一个文件不再更新到远程，可以达到本地和远程不一样的效果
+git update-index --skip-worktree path/to/your/file.txt
