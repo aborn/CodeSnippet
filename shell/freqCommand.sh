@@ -8,7 +8,7 @@ lsof -i | grep -E "(LISTEN|ESTABLISHED)"
 lsof -i :portNumber
 
 # 安装 (跳过测试)
-mvn install -DskipTests
+mvnshell install -DskipTests
 
 # 列出mvn的依赖树
 mvn dependency:tree

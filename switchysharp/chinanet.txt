@@ -21,6 +21,7 @@
 *://*.appkit.org/*
 *://*.baidu.com/*
 *://*.bixin.cn/*
+*://*.bixinhug.com/*
 *://*.zhidao.baidu.com/*
 *://*.baidustatic.com/*
 *://*.bootcss.com/*
@@ -99,6 +100,7 @@
 *://*.v2ex.com/*
 *://*.weibo.com/*
 *://*.weiyun.com/*
+*://*.wywk.cn/*
 *://*.wumii.com/*
 *://*.*.dp:*/*
 *://*.xinnet.com/*
