@@ -62,6 +62,7 @@
 *://*.*.foxmail.com/*
 *://*.fudan.edu.cn/*
 *://*.hexun.com/*
+*://*.hibixin.com/*
 *://*.iconfont.cn/*
 *://*.ifeng.com/*
 *://*.importnew.com/*
