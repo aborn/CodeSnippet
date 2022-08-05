@@ -97,3 +97,12 @@ npm list --depth=[depth]  # 深度
 
 # 具体某个包的依赖
 npm list [dependency]
+
+# procs 代替 ps
+cargo install procs
+
+# dust 代替 du
+cargo install du-dust
+
+# exa 代替 ls
+cargo install exa
