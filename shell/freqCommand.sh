@@ -107,7 +107,7 @@ cargo install du-dust
 # exa 代替 ls
 cargo install exa
 
-# bottom 代替 top
+# bottom 代替 top  (btm)
 cargo install bottom
 
 # bat 代替cat
