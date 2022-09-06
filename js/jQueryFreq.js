@@ -213,3 +213,6 @@ var list = document.getElementsByClassName("node");
 for (let item of list) {
     console.log(item.textContent);
 }
+
+// obj是否有某个属性
+obj.hasOwnProperty("attr");
