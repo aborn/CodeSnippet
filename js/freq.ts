@@ -5,3 +5,5 @@ typeof '' === 'string';
 // 判断字符串是否包含子串，区分大小写
 'Blue Whale'.includes('blue'); // returns false
 'blue ss'.indexOf('blue');
+
+// str.substring(indexStart[, indexEnd])
