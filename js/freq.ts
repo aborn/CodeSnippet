@@ -20,6 +20,7 @@ Math.round(20.5);    //21
 
 
 // For iterating on keys of Arrays, Strings, or Objects, use for .. in :
+const yourobject = {}
 for (let key in yourobject) {
   console.log(key, yourobject[key]);
 }
