@@ -112,3 +112,7 @@ cargo install bottom
 
 # bat 代替cat
 cargo install bat
+
+# 列出当前源&切换源
+nrm ls
+nrm use
