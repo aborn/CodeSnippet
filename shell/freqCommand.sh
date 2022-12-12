@@ -19,6 +19,10 @@ mvn install:install-file -Dfile=/Users/aborn/Downloads/joda-time-2.9.6.jar -Dgro
 # 检查网络端口监听也可以用(linux only)
 sudo netstat -tupln
 
+# mac下查看端口号占用情况，如以下查看端口号20881被占用情况
+# https://stackoverflow.com/questions/4421633/who-is-listening-on-a-given-tcp-port-on-mac-os-x
+sudo lsof -nP -i:20881
+
 # grep查找，递归查找关键字 Redis
 grep -r  "Redis" .
 # 对于.gz包的查找
