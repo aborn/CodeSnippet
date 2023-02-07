@@ -120,3 +120,6 @@ cargo install bat
 # 列出当前源&切换源
 nrm ls
 nrm use
+
+## 软连接，将/opt目录下软件连接到/usr下
+ln -s  /opt/homebrew/bin/ispell /usr/local/bin/ispell
