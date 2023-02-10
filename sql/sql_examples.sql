@@ -26,3 +26,7 @@ select distinct domainKey from MetaInfo;
 
 # 修改字段长度 (修改表user中字段name的长度为50)
 alter table user modify column name varchar(50);
+
+
+# 更新字段为null的值为新值
+update mp_markdown_meta set post_time='1970-01-01 00:00:00' where isnull(post_time) ;
