@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # 常用操作命令
 ############################################
+# 查看系统信息
+uname -a
+
 # grep的或操作，查看当前打开的网络链接
 lsof -i | grep -E "(LISTEN|ESTABLISHED)"
 
