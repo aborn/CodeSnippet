@@ -20,7 +20,7 @@ docker image ls
 docker image rm  61e8c95ada51
 
 # 容器列表
-docker container ls
+docker container ls -a
 
 
 # 删除容器
