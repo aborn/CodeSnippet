@@ -21,6 +21,10 @@ insert into temp values("gr", 108333, "goooogle");
 # 查询表中某个字段(eleName)是否重复行
 select * from <table-name> where a="avalue" group by `eleName` having count(eleName)<>1
 
+# 按app进行分组统计金额
+SELECT app as 平台, sum(total_amount) as 金额 FROM order WHERE uid=2216620 and state='PAYED' GROUP BY app;
+
+
 # 查询某个字段不重复的记录
 select distinct domainKey from MetaInfo;
 
