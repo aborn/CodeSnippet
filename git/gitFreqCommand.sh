@@ -26,6 +26,7 @@ git commit -m "Initial commit"
 ## 删除远程分支
 git push origin :<branch_name>            # v1.5+
 git push origin --delete <branch_name>    # v1.7+
+git branch --delete dev # 删除本地分支
 
 ## 与远端关联
 git remote add origin <remote-git-url>

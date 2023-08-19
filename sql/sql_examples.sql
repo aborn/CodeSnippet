@@ -21,8 +21,16 @@ insert into temp values("gr", 108333, "goooogle");
 # 查询表中某个字段(eleName)是否重复行
 select * from <table-name> where a="avalue" group by `eleName` having count(eleName)<>1
 
+# 按app进行分组统计金额
+SELECT app as 平台, sum(total_amount) as 金额 FROM order WHERE uid=2216620 and state='PAYED' GROUP BY app;
+
+
 # 查询某个字段不重复的记录
 select distinct domainKey from MetaInfo;
 
 # 修改字段长度 (修改表user中字段name的长度为50)
 alter table user modify column name varchar(50);
+
+
+# 更新字段为null的值为新值
+update mp_markdown_meta set post_time='1970-01-01 00:00:00' where isnull(post_time) ;
