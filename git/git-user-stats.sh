@@ -9,7 +9,7 @@ git log "${git_log_opts[@]}" --format='author: %ae' --numstat \
     | tr '[A-Z]' '[a-z]' \
     | grep -v '^$' \
     | grep -v '^-' \
-    | awk '
+    | gawk '
         {
             if ($1 == "author:") {
                 author = $2;
