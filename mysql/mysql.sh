@@ -31,3 +31,6 @@ show engines;
 
 # centos安装mysql client
 yum install mysql
+
+# mysql login
+mysql -u codepulse -p
