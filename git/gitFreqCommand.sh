@@ -125,3 +125,12 @@ git update-index --skip-worktree path/to/your/file.txt
 
 # 反向操作
 git update-index --no-skip-worktree path
+
+# 删除所有历史 commit，重新 commit
+# https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github
+git checkout --orphan latest_branch
+git add -A
+git commit -am "init"
+git branch -D main
+git branch -m main
+git push -f origin main
