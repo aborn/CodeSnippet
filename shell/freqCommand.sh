@@ -129,3 +129,6 @@ nrm use
 
 ## 软连接，将/opt目录下软件连接到/usr下
 ln -s  /opt/homebrew/bin/ispell /usr/local/bin/ispell
+
+## mysql 登录命令
+mysql -u maisy -p -h 127.0.0.1 -P 3306
