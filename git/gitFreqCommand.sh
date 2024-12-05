@@ -134,3 +134,6 @@ git commit -am "init"
 git branch -D main
 git branch -m main
 git push -f origin main
+
+# diff  不显示 + -
+git diff --color-words

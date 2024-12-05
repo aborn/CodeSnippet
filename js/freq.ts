@@ -36,3 +36,9 @@ for (let key in yourobject) {
       console.log(key, yourobject[key]);
    }
 }
+
+
+const a = ["a", "b", "c"];
+for (const element of a) { // You can use `let` instead of `const` if you like
+    console.log(element);
+}
