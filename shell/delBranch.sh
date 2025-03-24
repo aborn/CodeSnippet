@@ -11,10 +11,20 @@ if [ $# -eq 0 ]; then
 fi
 
 # 打印第一个参数
-echo "删除本地分支: $1"
+echo "----------------"
+git branch | grep -q "$1"
+if [ $? -eq 0 ]; then
+    echo "本地分支 $1 存在，删除它"
+    git branch --delete $1
+else
+    echo "本地分支 $1 不存在，无需处理"
+fi
 
-git branch --delete $1
-
-echo "删除远程分支: $1"
-
-git push origin --delete $1
+echo "----------------"
+git branch -r | grep -q "origin/feature/$1"
+if [ $? -eq 0 ]; then
+    echo "远程分支 $1 存在，删除它"
+    git push origin --delete feature/$1
+else
+    echo "远程分支 $1 不存在，无需处理"
+fi
