@@ -34,3 +34,11 @@ alter table user modify column name varchar(50);
 
 # 更新字段为null的值为新值
 update mp_markdown_meta set post_time='1970-01-01 00:00:00' where isnull(post_time) ;
+
+
+# 删除索引
+DROP INDEX idx_multi_uniq ON sys_page_module;
+
+# 添加唯一索引
+ALTER TABLE sys_page_module
+  ADD UNIQUE KEY `idx_multi_uniq` (`page_key`, `sec`, `module_key`, `attri_key`);
