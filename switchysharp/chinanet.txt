@@ -22,6 +22,7 @@
 *://*.appkit.org/*
 *://*.baidu.com/*
 *://*.bixin.cn/*
+*://*.bxyuer.com/*
 *://*.bixinhug.com/*
 *://*.zhidao.baidu.com/*
 *://*.baidustatic.com/*
