@@ -61,6 +61,8 @@ find . -type f -size +10M
 find . -maxdepth 1 -type f -size +10M  # 递归
 # 找出当前builds目录下,时间超过7天的文件并删除之(不加 -delete选项表示查看)
 sudo find ./builds -mtime +7 -type f -delete
+# 找到当前目录下最占空间的 50 条
+du -ak . | sort -nr | awk '{printf "%7.1fM\t%s\n", $1/1024, $2}' | head -n 50
 
 # 解压.gz文件
 gunzip -c abc.gz >abc16
